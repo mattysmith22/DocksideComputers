@@ -1,0 +1,63 @@
+c:\users\matt desktop\documents\visual studio 2010\Projects\DocksideComputers\Prototype\bin\Debug\Prototype.exe
+c:\users\matt desktop\documents\visual studio 2010\Projects\DocksideComputers\Prototype\bin\Debug\Prototype.pdb
+c:\users\matt desktop\documents\visual studio 2010\Projects\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Properties.Resources.resources
+c:\users\matt desktop\documents\visual studio 2010\Projects\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Security.LogIn.resources
+c:\users\matt desktop\documents\visual studio 2010\Projects\DocksideComputers\Prototype\obj\x86\Debug\Prototype.csproj.GenerateResource.Cache
+c:\users\matt desktop\documents\visual studio 2010\Projects\DocksideComputers\Prototype\obj\x86\Debug\Prototype.exe
+c:\users\matt desktop\documents\visual studio 2010\Projects\DocksideComputers\Prototype\obj\x86\Debug\Prototype.pdb
+C:\Users\Matt Desktop\documents\visual studio 2010\Projects\DocksideComputers\Prototype\bin\Debug\Prototype.exe.config
+F:\DocksideComputers\Prototype\bin\Debug\Prototype.exe.config
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.exe
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.pdb
+F:\DocksideComputers\Prototype\bin\Debug\Prototype.exe
+F:\DocksideComputers\Prototype\bin\Debug\Prototype.pdb
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Properties.Resources.resources
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Customers.Filter.resources
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Customers.Find.resources
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Misc.About.resources
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Security.Lock.resources
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Security.LogIn.resources
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.csproj.GenerateResource.Cache
+E:\DocksideComputers\Prototype\bin\Debug\Prototype.exe.config
+E:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.exe
+E:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.pdb
+E:\DocksideComputers\Prototype\bin\Debug\Prototype.exe
+E:\DocksideComputers\Prototype\bin\Debug\Prototype.pdb
+E:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Properties.Resources.resources
+E:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Customers.Filter.resources
+E:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Customers.Find.resources
+E:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Misc.About.resources
+E:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Security.ChangePassword.resources
+E:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Security.Lock.resources
+E:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Security.LogIn.resources
+E:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.csproj.GenerateResource.Cache
+H:\Visual Studio 2010\DocksideComputers\Prototype\bin\Debug\Prototype.exe.config
+H:\Visual Studio 2010\DocksideComputers\Prototype\bin\Debug\Prototype.exe
+H:\Visual Studio 2010\DocksideComputers\Prototype\bin\Debug\Prototype.pdb
+H:\Visual Studio 2010\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Properties.Resources.resources
+H:\Visual Studio 2010\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Customers.Filter.resources
+H:\Visual Studio 2010\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Customers.Find.resources
+H:\Visual Studio 2010\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Misc.About.resources
+H:\Visual Studio 2010\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Security.ChangePassword.resources
+H:\Visual Studio 2010\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Security.Lock.resources
+H:\Visual Studio 2010\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Security.LogIn.resources
+H:\Visual Studio 2010\DocksideComputers\Prototype\obj\x86\Debug\Prototype.csproj.GenerateResource.Cache
+H:\Visual Studio 2010\DocksideComputers\Prototype\obj\x86\Debug\Prototype.exe
+H:\Visual Studio 2010\DocksideComputers\Prototype\obj\x86\Debug\Prototype.pdb
+H:\Visual Studio 2010\DocksideComputers\Prototype\obj\x86\Debug\Prototype.csprojResolveAssemblyReference.cache
+H:\Visual Studio 2010\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Jobs.Edit.resources
+H:\Visual Studio 2010\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Jobs.View.resources
+H:\Visual Studio 2010\DocksideComputers\Prototype\bin\Debug\System.Data.SQLite.dll
+H:\Visual Studio 2010\DocksideComputers\Prototype\bin\Debug\System.Data.SQLite.pdb
+H:\Visual Studio 2010\DocksideComputers\Prototype\bin\Debug\System.Data.SQLite.xml
+F:\DocksideComputers\Prototype\bin\Debug\System.Data.SQLite.xml
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Backup.Open.resources
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Backup.Save.resources
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Jobs.Edit.resources
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Jobs.View.resources
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Jobs.ViewUnfinished.resources
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Security.ChangePassword.resources
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Security.VerifyAdmin.resources
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Users.Add.resources
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Users.Edit.resources
+F:\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Users.View.resources

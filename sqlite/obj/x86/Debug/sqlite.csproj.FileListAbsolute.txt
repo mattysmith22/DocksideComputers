@@ -1,0 +1,22 @@
+E:\DocksideComputers\sqlite\bin\Debug\sqlite.exe
+E:\DocksideComputers\sqlite\bin\Debug\sqlite.pdb
+E:\DocksideComputers\sqlite\bin\Debug\System.Data.SQLite.dll
+E:\DocksideComputers\sqlite\bin\Debug\System.Data.SQLite.pdb
+E:\DocksideComputers\sqlite\bin\Debug\System.Data.SQLite.xml
+E:\DocksideComputers\sqlite\obj\x86\Debug\sqlite.csprojResolveAssemblyReference.cache
+E:\DocksideComputers\sqlite\obj\x86\Debug\sqlite.Form1.resources
+E:\DocksideComputers\sqlite\obj\x86\Debug\sqlite.Properties.Resources.resources
+E:\DocksideComputers\sqlite\obj\x86\Debug\sqlite.csproj.GenerateResource.Cache
+E:\DocksideComputers\sqlite\obj\x86\Debug\sqlite.exe
+E:\DocksideComputers\sqlite\obj\x86\Debug\sqlite.pdb
+H:\Visual Studio 2010\DocksideComputers\sqlite\obj\x86\Debug\sqlite.exe
+H:\Visual Studio 2010\DocksideComputers\sqlite\obj\x86\Debug\sqlite.pdb
+H:\Visual Studio 2010\DocksideComputers\sqlite\bin\Debug\sqlite.exe
+H:\Visual Studio 2010\DocksideComputers\sqlite\bin\Debug\sqlite.pdb
+H:\Visual Studio 2010\DocksideComputers\sqlite\obj\x86\Debug\sqlite.Form1.resources
+H:\Visual Studio 2010\DocksideComputers\sqlite\obj\x86\Debug\sqlite.Properties.Resources.resources
+H:\Visual Studio 2010\DocksideComputers\sqlite\obj\x86\Debug\sqlite.csproj.GenerateResource.Cache
+H:\Visual Studio 2010\DocksideComputers\sqlite\bin\Debug\sqlite.exe.config
+F:\DocksideComputers\sqlite\bin\Debug\sqlite.exe.config
+F:\DocksideComputers\sqlite\obj\x86\Debug\sqlite.exe
+F:\DocksideComputers\sqlite\obj\x86\Debug\sqlite.pdb
