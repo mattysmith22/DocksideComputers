@@ -102,24 +102,30 @@ namespace Prototype.Screens.Customers
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedCells.Count == 1)
+            Security.VerifyAdmin verifyAdminScreen = new Security.VerifyAdmin();
+            verifyAdminScreen.ShowDialog();
+
+            if (verifyAdminScreen.success)
             {
-                MySqlConnection connection = Database.GetConnection();
-                connection.Open();
-                string sql = "DELETE FROM tbl_customers WHERE customerID = @customerID";
-                MySqlCommand command = new MySqlCommand(sql, connection);
+                if (dataGridView1.SelectedCells.Count == 1)
+                {
+                    MySqlConnection connection = Database.GetConnection();
+                    connection.Open();
+                    string sql = "DELETE FROM tbl_customers WHERE customerID = @customerID";
+                    MySqlCommand command = new MySqlCommand(sql, connection);
 
-                command.Parameters.AddWithValue("@customerID", getSelectedCustomerID());
+                    command.Parameters.AddWithValue("@customerID", getSelectedCustomerID());
 
-                command.ExecuteNonQuery();
+                    command.ExecuteNonQuery();
 
-                connection.Close();
+                    connection.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Error: Customer not properly highlighted");
+                }
+                updateDataTable();
             }
-            else
-            {
-                MessageBox.Show("Error: Customer not properly highlighted");
-            }
-            updateDataTable();
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
@@ -134,3 +140,4 @@ namespace Prototype.Screens.Customers
         }
     }
 }
+

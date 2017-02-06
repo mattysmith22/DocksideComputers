@@ -68,6 +68,7 @@
             this.buttonVerify.TabIndex = 3;
             this.buttonVerify.Text = "Verify";
             this.buttonVerify.UseVisualStyleBackColor = true;
+            this.buttonVerify.Click += new System.EventHandler(this.buttonVerify_Click);
             // 
             // VerifyAdmin
             // 
@@ -80,7 +81,7 @@
             this.Controls.Add(this.label1);
             this.Name = "VerifyAdmin";
             this.Text = "Verify Admin";
-            this.Load += new System.EventHandler(this.VerifyAdmin_Load);
+            this.Shown += new System.EventHandler(this.VerifyAdmin_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
