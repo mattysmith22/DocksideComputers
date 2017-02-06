@@ -363,6 +363,7 @@
             this.buttonEdit.TabIndex = 14;
             this.buttonEdit.Text = "Edit";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonPrint
             // 

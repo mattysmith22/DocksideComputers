@@ -121,5 +121,16 @@ namespace Prototype.Screens.Customers
             }
             updateDataTable();
         }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedCells.Count == 1)
+            {
+                Customers.Edit editScreen = new Edit(getSelectedCustomerID());
+                editScreen.ShowDialog();
+                updateDataTable();
+                updateDataList();
+            }
+        }
     }
 }

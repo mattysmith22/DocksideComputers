@@ -166,6 +166,7 @@
             this.buttonEdit.TabIndex = 14;
             this.buttonEdit.Text = "Edit";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonRevert
             // 
@@ -175,6 +176,7 @@
             this.buttonRevert.TabIndex = 15;
             this.buttonRevert.Text = "Revert";
             this.buttonRevert.UseVisualStyleBackColor = true;
+            this.buttonRevert.Click += new System.EventHandler(this.buttonRevert_Click);
             // 
             // Edit
             // 
