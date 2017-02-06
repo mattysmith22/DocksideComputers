@@ -89,3 +89,31 @@ C:\Users\Matthew\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.c
 C:\Users\Matthew\Documents\DocksideComputers\Prototype\bin\Debug\Prototype.exe
 C:\Users\Matthew\Documents\DocksideComputers\Prototype\bin\Debug\Prototype.pdb
 C:\Users\Matthew\Documents\DocksideComputers\Prototype\bin\Debug\MySql.Data.dll
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\bin\Debug\Prototype.exe.config
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.exe
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.pdb
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\bin\Debug\Prototype.exe
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\bin\Debug\Prototype.pdb
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\bin\Debug\MySql.Data.dll
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.csprojResolveAssemblyReference.cache
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Properties.Resources.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Backup.Open.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Backup.Save.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Customers.Add.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Customers.Edit.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Customers.Filter.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Customers.Find.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Jobs.Add.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Jobs.Edit.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Jobs.SeeCustomerJobs.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Jobs.View.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Jobs.ViewUnfinished.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Misc.About.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Security.ChangePassword.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Security.Lock.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Security.LogIn.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Security.VerifyAdmin.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Users.Add.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Users.Edit.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Users.View.resources
+C:\Users\Matt Desktop\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.csproj.GenerateResource.Cache

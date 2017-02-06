@@ -111,6 +111,7 @@
             this.buttonFilter.TabIndex = 8;
             this.buttonFilter.Text = "Filter";
             this.buttonFilter.UseVisualStyleBackColor = true;
+            this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
             // 
             // Filter
             // 

@@ -13,11 +13,19 @@ namespace Prototype.Screens.Customers
 {
     public partial class Find : Form
     {
+        FilterOptions filterOptions;
+
         public Find()
         {
             InitializeComponent();
             adminToolStripMenuItem.Visible = Globals.isAdmin; //Only show admin menus if the user is an administrator
             updateDataTable();
+
+            filterOptions = new FilterOptions();
+            filterOptions.firstname = "";
+            filterOptions.surname = "";
+            filterOptions.mobile = "";
+            filterOptions.landline = "";
         }
 
         private void updateDataTable() //Does what it says on the tin
@@ -137,6 +145,19 @@ namespace Prototype.Screens.Customers
                 updateDataTable();
                 updateDataList();
             }
+        }
+
+        private void buttonFilter_Click(object sender, EventArgs e)
+        {
+            Filter filterScreen = new Filter(filterOptions);
+            filterScreen.ShowDialog();
+
+            filterOptions = filterScreen.filterOptions;
+        }
+
+        private void checkBoxFilter_CheckedChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("As this is a prototype, filtering has not been implemented");
         }
     }
 }

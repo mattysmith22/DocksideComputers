@@ -262,6 +262,7 @@
             this.checkBoxFilter.Size = new System.Drawing.Size(15, 14);
             this.checkBoxFilter.TabIndex = 3;
             this.checkBoxFilter.UseVisualStyleBackColor = true;
+            this.checkBoxFilter.CheckedChanged += new System.EventHandler(this.checkBoxFilter_CheckedChanged);
             // 
             // buttonFilter
             // 
@@ -271,6 +272,7 @@
             this.buttonFilter.TabIndex = 4;
             this.buttonFilter.Text = "Filter";
             this.buttonFilter.UseVisualStyleBackColor = true;
+            this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
             // 
             // buttonAdd
             // 
