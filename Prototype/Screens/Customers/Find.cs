@@ -92,6 +92,12 @@ namespace Prototype.Screens.Customers
             updateDataList();
         }
 
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            Customers.Add addCustomerScreen = new Add();
+            addCustomerScreen.ShowDialog();
 
+            updateDataTable();
+        }
     }
 }
