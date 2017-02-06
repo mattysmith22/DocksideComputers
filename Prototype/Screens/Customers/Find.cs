@@ -42,7 +42,7 @@ namespace Prototype.Screens.Customers
         private void updateDataList() //Updates the in-depth list of details on the right-hand side of the selected customer
         {
             Debug.WriteLine("Selected cells:" + dataGridView1.SelectedCells.Count.ToString());
-            if (dataGridView1.SelectedCells.Count== 1)
+            if (dataGridView1.SelectedCells.Count == 1)
             {
                 int customerID = getSelectedCustomerID(); //Get the ID of the selected customer
 
