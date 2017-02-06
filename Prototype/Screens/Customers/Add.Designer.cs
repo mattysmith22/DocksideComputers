@@ -53,6 +53,7 @@
             this.buttonAdd.TabIndex = 30;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // textBoxMobile
             // 

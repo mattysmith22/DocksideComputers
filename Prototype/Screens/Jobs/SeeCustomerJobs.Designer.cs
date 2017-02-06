@@ -102,7 +102,6 @@
             this.Controls.Add(this.dataGridViewJobs);
             this.Name = "SeeCustomerJobs";
             this.Text = "View Jobs";
-            this.Load += new System.EventHandler(this.SeeCustomerJobs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJobs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

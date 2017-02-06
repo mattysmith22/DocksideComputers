@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data.SQLite;
+using MySql.Data.MySqlClient;
 using System.Configuration;
 
 namespace Prototype
 {
     class Database
     {
-        public static SQLiteConnection GetConnection()
+        public static MySqlConnection GetConnection()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["DocksideDatabase"].ConnectionString;
-            return new SQLiteConnection(connectionString);
+            return new MySqlConnection(connectionString);
         }
 
-        public static SQLiteDataAdapter GetDataAdapter(string sql)
+        public static MySqlDataAdapter GetDataAdapter(string sql)
         {
-            SQLiteConnection connection = GetConnection();
+            MySqlConnection connection = GetConnection();
             connection.Open();
-            SQLiteDataAdapter data = new SQLiteDataAdapter(sql, connection);
+            MySqlDataAdapter data = new MySqlDataAdapter(sql, connection);
             connection.Close();
             return data;
         }

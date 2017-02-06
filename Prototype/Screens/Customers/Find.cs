@@ -6,7 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Data.SQLite;
+using MySql.Data.MySqlClient;
+using System.Diagnostics;
 
 namespace Prototype.Screens.Customers
 {
@@ -23,7 +24,7 @@ namespace Prototype.Screens.Customers
         {
             //Get relevant data
             string sql = "SELECT customerID, firstname, surname FROM tbl_customers";
-            SQLiteDataAdapter data = Database.GetDataAdapter(sql);
+            MySqlDataAdapter data = Database.GetDataAdapter(sql);
 
             using(DataTable dt = new DataTable()) //Increases efficiency
             {
@@ -34,33 +35,38 @@ namespace Prototype.Screens.Customers
 
         private int getSelectedCustomerID()//Gets the ID of the selected customer in the dataGridView
         {
-            return (int)dataGridView1.SelectedRows[0].Cells["customerID"].Value;
+            int rowIndex = dataGridView1.SelectedCells[0].RowIndex;
+            return (int)dataGridView1.Rows[rowIndex].Cells["customerID"].Value;
         }
 
         private void updateDataList() //Updates the in-depth list of details on the right-hand side of the selected customer
         {
-            int customerID = getSelectedCustomerID(); //Get the ID of the selected customer
-
-            SQLiteConnection connection = Database.GetConnection(); //Open database connection
-            connection.Open();
-
-            string sql = "SELECT * FROM tbl_customers WHERE customerID = @id"; //Create query
-            SQLiteCommand command = new SQLiteCommand(sql, connection);
-            command.Parameters.AddWithValue("@id", customerID);
-
-            SQLiteDataReader data = command.ExecuteReader(); //Get Data
-
-            if (data.Read()) //If any is selected at all
+            Debug.WriteLine("Selected cells:" + dataGridView1.SelectedCells.Count.ToString());
+            if (dataGridView1.SelectedCells.Count== 1)
             {
-                labelFirstname.Text = "Firstname: " + data.GetString(data.GetOrdinal("firstname")); //Copy data into labels
-                labelSurname.Text = "Surname: " + data.GetString(data.GetOrdinal("surname"));
-                labelAddress.Text = "Address: " + data.GetString(data.GetOrdinal("address"));
-                labelTown.Text = "Town: " + data.GetString(data.GetOrdinal("town"));
-                labelCounty.Text = "County: " + data.GetString(data.GetOrdinal("county"));
-                labelLandline.Text = "Landline: " + data.GetString(data.GetOrdinal("landline"));
-                labelMobile.Text = "Mobile: " + data.GetString(data.GetOrdinal("mobile"));
+                int customerID = getSelectedCustomerID(); //Get the ID of the selected customer
+
+                MySqlConnection connection = Database.GetConnection(); //Open database connection
+                connection.Open();
+
+                string sql = "SELECT * FROM tbl_customers WHERE customerID = @id"; //Create query
+                MySqlCommand command = new MySqlCommand(sql, connection);
+                command.Parameters.AddWithValue("@id", customerID);
+
+                MySqlDataReader data = command.ExecuteReader(); //Get Data
+
+                if (data.Read()) //If any is selected at all
+                {
+                    labelFirstname.Text = "Firstname: " + data.GetString("firstname"); //Copy data into labels
+                    labelSurname.Text = "Surname: " + data.GetString("surname");
+                    labelAddress.Text = "Address: " + data.GetString("address");
+                    labelTown.Text = "Town: " + data.GetString("town");
+                    labelCounty.Text = "County: " + data.GetString("county");
+                    labelLandline.Text = "Landline: " + data.GetString("landline");
+                    labelMobile.Text = "Mobile: " + data.GetString("mobile");
+                }
+                connection.Close(); //Cleanup
             }
-            connection.Close(); //Cleanup
         }
 
         private void buttonPrint_Click(object sender, EventArgs e)
@@ -79,6 +85,11 @@ namespace Prototype.Screens.Customers
         {
             Jobs.Add addJobScreen = new Jobs.Add(getSelectedCustomerID());
             addJobScreen.Show();
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            updateDataList();
         }
 
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
 
 namespace Prototype
 {
@@ -14,7 +15,9 @@ namespace Prototype
             SHA256Managed hashCompute = new SHA256Managed();
 
             byte[] hash = hashCompute.ComputeHash(bytes);
-            return BitConverter.ToString(hash).Replace("-", "").ToLower();
+            Debug.WriteLine("Computed hash: " + BitConverter.ToString(hash).Replace("-", "").ToLower());
+
+            return BitConverter.ToString(hash).Replace("-", "").ToUpper();
         }
 
         public static bool Verify(string input, string hash)
