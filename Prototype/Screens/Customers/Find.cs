@@ -99,5 +99,27 @@ namespace Prototype.Screens.Customers
 
             updateDataTable();
         }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedCells.Count == 1)
+            {
+                MySqlConnection connection = Database.GetConnection();
+                connection.Open();
+                string sql = "DELETE FROM tbl_customers WHERE customerID = @customerID";
+                MySqlCommand command = new MySqlCommand(sql, connection);
+
+                command.Parameters.AddWithValue("@customerID", getSelectedCustomerID());
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+            }
+            else
+            {
+                MessageBox.Show("Error: Customer not properly highlighted");
+            }
+            updateDataTable();
+        }
     }
 }
