@@ -39,17 +39,21 @@
             // 
             // dataGridViewJobs
             // 
+            this.dataGridViewJobs.AllowUserToAddRows = false;
+            this.dataGridViewJobs.AllowUserToDeleteRows = false;
             this.dataGridViewJobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewJobs.Location = new System.Drawing.Point(13, 13);
             this.dataGridViewJobs.Name = "dataGridViewJobs";
-            this.dataGridViewJobs.Size = new System.Drawing.Size(286, 91);
+            this.dataGridViewJobs.ReadOnly = true;
+            this.dataGridViewJobs.Size = new System.Drawing.Size(385, 155);
             this.dataGridViewJobs.TabIndex = 0;
+            this.dataGridViewJobs.SelectionChanged += new System.EventHandler(this.dataGridViewJobs_SelectionChanged);
             // 
             // buttonView
             // 
-            this.buttonView.Location = new System.Drawing.Point(15, 212);
+            this.buttonView.Location = new System.Drawing.Point(12, 275);
             this.buttonView.Name = "buttonView";
-            this.buttonView.Size = new System.Drawing.Size(286, 23);
+            this.buttonView.Size = new System.Drawing.Size(386, 23);
             this.buttonView.TabIndex = 1;
             this.buttonView.Text = "View";
             this.buttonView.UseVisualStyleBackColor = true;
@@ -57,7 +61,7 @@
             // labelProblem
             // 
             this.labelProblem.AutoSize = true;
-            this.labelProblem.Location = new System.Drawing.Point(13, 111);
+            this.labelProblem.Location = new System.Drawing.Point(12, 174);
             this.labelProblem.Name = "labelProblem";
             this.labelProblem.Size = new System.Drawing.Size(48, 13);
             this.labelProblem.TabIndex = 2;
@@ -66,7 +70,7 @@
             // labelDetails
             // 
             this.labelDetails.AutoSize = true;
-            this.labelDetails.Location = new System.Drawing.Point(13, 137);
+            this.labelDetails.Location = new System.Drawing.Point(12, 200);
             this.labelDetails.Name = "labelDetails";
             this.labelDetails.Size = new System.Drawing.Size(42, 13);
             this.labelDetails.TabIndex = 3;
@@ -75,25 +79,25 @@
             // textBoxProblem
             // 
             this.textBoxProblem.Enabled = false;
-            this.textBoxProblem.Location = new System.Drawing.Point(62, 111);
+            this.textBoxProblem.Location = new System.Drawing.Point(62, 174);
             this.textBoxProblem.Name = "textBoxProblem";
-            this.textBoxProblem.Size = new System.Drawing.Size(237, 20);
+            this.textBoxProblem.Size = new System.Drawing.Size(336, 20);
             this.textBoxProblem.TabIndex = 4;
             // 
             // textBoxDetails
             // 
             this.textBoxDetails.Enabled = false;
-            this.textBoxDetails.Location = new System.Drawing.Point(64, 137);
+            this.textBoxDetails.Location = new System.Drawing.Point(62, 200);
             this.textBoxDetails.Multiline = true;
             this.textBoxDetails.Name = "textBoxDetails";
-            this.textBoxDetails.Size = new System.Drawing.Size(237, 69);
+            this.textBoxDetails.Size = new System.Drawing.Size(336, 69);
             this.textBoxDetails.TabIndex = 5;
             // 
             // SeeCustomerJobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(313, 245);
+            this.ClientSize = new System.Drawing.Size(410, 310);
             this.Controls.Add(this.textBoxDetails);
             this.Controls.Add(this.textBoxProblem);
             this.Controls.Add(this.labelDetails);
