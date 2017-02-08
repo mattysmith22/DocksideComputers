@@ -6,16 +6,44 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Prototype.Screens.Jobs
 {
     public partial class Add : Form
     {
         private int customerID;
+
         public Add(int customerID)
         {
             InitializeComponent();
             this.customerID = customerID;
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            MySqlConnection connection = Database.GetConnection();
+            connection.Open();
+
+            string sql = "INSERT INTO tbl_jobs (`customerID`, `problem`, `details`, `computerUsername`, `computerPassword`, `backup`, `format`, `shouldCallBefore`, `speakingAuthorisation`, `receiptKey`) VALUES (@customerID, @problem, @details, @computerUsername, @computerPassword, @backup, @format, @shouldCallBefore, @speakingAuthorisation, @receiptKey)";
+            MySqlCommand command = new MySqlCommand(sql, connection);
+            
+            command.Parameters.AddWithValue("@customerID", customerID);
+            command.Parameters.AddWithValue("@problem", textBoxProblem.Text);
+            command.Parameters.AddWithValue("@details", textBoxDetails.Text);
+            command.Parameters.AddWithValue("@computerUsername", textBoxUsername.Text);
+            command.Parameters.AddWithValue("@computerPassword", textBoxPassword.Text);
+            command.Parameters.AddWithValue("@backup", Database.BoolToDatabase(checkBoxBackup.Checked));
+            command.Parameters.AddWithValue("@format", Database.BoolToDatabase(checkBoxFormat.Checked));
+            command.Parameters.AddWithValue("@shouldCallBefore", Database.BoolToDatabase(checkBoxNeedCall.Checked));
+            command.Parameters.AddWithValue("@speakingAuthorisation", textBoxSpeakTo.Text);
+            command.Parameters.AddWithValue("@receiptKey", Receipts.GenerateReceiptKey());
+
+            command.ExecuteNonQuery();
+
+            connection.Close();
+
+            this.Close();
         }
     }
 }

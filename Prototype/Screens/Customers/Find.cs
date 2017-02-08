@@ -92,7 +92,7 @@ namespace Prototype.Screens.Customers
         private void buttonAddJob_Click(object sender, EventArgs e)
         {
             Jobs.Add addJobScreen = new Jobs.Add(getSelectedCustomerID());
-            addJobScreen.Show();
+            addJobScreen.ShowDialog();
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -161,4 +161,3 @@ namespace Prototype.Screens.Customers
         }
     }
 }
-

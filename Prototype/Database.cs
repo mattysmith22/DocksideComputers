@@ -23,5 +23,33 @@ namespace Prototype
             connection.Close();
             return data;
         }
+
+        public static int BoolToDatabase(bool value)
+        {
+            if (value == true)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public static bool DatabaseToBool(int value)
+        {
+            if (value == 0)
+            {
+                return false;
+            }
+            else if (value > 0)
+            {
+                return true;
+            }
+            else
+            {
+                throw new FormatException("Value must be more than 0");
+            }
+        }
     }
 }
