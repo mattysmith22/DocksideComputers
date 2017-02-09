@@ -66,5 +66,14 @@ namespace Prototype.Screens.Jobs
         {
             UpdateData();
         }
+
+        private void buttonView_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewJobs.SelectedCells.Count > 0)
+            {
+                Jobs.View viewJob = new View(GetSelectedJobId());
+                viewJob.ShowDialog();
+            }
+        }
     }
 }

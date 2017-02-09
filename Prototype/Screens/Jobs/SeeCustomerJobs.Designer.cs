@@ -57,6 +57,7 @@
             this.buttonView.TabIndex = 1;
             this.buttonView.Text = "View";
             this.buttonView.UseVisualStyleBackColor = true;
+            this.buttonView.Click += new System.EventHandler(this.buttonView_Click);
             // 
             // labelProblem
             // 

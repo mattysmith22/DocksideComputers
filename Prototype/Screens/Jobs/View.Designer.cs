@@ -40,7 +40,7 @@
             this.labelSpeakTo = new System.Windows.Forms.Label();
             this.textBoxSpeakTo = new System.Windows.Forms.TextBox();
             this.labelNeedCall = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxNeedCall = new System.Windows.Forms.CheckBox();
             this.checkBoxFormat = new System.Windows.Forms.CheckBox();
             this.labelFormat = new System.Windows.Forms.Label();
             this.checkBoxBackup = new System.Windows.Forms.CheckBox();
@@ -55,6 +55,8 @@
             this.labelProblem = new System.Windows.Forms.Label();
             this.buttonVerify = new System.Windows.Forms.Button();
             this.labelCompletionDateData = new System.Windows.Forms.Label();
+            this.labelStaffMember = new System.Windows.Forms.Label();
+            this.textBoxStaffMember = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonEdit
@@ -165,15 +167,15 @@
             this.labelNeedCall.TabIndex = 41;
             this.labelNeedCall.Text = "Need Call:";
             // 
-            // checkBox1
+            // checkBoxNeedCall
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Enabled = false;
-            this.checkBox1.Location = new System.Drawing.Point(78, 205);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 40;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxNeedCall.AutoSize = true;
+            this.checkBoxNeedCall.Enabled = false;
+            this.checkBoxNeedCall.Location = new System.Drawing.Point(78, 205);
+            this.checkBoxNeedCall.Name = "checkBoxNeedCall";
+            this.checkBoxNeedCall.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxNeedCall.TabIndex = 40;
+            this.checkBoxNeedCall.UseVisualStyleBackColor = true;
             // 
             // checkBoxFormat
             // 
@@ -295,6 +297,7 @@
             this.buttonVerify.TabIndex = 48;
             this.buttonVerify.Text = "Verify";
             this.buttonVerify.UseVisualStyleBackColor = true;
+            this.buttonVerify.Click += new System.EventHandler(this.buttonVerify_Click);
             // 
             // labelCompletionDateData
             // 
@@ -305,11 +308,30 @@
             this.labelCompletionDateData.TabIndex = 56;
             this.labelCompletionDateData.Text = "<date>";
             // 
+            // labelStaffMember
+            // 
+            this.labelStaffMember.AutoSize = true;
+            this.labelStaffMember.Location = new System.Drawing.Point(225, 133);
+            this.labelStaffMember.Name = "labelStaffMember";
+            this.labelStaffMember.Size = new System.Drawing.Size(72, 13);
+            this.labelStaffMember.TabIndex = 57;
+            this.labelStaffMember.Text = "Staff member:";
+            // 
+            // textBoxStaffMember
+            // 
+            this.textBoxStaffMember.Enabled = false;
+            this.textBoxStaffMember.Location = new System.Drawing.Point(318, 133);
+            this.textBoxStaffMember.Name = "textBoxStaffMember";
+            this.textBoxStaffMember.Size = new System.Drawing.Size(156, 20);
+            this.textBoxStaffMember.TabIndex = 58;
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 259);
+            this.Controls.Add(this.textBoxStaffMember);
+            this.Controls.Add(this.labelStaffMember);
             this.Controls.Add(this.labelCompletionDateData);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.labelPaymentMethod);
@@ -324,7 +346,7 @@
             this.Controls.Add(this.labelSpeakTo);
             this.Controls.Add(this.textBoxSpeakTo);
             this.Controls.Add(this.labelNeedCall);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxNeedCall);
             this.Controls.Add(this.checkBoxFormat);
             this.Controls.Add(this.labelFormat);
             this.Controls.Add(this.checkBoxBackup);
@@ -358,7 +380,7 @@
         private System.Windows.Forms.Label labelSpeakTo;
         private System.Windows.Forms.TextBox textBoxSpeakTo;
         private System.Windows.Forms.Label labelNeedCall;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxNeedCall;
         private System.Windows.Forms.CheckBox checkBoxFormat;
         private System.Windows.Forms.Label labelFormat;
         private System.Windows.Forms.CheckBox checkBoxBackup;
@@ -373,5 +395,7 @@
         private System.Windows.Forms.Label labelProblem;
         private System.Windows.Forms.Button buttonVerify;
         private System.Windows.Forms.Label labelCompletionDateData;
+        private System.Windows.Forms.Label labelStaffMember;
+        private System.Windows.Forms.TextBox textBoxStaffMember;
     }
 }
