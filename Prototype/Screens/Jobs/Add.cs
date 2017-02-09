@@ -25,7 +25,7 @@ namespace Prototype.Screens.Jobs
             MySqlConnection connection = Database.GetConnection();
             connection.Open();
 
-            string sql = "INSERT INTO tbl_jobs (`customerID`, `problem`, `details`, `computerUsername`, `computerPassword`, `backup`, `format`, `shouldCallBefore`, `speakingAuthorisation`, `receiptKey`) VALUES (@customerID, @problem, @details, @computerUsername, @computerPassword, @backup, @format, @shouldCallBefore, @speakingAuthorisation, @receiptKey)";
+            string sql = "INSERT INTO tbl_jobs (customerID, problem, details, computerUsername, computerPassword, backup, format, shouldCallBefore, speakingAuthorisation, receiptKey) VALUES (@customerID, @problem, @details, @computerUsername, @computerPassword, @backup, @format, @shouldCallBefore, @speakingAuthorisation, @receiptKey); INSERT INTO tbl_transactions (jobID, cost, phonedCustomer, leftMessage, amountPaid, paymentMethod, staffUsername) VALUES (LAST_INSERT_ID(), 0.00, 0, 0, 0.00, '', '');";
             MySqlCommand command = new MySqlCommand(sql, connection);
             
             command.Parameters.AddWithValue("@customerID", customerID);
