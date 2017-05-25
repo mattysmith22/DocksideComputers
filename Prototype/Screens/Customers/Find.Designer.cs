@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,6 +68,8 @@
             this.buttonPrint = new System.Windows.Forms.Button();
             this.buttonAddJob = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
+            this.labelBranding = new System.Windows.Forms.Label();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +84,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(672, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(821, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -107,6 +110,7 @@
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.logOutToolStripMenuItem.Text = "Log Out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.exit);
             // 
             // lockToolStripMenuItem
             // 
@@ -238,10 +242,11 @@
             // 
             this.label1.AutoEllipsis = true;
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(13, 28);
+            this.label1.Location = new System.Drawing.Point(14, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Customers";
             // 
@@ -250,17 +255,26 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 45);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.Location = new System.Drawing.Point(17, 78);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(400, 226);
+            this.dataGridView1.Size = new System.Drawing.Size(478, 334);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // checkBoxFilter
             // 
             this.checkBoxFilter.AutoSize = true;
-            this.checkBoxFilter.Location = new System.Drawing.Point(16, 278);
+            this.checkBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxFilter.Location = new System.Drawing.Point(17, 423);
             this.checkBoxFilter.Name = "checkBoxFilter";
             this.checkBoxFilter.Size = new System.Drawing.Size(15, 14);
             this.checkBoxFilter.TabIndex = 3;
@@ -269,19 +283,21 @@
             // 
             // buttonFilter
             // 
-            this.buttonFilter.Location = new System.Drawing.Point(38, 278);
+            this.buttonFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFilter.Location = new System.Drawing.Point(38, 423);
             this.buttonFilter.Name = "buttonFilter";
-            this.buttonFilter.Size = new System.Drawing.Size(75, 23);
+            this.buttonFilter.Size = new System.Drawing.Size(95, 25);
             this.buttonFilter.TabIndex = 4;
-            this.buttonFilter.Text = "Filter";
+            this.buttonFilter.Text = "Search";
             this.buttonFilter.UseVisualStyleBackColor = true;
             this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(120, 278);
+            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdd.Location = new System.Drawing.Point(139, 423);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(95, 25);
             this.buttonAdd.TabIndex = 5;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -290,71 +306,79 @@
             // labelFirstname
             // 
             this.labelFirstname.AutoSize = true;
-            this.labelFirstname.Location = new System.Drawing.Point(423, 45);
+            this.labelFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFirstname.Location = new System.Drawing.Point(501, 78);
             this.labelFirstname.Name = "labelFirstname";
-            this.labelFirstname.Size = new System.Drawing.Size(55, 13);
+            this.labelFirstname.Size = new System.Drawing.Size(84, 20);
             this.labelFirstname.TabIndex = 6;
             this.labelFirstname.Text = "Firstname:";
             // 
             // labelSurname
             // 
             this.labelSurname.AutoSize = true;
-            this.labelSurname.Location = new System.Drawing.Point(423, 58);
+            this.labelSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSurname.Location = new System.Drawing.Point(501, 98);
             this.labelSurname.Name = "labelSurname";
-            this.labelSurname.Size = new System.Drawing.Size(52, 13);
+            this.labelSurname.Size = new System.Drawing.Size(78, 20);
             this.labelSurname.TabIndex = 7;
             this.labelSurname.Text = "Surname:";
             // 
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(422, 71);
+            this.labelAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAddress.Location = new System.Drawing.Point(501, 118);
             this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(48, 13);
+            this.labelAddress.Size = new System.Drawing.Size(72, 20);
             this.labelAddress.TabIndex = 8;
             this.labelAddress.Text = "Address:";
             // 
             // labelTown
             // 
             this.labelTown.AutoSize = true;
-            this.labelTown.Location = new System.Drawing.Point(422, 84);
+            this.labelTown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTown.Location = new System.Drawing.Point(501, 138);
             this.labelTown.Name = "labelTown";
-            this.labelTown.Size = new System.Drawing.Size(37, 13);
+            this.labelTown.Size = new System.Drawing.Size(51, 20);
             this.labelTown.TabIndex = 9;
             this.labelTown.Text = "Town:";
             // 
             // labelCounty
             // 
             this.labelCounty.AutoSize = true;
-            this.labelCounty.Location = new System.Drawing.Point(422, 97);
+            this.labelCounty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCounty.Location = new System.Drawing.Point(501, 158);
             this.labelCounty.Name = "labelCounty";
-            this.labelCounty.Size = new System.Drawing.Size(43, 13);
+            this.labelCounty.Size = new System.Drawing.Size(63, 20);
             this.labelCounty.TabIndex = 10;
             this.labelCounty.Text = "County:";
             // 
             // labelLandline
             // 
             this.labelLandline.AutoSize = true;
-            this.labelLandline.Location = new System.Drawing.Point(422, 110);
+            this.labelLandline.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLandline.Location = new System.Drawing.Point(501, 178);
             this.labelLandline.Name = "labelLandline";
-            this.labelLandline.Size = new System.Drawing.Size(50, 13);
+            this.labelLandline.Size = new System.Drawing.Size(73, 20);
             this.labelLandline.TabIndex = 11;
             this.labelLandline.Text = "Landline:";
             // 
             // labelMobile
             // 
             this.labelMobile.AutoSize = true;
-            this.labelMobile.Location = new System.Drawing.Point(422, 123);
+            this.labelMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMobile.Location = new System.Drawing.Point(501, 198);
             this.labelMobile.Name = "labelMobile";
-            this.labelMobile.Size = new System.Drawing.Size(41, 13);
+            this.labelMobile.Size = new System.Drawing.Size(59, 20);
             this.labelMobile.TabIndex = 12;
             this.labelMobile.Text = "Mobile:";
             // 
             // buttonViewJobs
             // 
-            this.buttonViewJobs.Location = new System.Drawing.Point(423, 247);
+            this.buttonViewJobs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonViewJobs.Location = new System.Drawing.Point(501, 357);
             this.buttonViewJobs.Name = "buttonViewJobs";
-            this.buttonViewJobs.Size = new System.Drawing.Size(75, 23);
+            this.buttonViewJobs.Size = new System.Drawing.Size(95, 25);
             this.buttonViewJobs.TabIndex = 13;
             this.buttonViewJobs.Text = "View Jobs";
             this.buttonViewJobs.UseVisualStyleBackColor = true;
@@ -362,9 +386,10 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(505, 247);
+            this.buttonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEdit.Location = new System.Drawing.Point(602, 357);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(75, 23);
+            this.buttonEdit.Size = new System.Drawing.Size(95, 25);
             this.buttonEdit.TabIndex = 14;
             this.buttonEdit.Text = "Edit";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -372,9 +397,10 @@
             // 
             // buttonPrint
             // 
-            this.buttonPrint.Location = new System.Drawing.Point(587, 247);
+            this.buttonPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrint.Location = new System.Drawing.Point(501, 388);
             this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrint.Size = new System.Drawing.Size(95, 25);
             this.buttonPrint.TabIndex = 15;
             this.buttonPrint.Text = "Print";
             this.buttonPrint.UseVisualStyleBackColor = true;
@@ -382,9 +408,10 @@
             // 
             // buttonAddJob
             // 
-            this.buttonAddJob.Location = new System.Drawing.Point(422, 218);
+            this.buttonAddJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddJob.Location = new System.Drawing.Point(501, 326);
             this.buttonAddJob.Name = "buttonAddJob";
-            this.buttonAddJob.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddJob.Size = new System.Drawing.Size(95, 25);
             this.buttonAddJob.TabIndex = 16;
             this.buttonAddJob.Text = "Add Job";
             this.buttonAddJob.UseVisualStyleBackColor = true;
@@ -392,19 +419,44 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(503, 218);
+            this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.Location = new System.Drawing.Point(602, 326);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(75, 23);
+            this.buttonDelete.Size = new System.Drawing.Size(95, 25);
             this.buttonDelete.TabIndex = 17;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
+            // labelBranding
+            // 
+            this.labelBranding.AutoSize = true;
+            this.labelBranding.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBranding.Location = new System.Drawing.Point(12, 24);
+            this.labelBranding.Name = "labelBranding";
+            this.labelBranding.Size = new System.Drawing.Size(256, 29);
+            this.labelBranding.TabIndex = 18;
+            this.labelBranding.Text = "Dockside Computers";
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.Red;
+            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.Location = new System.Drawing.Point(602, 423);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(95, 25);
+            this.buttonExit.TabIndex = 19;
+            this.buttonExit.Text = "Exit";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.exit);
+            // 
             // Find
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 312);
+            this.ClientSize = new System.Drawing.Size(821, 494);
+            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.labelBranding);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonAddJob);
             this.Controls.Add(this.buttonPrint);
@@ -426,6 +478,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Find";
             this.Text = "Find Customers";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Find_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -475,5 +528,7 @@
         private System.Windows.Forms.Button buttonPrint;
         private System.Windows.Forms.Button buttonAddJob;
         private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.Label labelBranding;
+        private System.Windows.Forms.Button buttonExit;
     }
 }

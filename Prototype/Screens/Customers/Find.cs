@@ -159,5 +159,19 @@ namespace Prototype.Screens.Customers
         {
             MessageBox.Show("As this is a prototype, filtering has not been implemented");
         }
+
+        private void exit(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Find_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult reply = MessageBox.Show("Do you want to close the program?", "Are you sure?",  MessageBoxButtons.YesNo);
+            if (reply == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
