@@ -216,6 +216,7 @@
             this.Controls.Add(this.labelProblem);
             this.Name = "Add";
             this.Text = "Add Job";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Add_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

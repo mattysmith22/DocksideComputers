@@ -13,6 +13,7 @@ namespace Prototype.Screens.Jobs
     public partial class Add : Form
     {
         private int customerID;
+        private bool forceClose = false;
 
         public Add(int customerID)
         {
@@ -43,7 +44,21 @@ namespace Prototype.Screens.Jobs
 
             connection.Close();
 
+            forceClose = true;
+
             this.Close();
+        }
+
+        private void Add_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!forceClose)
+            {
+                DialogResult reply = MessageBox.Show("Do you want to close the program?", "Are you sure?", MessageBoxButtons.YesNo);
+                if (reply == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+            }
         }
     }
 }

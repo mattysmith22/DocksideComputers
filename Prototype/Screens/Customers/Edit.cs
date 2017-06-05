@@ -13,6 +13,7 @@ namespace Prototype.Screens.Customers
     public partial class Edit : Form
     {
         private int customerID;
+        private bool forceClose = false;
 
         public Edit(int customerID)
         {
@@ -74,7 +75,21 @@ namespace Prototype.Screens.Customers
 
             connection.Close();
 
+            forceClose = true;
+
             this.Close();
+        }
+
+        private void Edit_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!forceClose)
+            {
+                DialogResult reply = MessageBox.Show("Do you want to close the program?", "Are you sure?", MessageBoxButtons.YesNo);
+                if (reply == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+            }
         }
     }
 }

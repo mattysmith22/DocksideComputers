@@ -201,6 +201,7 @@
             this.Controls.Add(this.labelFirstname);
             this.Name = "Edit";
             this.Text = "Edit Customer";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Edit_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

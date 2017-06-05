@@ -189,6 +189,7 @@
             this.Controls.Add(this.labelFirstname);
             this.Name = "Add";
             this.Text = "Add Customer";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Add_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

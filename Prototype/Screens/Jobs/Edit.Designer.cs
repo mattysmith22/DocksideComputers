@@ -339,6 +339,7 @@
             this.Controls.Add(this.labelProblem);
             this.Name = "Edit";
             this.Text = "Edit";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Edit_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
