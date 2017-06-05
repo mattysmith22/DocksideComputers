@@ -53,7 +53,7 @@ namespace Prototype.Screens.Jobs
         {
             if (!forceClose)
             {
-                DialogResult reply = MessageBox.Show("Do you want to close the program?", "Are you sure?", MessageBoxButtons.YesNo);
+                DialogResult reply = MessageBox.Show("Do you want to close the form?", "Are you sure?", MessageBoxButtons.YesNo);
                 if (reply == DialogResult.No)
                 {
                     e.Cancel = true;
