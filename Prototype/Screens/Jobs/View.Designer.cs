@@ -61,12 +61,13 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(318, 223);
+            this.buttonEdit.Location = new System.Drawing.Point(318, 224);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(156, 23);
             this.buttonEdit.TabIndex = 55;
             this.buttonEdit.Text = "Edit";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // labelPaymentMethod
             // 

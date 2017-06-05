@@ -46,7 +46,7 @@ namespace Prototype.Screens.Jobs
 
                 try
                 {
-                    labelCompletionDateData.Text = data.GetString(data.GetOrdinal("completionDate"));
+                    labelCompletionDateData.Text = data.GetDateTime(data.GetOrdinal("completionDate")).ToString();
                 }
                 catch
                 {
@@ -71,7 +71,7 @@ namespace Prototype.Screens.Jobs
             Misc.GetReceiptString getReceiptString = new Misc.GetReceiptString();
             getReceiptString.ShowDialog();
 
-            MySqlConnection connection = new MySqlConnection();
+            MySqlConnection connection = Database.GetConnection();
             connection.Open();
 
             string sql = "SELECT jobID FROM tbl_jobs WHERE receiptKey = @receiptKey";
@@ -94,6 +94,13 @@ namespace Prototype.Screens.Jobs
             {
                 MessageBox.Show("Receipt is invalid");
             }
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            Screens.Jobs.Edit editScreen = new Edit(jobID);
+            editScreen.ShowDialog();
+            loadData();
         }
     }
 }

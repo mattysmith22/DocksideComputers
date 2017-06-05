@@ -40,7 +40,7 @@
             this.checkBoxBackup = new System.Windows.Forms.CheckBox();
             this.labelFormat = new System.Windows.Forms.Label();
             this.checkBoxFormat = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxNeedCall = new System.Windows.Forms.CheckBox();
             this.labelNeedCall = new System.Windows.Forms.Label();
             this.textBoxSpeakTo = new System.Windows.Forms.TextBox();
             this.labelSpeakTo = new System.Windows.Forms.Label();
@@ -51,11 +51,14 @@
             this.buttonRegenerate = new System.Windows.Forms.Button();
             this.labelLeftMessage = new System.Windows.Forms.Label();
             this.checkBoxLeftMessage = new System.Windows.Forms.CheckBox();
-            this.textBoxAmountPaid = new System.Windows.Forms.TextBox();
             this.labelAmountPaid = new System.Windows.Forms.Label();
-            this.textBoxPaymentMethod = new System.Windows.Forms.TextBox();
             this.labelPaymentMethod = new System.Windows.Forms.Label();
             this.buttonFinish = new System.Windows.Forms.Button();
+            this.labelCompletionDateData = new System.Windows.Forms.Label();
+            this.numericUpDownAmountPaid = new System.Windows.Forms.NumericUpDown();
+            this.textBoxPaymentMethod = new System.Windows.Forms.TextBox();
+            this.buttonReload = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmountPaid)).BeginInit();
             this.SuspendLayout();
             // 
             // labelProblem
@@ -164,14 +167,14 @@
             this.checkBoxFormat.TabIndex = 11;
             this.checkBoxFormat.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // checkBoxNeedCall
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(77, 203);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxNeedCall.AutoSize = true;
+            this.checkBoxNeedCall.Location = new System.Drawing.Point(77, 203);
+            this.checkBoxNeedCall.Name = "checkBoxNeedCall";
+            this.checkBoxNeedCall.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxNeedCall.TabIndex = 12;
+            this.checkBoxNeedCall.UseVisualStyleBackColor = true;
             // 
             // labelNeedCall
             // 
@@ -211,17 +214,18 @@
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(416, 9);
+            this.buttonRemove.Location = new System.Drawing.Point(416, 28);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(57, 20);
             this.buttonRemove.TabIndex = 18;
             this.buttonRemove.Text = "Remove";
             this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(222, 35);
+            this.label1.Location = new System.Drawing.Point(222, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 19;
@@ -229,16 +233,17 @@
             // 
             // buttonMarkComplete
             // 
-            this.buttonMarkComplete.Location = new System.Drawing.Point(317, 9);
+            this.buttonMarkComplete.Location = new System.Drawing.Point(317, 28);
             this.buttonMarkComplete.Name = "buttonMarkComplete";
             this.buttonMarkComplete.Size = new System.Drawing.Size(93, 20);
             this.buttonMarkComplete.TabIndex = 17;
             this.buttonMarkComplete.Text = "Mark Complete";
             this.buttonMarkComplete.UseVisualStyleBackColor = true;
+            this.buttonMarkComplete.Click += new System.EventHandler(this.buttonMarkComplete_Click);
             // 
             // buttonRegenerate
             // 
-            this.buttonRegenerate.Location = new System.Drawing.Point(317, 35);
+            this.buttonRegenerate.Location = new System.Drawing.Point(317, 54);
             this.buttonRegenerate.Name = "buttonRegenerate";
             this.buttonRegenerate.Size = new System.Drawing.Size(93, 20);
             this.buttonRegenerate.TabIndex = 20;
@@ -248,7 +253,7 @@
             // labelLeftMessage
             // 
             this.labelLeftMessage.AutoSize = true;
-            this.labelLeftMessage.Location = new System.Drawing.Point(222, 62);
+            this.labelLeftMessage.Location = new System.Drawing.Point(222, 81);
             this.labelLeftMessage.Name = "labelLeftMessage";
             this.labelLeftMessage.Size = new System.Drawing.Size(74, 13);
             this.labelLeftMessage.TabIndex = 21;
@@ -257,39 +262,25 @@
             // checkBoxLeftMessage
             // 
             this.checkBoxLeftMessage.AutoSize = true;
-            this.checkBoxLeftMessage.Location = new System.Drawing.Point(317, 62);
+            this.checkBoxLeftMessage.Location = new System.Drawing.Point(317, 81);
             this.checkBoxLeftMessage.Name = "checkBoxLeftMessage";
             this.checkBoxLeftMessage.Size = new System.Drawing.Size(15, 14);
             this.checkBoxLeftMessage.TabIndex = 22;
             this.checkBoxLeftMessage.UseVisualStyleBackColor = true;
             // 
-            // textBoxAmountPaid
-            // 
-            this.textBoxAmountPaid.Location = new System.Drawing.Point(317, 82);
-            this.textBoxAmountPaid.Name = "textBoxAmountPaid";
-            this.textBoxAmountPaid.Size = new System.Drawing.Size(156, 20);
-            this.textBoxAmountPaid.TabIndex = 23;
-            // 
             // labelAmountPaid
             // 
             this.labelAmountPaid.AutoSize = true;
-            this.labelAmountPaid.Location = new System.Drawing.Point(223, 82);
+            this.labelAmountPaid.Location = new System.Drawing.Point(223, 101);
             this.labelAmountPaid.Name = "labelAmountPaid";
             this.labelAmountPaid.Size = new System.Drawing.Size(70, 13);
             this.labelAmountPaid.TabIndex = 24;
             this.labelAmountPaid.Text = "Amount Paid:";
             // 
-            // textBoxPaymentMethod
-            // 
-            this.textBoxPaymentMethod.Location = new System.Drawing.Point(317, 107);
-            this.textBoxPaymentMethod.Name = "textBoxPaymentMethod";
-            this.textBoxPaymentMethod.Size = new System.Drawing.Size(156, 20);
-            this.textBoxPaymentMethod.TabIndex = 25;
-            // 
             // labelPaymentMethod
             // 
             this.labelPaymentMethod.AutoSize = true;
-            this.labelPaymentMethod.Location = new System.Drawing.Point(224, 107);
+            this.labelPaymentMethod.Location = new System.Drawing.Point(224, 126);
             this.labelPaymentMethod.Name = "labelPaymentMethod";
             this.labelPaymentMethod.Size = new System.Drawing.Size(90, 13);
             this.labelPaymentMethod.TabIndex = 26;
@@ -297,23 +288,70 @@
             // 
             // buttonFinish
             // 
-            this.buttonFinish.Location = new System.Drawing.Point(317, 221);
+            this.buttonFinish.Location = new System.Drawing.Point(317, 152);
             this.buttonFinish.Name = "buttonFinish";
             this.buttonFinish.Size = new System.Drawing.Size(156, 23);
             this.buttonFinish.TabIndex = 27;
-            this.buttonFinish.Text = "Finish";
+            this.buttonFinish.Text = "Save and Exit";
             this.buttonFinish.UseVisualStyleBackColor = true;
+            this.buttonFinish.Click += new System.EventHandler(this.buttonFinish_Click);
+            // 
+            // labelCompletionDateData
+            // 
+            this.labelCompletionDateData.AutoSize = true;
+            this.labelCompletionDateData.Location = new System.Drawing.Point(317, 9);
+            this.labelCompletionDateData.Name = "labelCompletionDateData";
+            this.labelCompletionDateData.Size = new System.Drawing.Size(40, 13);
+            this.labelCompletionDateData.TabIndex = 28;
+            this.labelCompletionDateData.Text = "<date>";
+            // 
+            // numericUpDownAmountPaid
+            // 
+            this.numericUpDownAmountPaid.DecimalPlaces = 2;
+            this.numericUpDownAmountPaid.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDownAmountPaid.Location = new System.Drawing.Point(317, 101);
+            this.numericUpDownAmountPaid.Maximum = new decimal(new int[] {
+            4000,
+            0,
+            0,
+            0});
+            this.numericUpDownAmountPaid.Name = "numericUpDownAmountPaid";
+            this.numericUpDownAmountPaid.Size = new System.Drawing.Size(156, 20);
+            this.numericUpDownAmountPaid.TabIndex = 29;
+            // 
+            // textBoxPaymentMethod
+            // 
+            this.textBoxPaymentMethod.Location = new System.Drawing.Point(317, 126);
+            this.textBoxPaymentMethod.Name = "textBoxPaymentMethod";
+            this.textBoxPaymentMethod.Size = new System.Drawing.Size(156, 20);
+            this.textBoxPaymentMethod.TabIndex = 25;
+            // 
+            // buttonReload
+            // 
+            this.buttonReload.Location = new System.Drawing.Point(317, 181);
+            this.buttonReload.Name = "buttonReload";
+            this.buttonReload.Size = new System.Drawing.Size(156, 23);
+            this.buttonReload.TabIndex = 30;
+            this.buttonReload.Text = "Reload";
+            this.buttonReload.UseVisualStyleBackColor = true;
+            this.buttonReload.Click += new System.EventHandler(this.buttonReload_Click);
             // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 254);
+            this.ClientSize = new System.Drawing.Size(608, 319);
+            this.Controls.Add(this.buttonReload);
+            this.Controls.Add(this.numericUpDownAmountPaid);
+            this.Controls.Add(this.labelCompletionDateData);
             this.Controls.Add(this.buttonFinish);
             this.Controls.Add(this.labelPaymentMethod);
             this.Controls.Add(this.textBoxPaymentMethod);
             this.Controls.Add(this.labelAmountPaid);
-            this.Controls.Add(this.textBoxAmountPaid);
             this.Controls.Add(this.checkBoxLeftMessage);
             this.Controls.Add(this.labelLeftMessage);
             this.Controls.Add(this.buttonRegenerate);
@@ -324,7 +362,7 @@
             this.Controls.Add(this.labelSpeakTo);
             this.Controls.Add(this.textBoxSpeakTo);
             this.Controls.Add(this.labelNeedCall);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxNeedCall);
             this.Controls.Add(this.checkBoxFormat);
             this.Controls.Add(this.labelFormat);
             this.Controls.Add(this.checkBoxBackup);
@@ -340,6 +378,7 @@
             this.Name = "Edit";
             this.Text = "Edit";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Edit_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmountPaid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,7 +398,7 @@
         private System.Windows.Forms.CheckBox checkBoxBackup;
         private System.Windows.Forms.Label labelFormat;
         private System.Windows.Forms.CheckBox checkBoxFormat;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxNeedCall;
         private System.Windows.Forms.Label labelNeedCall;
         private System.Windows.Forms.TextBox textBoxSpeakTo;
         private System.Windows.Forms.Label labelSpeakTo;
@@ -370,10 +409,12 @@
         private System.Windows.Forms.Button buttonRegenerate;
         private System.Windows.Forms.Label labelLeftMessage;
         private System.Windows.Forms.CheckBox checkBoxLeftMessage;
-        private System.Windows.Forms.TextBox textBoxAmountPaid;
         private System.Windows.Forms.Label labelAmountPaid;
-        private System.Windows.Forms.TextBox textBoxPaymentMethod;
         private System.Windows.Forms.Label labelPaymentMethod;
         private System.Windows.Forms.Button buttonFinish;
+        private System.Windows.Forms.Label labelCompletionDateData;
+        private System.Windows.Forms.NumericUpDown numericUpDownAmountPaid;
+        private System.Windows.Forms.TextBox textBoxPaymentMethod;
+        private System.Windows.Forms.Button buttonReload;
     }
 }
