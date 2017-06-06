@@ -34,11 +34,11 @@ namespace Prototype.Screens.Customers
             string sql = "SELECT customerID, firstname, surname FROM tbl_customers";
             MySqlDataAdapter data = Database.GetDataAdapter(sql);
 
-            using(DataTable dt = new DataTable()) //Increases efficiency
+            using (DataTable dt = new DataTable()) //Increases efficiency
             {
                 data.Fill(dt);
                 dataGridView1.DataSource = dt;
-            } 
+            }
         }
 
         private int getSelectedCustomerID()//Gets the ID of the selected customer in the dataGridView
@@ -167,11 +167,17 @@ namespace Prototype.Screens.Customers
 
         private void Find_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult reply = MessageBox.Show("Do you want to close the program?", "Are you sure?",  MessageBoxButtons.YesNo);
+            DialogResult reply = MessageBox.Show("Do you want to close the program?", "Are you sure?", MessageBoxButtons.YesNo);
             if (reply == DialogResult.No)
             {
                 e.Cancel = true;
             }
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Security.ChangePassword changePassword = new Security.ChangePassword(Globals.currentUsername);
+            changePassword.ShowDialog();
         }
     }
 }

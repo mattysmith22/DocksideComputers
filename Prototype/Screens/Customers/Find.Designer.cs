@@ -31,13 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.findToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jobToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verifyReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewUnfinishedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,7 +73,6 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.customerToolStripMenuItem,
             this.jobToolStripMenuItem,
             this.adminToolStripMenuItem,
             this.helpToolStripMenuItem});
@@ -91,19 +85,11 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.homeToolStripMenuItem,
             this.logOutToolStripMenuItem,
-            this.lockToolStripMenuItem,
             this.changePasswordToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
-            // 
-            // homeToolStripMenuItem
-            // 
-            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.homeToolStripMenuItem.Text = "Home";
             // 
             // logOutToolStripMenuItem
             // 
@@ -112,38 +98,12 @@
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.exit);
             // 
-            // lockToolStripMenuItem
-            // 
-            this.lockToolStripMenuItem.Name = "lockToolStripMenuItem";
-            this.lockToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.lockToolStripMenuItem.Text = "Lock";
-            // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
             this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
-            // 
-            // customerToolStripMenuItem
-            // 
-            this.customerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.findToolStripMenuItem,
-            this.addToolStripMenuItem});
-            this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
-            this.customerToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.customerToolStripMenuItem.Text = "Customer";
-            // 
-            // findToolStripMenuItem
-            // 
-            this.findToolStripMenuItem.Name = "findToolStripMenuItem";
-            this.findToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
-            this.findToolStripMenuItem.Text = "Find";
-            // 
-            // addToolStripMenuItem
-            // 
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
-            this.addToolStripMenuItem.Text = "Add";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // jobToolStripMenuItem
             // 
@@ -491,13 +451,8 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lockToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem customerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem findToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jobToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verifyReceiptToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewUnfinishedToolStripMenuItem;

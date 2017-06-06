@@ -34,7 +34,7 @@
             this.textBoxOld = new System.Windows.Forms.TextBox();
             this.textBoxNew = new System.Windows.Forms.TextBox();
             this.textBoxNewConfirm = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonChange = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -54,7 +54,6 @@
             this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "New Password:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -71,6 +70,7 @@
             this.textBoxOld.Name = "textBoxOld";
             this.textBoxOld.Size = new System.Drawing.Size(140, 20);
             this.textBoxOld.TabIndex = 3;
+            this.textBoxOld.UseSystemPasswordChar = true;
             // 
             // textBoxNew
             // 
@@ -78,6 +78,7 @@
             this.textBoxNew.Name = "textBoxNew";
             this.textBoxNew.Size = new System.Drawing.Size(140, 20);
             this.textBoxNew.TabIndex = 4;
+            this.textBoxNew.UseSystemPasswordChar = true;
             // 
             // textBoxNewConfirm
             // 
@@ -85,22 +86,24 @@
             this.textBoxNewConfirm.Name = "textBoxNewConfirm";
             this.textBoxNewConfirm.Size = new System.Drawing.Size(140, 20);
             this.textBoxNewConfirm.TabIndex = 5;
+            this.textBoxNewConfirm.UseSystemPasswordChar = true;
             // 
-            // button1
+            // buttonChange
             // 
-            this.button1.Location = new System.Drawing.Point(99, 91);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Change";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonChange.Location = new System.Drawing.Point(99, 91);
+            this.buttonChange.Name = "buttonChange";
+            this.buttonChange.Size = new System.Drawing.Size(140, 23);
+            this.buttonChange.TabIndex = 6;
+            this.buttonChange.Text = "Change";
+            this.buttonChange.UseVisualStyleBackColor = true;
+            this.buttonChange.Click += new System.EventHandler(this.buttonChange_Click);
             // 
             // ChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(251, 126);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonChange);
             this.Controls.Add(this.textBoxNewConfirm);
             this.Controls.Add(this.textBoxNew);
             this.Controls.Add(this.textBoxOld);
@@ -122,6 +125,6 @@
         private System.Windows.Forms.TextBox textBoxOld;
         private System.Windows.Forms.TextBox textBoxNew;
         private System.Windows.Forms.TextBox textBoxNewConfirm;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonChange;
     }
 }
