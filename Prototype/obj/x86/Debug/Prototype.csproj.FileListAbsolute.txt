@@ -147,3 +147,4 @@ C:\Users\Matthew\Documents\Visual Studio 2010\Projects\DocksideComputers\Prototy
 C:\Users\Matthew\Documents\Visual Studio 2010\Projects\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Users.Edit.resources
 C:\Users\Matthew\Documents\Visual Studio 2010\Projects\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Users.View.resources
 C:\Users\Matthew\Documents\Visual Studio 2010\Projects\DocksideComputers\Prototype\obj\x86\Debug\Prototype.csproj.GenerateResource.Cache
+C:\Users\Matthew\Documents\DocksideComputers\Prototype\obj\x86\Debug\Prototype.Screens.Misc.DateTimePicker.resources

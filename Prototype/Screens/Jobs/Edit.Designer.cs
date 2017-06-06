@@ -58,6 +58,7 @@
             this.numericUpDownAmountPaid = new System.Windows.Forms.NumericUpDown();
             this.textBoxPaymentMethod = new System.Windows.Forms.TextBox();
             this.buttonReload = new System.Windows.Forms.Button();
+            this.buttonBackdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmountPaid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -225,7 +226,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(222, 54);
+            this.label1.Location = new System.Drawing.Point(222, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 19;
@@ -243,7 +244,7 @@
             // 
             // buttonRegenerate
             // 
-            this.buttonRegenerate.Location = new System.Drawing.Point(317, 54);
+            this.buttonRegenerate.Location = new System.Drawing.Point(317, 88);
             this.buttonRegenerate.Name = "buttonRegenerate";
             this.buttonRegenerate.Size = new System.Drawing.Size(93, 20);
             this.buttonRegenerate.TabIndex = 20;
@@ -253,7 +254,7 @@
             // labelLeftMessage
             // 
             this.labelLeftMessage.AutoSize = true;
-            this.labelLeftMessage.Location = new System.Drawing.Point(222, 81);
+            this.labelLeftMessage.Location = new System.Drawing.Point(222, 115);
             this.labelLeftMessage.Name = "labelLeftMessage";
             this.labelLeftMessage.Size = new System.Drawing.Size(74, 13);
             this.labelLeftMessage.TabIndex = 21;
@@ -262,7 +263,7 @@
             // checkBoxLeftMessage
             // 
             this.checkBoxLeftMessage.AutoSize = true;
-            this.checkBoxLeftMessage.Location = new System.Drawing.Point(317, 81);
+            this.checkBoxLeftMessage.Location = new System.Drawing.Point(317, 115);
             this.checkBoxLeftMessage.Name = "checkBoxLeftMessage";
             this.checkBoxLeftMessage.Size = new System.Drawing.Size(15, 14);
             this.checkBoxLeftMessage.TabIndex = 22;
@@ -271,7 +272,7 @@
             // labelAmountPaid
             // 
             this.labelAmountPaid.AutoSize = true;
-            this.labelAmountPaid.Location = new System.Drawing.Point(223, 101);
+            this.labelAmountPaid.Location = new System.Drawing.Point(223, 135);
             this.labelAmountPaid.Name = "labelAmountPaid";
             this.labelAmountPaid.Size = new System.Drawing.Size(70, 13);
             this.labelAmountPaid.TabIndex = 24;
@@ -280,7 +281,7 @@
             // labelPaymentMethod
             // 
             this.labelPaymentMethod.AutoSize = true;
-            this.labelPaymentMethod.Location = new System.Drawing.Point(224, 126);
+            this.labelPaymentMethod.Location = new System.Drawing.Point(224, 160);
             this.labelPaymentMethod.Name = "labelPaymentMethod";
             this.labelPaymentMethod.Size = new System.Drawing.Size(90, 13);
             this.labelPaymentMethod.TabIndex = 26;
@@ -288,7 +289,7 @@
             // 
             // buttonFinish
             // 
-            this.buttonFinish.Location = new System.Drawing.Point(317, 152);
+            this.buttonFinish.Location = new System.Drawing.Point(317, 186);
             this.buttonFinish.Name = "buttonFinish";
             this.buttonFinish.Size = new System.Drawing.Size(156, 23);
             this.buttonFinish.TabIndex = 27;
@@ -313,7 +314,7 @@
             0,
             0,
             131072});
-            this.numericUpDownAmountPaid.Location = new System.Drawing.Point(317, 101);
+            this.numericUpDownAmountPaid.Location = new System.Drawing.Point(317, 135);
             this.numericUpDownAmountPaid.Maximum = new decimal(new int[] {
             4000,
             0,
@@ -325,14 +326,14 @@
             // 
             // textBoxPaymentMethod
             // 
-            this.textBoxPaymentMethod.Location = new System.Drawing.Point(317, 126);
+            this.textBoxPaymentMethod.Location = new System.Drawing.Point(317, 160);
             this.textBoxPaymentMethod.Name = "textBoxPaymentMethod";
             this.textBoxPaymentMethod.Size = new System.Drawing.Size(156, 20);
             this.textBoxPaymentMethod.TabIndex = 25;
             // 
             // buttonReload
             // 
-            this.buttonReload.Location = new System.Drawing.Point(317, 181);
+            this.buttonReload.Location = new System.Drawing.Point(317, 215);
             this.buttonReload.Name = "buttonReload";
             this.buttonReload.Size = new System.Drawing.Size(156, 23);
             this.buttonReload.TabIndex = 30;
@@ -340,11 +341,22 @@
             this.buttonReload.UseVisualStyleBackColor = true;
             this.buttonReload.Click += new System.EventHandler(this.buttonReload_Click);
             // 
+            // buttonBackdate
+            // 
+            this.buttonBackdate.Location = new System.Drawing.Point(317, 54);
+            this.buttonBackdate.Name = "buttonBackdate";
+            this.buttonBackdate.Size = new System.Drawing.Size(93, 20);
+            this.buttonBackdate.TabIndex = 31;
+            this.buttonBackdate.Text = "Backdate";
+            this.buttonBackdate.UseVisualStyleBackColor = true;
+            this.buttonBackdate.Click += new System.EventHandler(this.buttonBackdate_Click);
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 319);
+            this.Controls.Add(this.buttonBackdate);
             this.Controls.Add(this.buttonReload);
             this.Controls.Add(this.numericUpDownAmountPaid);
             this.Controls.Add(this.labelCompletionDateData);
@@ -416,5 +428,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDownAmountPaid;
         private System.Windows.Forms.TextBox textBoxPaymentMethod;
         private System.Windows.Forms.Button buttonReload;
+        private System.Windows.Forms.Button buttonBackdate;
     }
 }

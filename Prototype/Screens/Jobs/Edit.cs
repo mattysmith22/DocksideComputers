@@ -24,6 +24,9 @@ namespace Prototype.Screens.Jobs
 
             this.jobID = jobID;
             UpdateData();
+
+            buttonBackdate.Visible = Globals.isAdmin;
+            buttonBackdate.Enabled = Globals.isAdmin;
         }
 
         private void UpdateData()
@@ -132,6 +135,33 @@ namespace Prototype.Screens.Jobs
         {
             dateIsNull = true;
             labelCompletionDateData.Text = "Incomplete";
+        }
+
+        private void buttonBackdate_Click(object sender, EventArgs e)
+        {
+            Screens.Misc.DateTimePicker picker;
+
+            if (dateIsNull)
+            {
+                picker = new Misc.DateTimePicker();
+            }
+            else
+            {
+                picker = new Misc.DateTimePicker(completionDate);
+            }
+
+            picker.ShowDialog();
+
+            dateIsNull = picker.isNull;
+            if(!picker.isNull)
+            {
+                labelCompletionDateData.Text = completionDate.ToString();
+                completionDate = picker.value;
+            }
+            else
+            {
+                labelCompletionDateData.Text = "Incomplete";
+            }
         }
     }
 }

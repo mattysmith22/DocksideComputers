@@ -129,6 +129,12 @@
     <Compile Include="Screens\Misc\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Misc\DateTimePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Misc\DateTimePicker.Designer.cs">
+      <DependentUpon>DateTimePicker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Misc\GetReceiptString.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Misc\About.resx">
       <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Misc\DateTimePicker.resx">
+      <DependentUpon>DateTimePicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Misc\GetReceiptString.resx">
       <DependentUpon>GetReceiptString.cs</DependentUpon>
