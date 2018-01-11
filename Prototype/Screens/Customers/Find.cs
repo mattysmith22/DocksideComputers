@@ -79,8 +79,38 @@ namespace Prototype.Screens.Customers
 
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-            //Functionality not added as this is a prototype
-            MessageBox.Show("This is a prototype, this functionality has not been added");
+            if (dataGridView1.SelectedCells.Count == 1)
+            {
+                int customerID = getSelectedCustomerID(); //Get the ID of the selected customer
+
+                MySqlConnection connection = Database.GetConnection(); //Open database connection
+                connection.Open();
+
+                string sql = "SELECT * FROM tbl_customers WHERE customerID = @id"; //Create query
+                MySqlCommand command = new MySqlCommand(sql, connection);
+                command.Parameters.AddWithValue("@id", customerID);
+
+                MySqlDataReader data = command.ExecuteReader(); //Get Data
+
+                if (data.Read()) //If any is selected at all
+                {
+                    Printing.PrintReceipt document = new Printing.PrintReceipt(getSelectedCustomerID(),
+                        data.GetString("firstname"),
+                        data.GetString("surname"),
+                        data.GetString("address"),
+                        data.GetString("town"),
+                        data.GetString("county"),
+                        data.GetString("landline"),
+                        data.GetString("mobile"));
+
+                    if (printDialog1.ShowDialog() == DialogResult.OK)
+                    {
+                        document.PrinterSettings = printDialog1.PrinterSettings;
+                        document.Print();
+                    }
+                }
+                connection.Close(); //Cleanup
+            }
         }
 
         private void buttonViewJobs_Click(object sender, EventArgs e)

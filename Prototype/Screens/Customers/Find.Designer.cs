@@ -65,6 +65,7 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.labelBranding = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -410,6 +411,10 @@
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.exit);
             // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
             // Find
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -485,5 +490,6 @@
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Label labelBranding;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }
