@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,13 +51,6 @@
             this.checkBoxFilter = new System.Windows.Forms.CheckBox();
             this.buttonFilter = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.labelFirstname = new System.Windows.Forms.Label();
-            this.labelSurname = new System.Windows.Forms.Label();
-            this.labelAddress = new System.Windows.Forms.Label();
-            this.labelTown = new System.Windows.Forms.Label();
-            this.labelCounty = new System.Windows.Forms.Label();
-            this.labelLandline = new System.Windows.Forms.Label();
-            this.labelMobile = new System.Windows.Forms.Label();
             this.buttonViewJobs = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonPrint = new System.Windows.Forms.Button();
@@ -66,6 +59,7 @@
             this.labelBranding = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.textBoxCustomerData = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -216,14 +210,14 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(17, 78);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -263,76 +257,6 @@
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
-            // 
-            // labelFirstname
-            // 
-            this.labelFirstname.AutoSize = true;
-            this.labelFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFirstname.Location = new System.Drawing.Point(501, 78);
-            this.labelFirstname.Name = "labelFirstname";
-            this.labelFirstname.Size = new System.Drawing.Size(84, 20);
-            this.labelFirstname.TabIndex = 6;
-            this.labelFirstname.Text = "Firstname:";
-            // 
-            // labelSurname
-            // 
-            this.labelSurname.AutoSize = true;
-            this.labelSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSurname.Location = new System.Drawing.Point(501, 98);
-            this.labelSurname.Name = "labelSurname";
-            this.labelSurname.Size = new System.Drawing.Size(78, 20);
-            this.labelSurname.TabIndex = 7;
-            this.labelSurname.Text = "Surname:";
-            // 
-            // labelAddress
-            // 
-            this.labelAddress.AutoSize = true;
-            this.labelAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddress.Location = new System.Drawing.Point(501, 118);
-            this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(72, 20);
-            this.labelAddress.TabIndex = 8;
-            this.labelAddress.Text = "Address:";
-            // 
-            // labelTown
-            // 
-            this.labelTown.AutoSize = true;
-            this.labelTown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTown.Location = new System.Drawing.Point(501, 138);
-            this.labelTown.Name = "labelTown";
-            this.labelTown.Size = new System.Drawing.Size(51, 20);
-            this.labelTown.TabIndex = 9;
-            this.labelTown.Text = "Town:";
-            // 
-            // labelCounty
-            // 
-            this.labelCounty.AutoSize = true;
-            this.labelCounty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCounty.Location = new System.Drawing.Point(501, 158);
-            this.labelCounty.Name = "labelCounty";
-            this.labelCounty.Size = new System.Drawing.Size(63, 20);
-            this.labelCounty.TabIndex = 10;
-            this.labelCounty.Text = "County:";
-            // 
-            // labelLandline
-            // 
-            this.labelLandline.AutoSize = true;
-            this.labelLandline.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLandline.Location = new System.Drawing.Point(501, 178);
-            this.labelLandline.Name = "labelLandline";
-            this.labelLandline.Size = new System.Drawing.Size(73, 20);
-            this.labelLandline.TabIndex = 11;
-            this.labelLandline.Text = "Landline:";
-            // 
-            // labelMobile
-            // 
-            this.labelMobile.AutoSize = true;
-            this.labelMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMobile.Location = new System.Drawing.Point(501, 198);
-            this.labelMobile.Name = "labelMobile";
-            this.labelMobile.Size = new System.Drawing.Size(59, 20);
-            this.labelMobile.TabIndex = 12;
-            this.labelMobile.Text = "Mobile:";
             // 
             // buttonViewJobs
             // 
@@ -403,7 +327,7 @@
             // 
             this.buttonExit.BackColor = System.Drawing.Color.Red;
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.Location = new System.Drawing.Point(602, 423);
+            this.buttonExit.Location = new System.Drawing.Point(602, 388);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(95, 25);
             this.buttonExit.TabIndex = 19;
@@ -415,11 +339,23 @@
             // 
             this.printDialog1.UseEXDialog = true;
             // 
+            // textBoxCustomerData
+            // 
+            this.textBoxCustomerData.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxCustomerData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCustomerData.Location = new System.Drawing.Point(502, 78);
+            this.textBoxCustomerData.Multiline = true;
+            this.textBoxCustomerData.Name = "textBoxCustomerData";
+            this.textBoxCustomerData.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxCustomerData.Size = new System.Drawing.Size(307, 242);
+            this.textBoxCustomerData.TabIndex = 20;
+            // 
             // Find
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 494);
+            this.Controls.Add(this.textBoxCustomerData);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.labelBranding);
             this.Controls.Add(this.buttonDelete);
@@ -427,13 +363,6 @@
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonViewJobs);
-            this.Controls.Add(this.labelMobile);
-            this.Controls.Add(this.labelLandline);
-            this.Controls.Add(this.labelCounty);
-            this.Controls.Add(this.labelTown);
-            this.Controls.Add(this.labelAddress);
-            this.Controls.Add(this.labelSurname);
-            this.Controls.Add(this.labelFirstname);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonFilter);
             this.Controls.Add(this.checkBoxFilter);
@@ -444,6 +373,7 @@
             this.Name = "Find";
             this.Text = "Find Customers";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Find_FormClosing);
+            this.Load += new System.EventHandler(this.Find_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -476,13 +406,6 @@
         private System.Windows.Forms.CheckBox checkBoxFilter;
         private System.Windows.Forms.Button buttonFilter;
         private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Label labelFirstname;
-        private System.Windows.Forms.Label labelSurname;
-        private System.Windows.Forms.Label labelAddress;
-        private System.Windows.Forms.Label labelTown;
-        private System.Windows.Forms.Label labelCounty;
-        private System.Windows.Forms.Label labelLandline;
-        private System.Windows.Forms.Label labelMobile;
         private System.Windows.Forms.Button buttonViewJobs;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonPrint;
@@ -491,5 +414,6 @@
         private System.Windows.Forms.Label labelBranding;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.TextBox textBoxCustomerData;
     }
 }

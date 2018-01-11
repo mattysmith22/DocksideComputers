@@ -65,13 +65,13 @@ namespace Prototype.Screens.Customers
 
                 if (data.Read()) //If any is selected at all
                 {
-                    labelFirstname.Text = "Firstname: " + data.GetString("firstname"); //Copy data into labels
-                    labelSurname.Text = "Surname: " + data.GetString("surname");
-                    labelAddress.Text = "Address: " + data.GetString("address");
-                    labelTown.Text = "Town: " + data.GetString("town");
-                    labelCounty.Text = "County: " + data.GetString("county");
-                    labelLandline.Text = "Landline: " + data.GetString("landline");
-                    labelMobile.Text = "Mobile: " + data.GetString("mobile");
+                    textBoxCustomerData.Text= "Firstname: " + data.GetString("firstname") + Environment.NewLine +
+                    "Surname: " + data.GetString("surname") + Environment.NewLine +
+                    "Address: " + data.GetString("address") + Environment.NewLine +
+                    "Town: " + data.GetString("town") + Environment.NewLine +
+                    "County: " + data.GetString("county") + Environment.NewLine +
+                    "Landline: " + data.GetString("landline") + Environment.NewLine +
+                    "Mobile: " + data.GetString("mobile");
                 }
                 connection.Close(); //Cleanup
             }
@@ -208,6 +208,11 @@ namespace Prototype.Screens.Customers
         {
             Security.ChangePassword changePassword = new Security.ChangePassword(Globals.currentUsername);
             changePassword.ShowDialog();
+        }
+
+        private void Find_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
