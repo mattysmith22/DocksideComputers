@@ -65,7 +65,7 @@ namespace Prototype.Screens.Customers
 
                 if (data.Read()) //If any is selected at all
                 {
-                    textBoxCustomerData.Text= "Firstname: " + data.GetString("firstname") + Environment.NewLine +
+                    textBoxCustomerData.Text = "Firstname: " + data.GetString("firstname") + Environment.NewLine +
                     "Surname: " + data.GetString("surname") + Environment.NewLine +
                     "Address: " + data.GetString("address") + Environment.NewLine +
                     "Town: " + data.GetString("town") + Environment.NewLine +
@@ -204,15 +204,48 @@ namespace Prototype.Screens.Customers
             }
         }
 
+        #region Toolstrip Event Handler
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Security.ChangePassword changePassword = new Security.ChangePassword(Globals.currentUsername);
             changePassword.ShowDialog();
         }
 
-        private void Find_Load(object sender, EventArgs e)
+        private void viewUnfinishedToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Jobs.ViewUnfinished viewUnfinished = new Jobs.ViewUnfinished();
+            viewUnfinished.ShowDialog();
         }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Users.Add addUser = new Users.Add();
+            addUser.ShowDialog();
+        }
+
+        private void findToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Users.View viewUser = new Users.View();
+            viewUser.ShowDialog();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Backup.Save saveBackup = new Backup.Save();
+            saveBackup.ShowDialog();
+        }
+
+        private void restoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Backup.Open openBackup = new Backup.Open();
+            openBackup.ShowDialog();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Misc.About about = new Misc.About();
+            about.ShowDialog();
+        }
+        #endregion
     }
 }

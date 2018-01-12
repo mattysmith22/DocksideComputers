@@ -16,16 +16,23 @@ namespace Prototype
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Screens.Security.LogIn logInScreen = new Screens.Security.LogIn();
-            Application.Run(logInScreen);
-
-            if (logInScreen.isLoggedIn)
+            while (true)
             {
-                Globals.currentUsername = logInScreen.username;
-                Globals.isAdmin = logInScreen.isAdmin;
+                Screens.Security.LogIn logInScreen = new Screens.Security.LogIn();
+                Application.Run(logInScreen);
 
-                Screens.Customers.Find mainScreen = new Screens.Customers.Find();
-                Application.Run(mainScreen);
+                if (logInScreen.isLoggedIn)
+                {
+                    Globals.currentUsername = logInScreen.username;
+                    Globals.isAdmin = logInScreen.isAdmin;
+
+                    Screens.Customers.Find mainScreen = new Screens.Customers.Find();
+                    Application.Run(mainScreen);
+                }
+                else
+                {
+                    break;
+                }
             }
         }
     }
