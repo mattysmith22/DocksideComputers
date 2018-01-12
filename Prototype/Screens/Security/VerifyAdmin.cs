@@ -55,6 +55,7 @@ namespace Prototype.Screens.Security
         {
             if (!Globals.isAdmin)
             {
+                MessageBox.Show("Error: User is not admin", "Error");
                 this.Close();
             }
         }
