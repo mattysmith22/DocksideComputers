@@ -33,7 +33,7 @@
             this.buttonFind = new System.Windows.Forms.Button();
             this.labelLocation = new System.Windows.Forms.Label();
             this.textBoxLocation = new System.Windows.Forms.TextBox();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // buttonSave
@@ -45,6 +45,7 @@
             this.buttonSave.TabIndex = 7;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonFind
             // 
@@ -55,6 +56,7 @@
             this.buttonFind.TabIndex = 6;
             this.buttonFind.Text = "Find";
             this.buttonFind.UseVisualStyleBackColor = true;
+            this.buttonFind.Click += new System.EventHandler(this.buttonFind_Click);
             // 
             // labelLocation
             // 
@@ -71,8 +73,14 @@
             this.textBoxLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxLocation.Location = new System.Drawing.Point(92, 12);
             this.textBoxLocation.Name = "textBoxLocation";
+            this.textBoxLocation.ReadOnly = true;
             this.textBoxLocation.Size = new System.Drawing.Size(136, 26);
             this.textBoxLocation.TabIndex = 4;
+            // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.Filter = "SQL Files|*.cs|All files|*.*";
+            this.saveFileDialog.Title = "Where to save SQL File";
             // 
             // Save
             // 
@@ -97,6 +105,6 @@
         private System.Windows.Forms.Button buttonFind;
         private System.Windows.Forms.Label labelLocation;
         private System.Windows.Forms.TextBox textBoxLocation;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }

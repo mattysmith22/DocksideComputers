@@ -41,12 +41,15 @@
             this.textBoxLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxLocation.Location = new System.Drawing.Point(92, 13);
             this.textBoxLocation.Name = "textBoxLocation";
+            this.textBoxLocation.ReadOnly = true;
             this.textBoxLocation.Size = new System.Drawing.Size(136, 26);
             this.textBoxLocation.TabIndex = 0;
             // 
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog1";
+            this.openFileDialog.Filter = "SQL Files|*.cs|All files|*.*";
+            this.openFileDialog.Title = "SQL File to load";
             // 
             // labelLocation
             // 
@@ -67,6 +70,7 @@
             this.buttonFind.TabIndex = 2;
             this.buttonFind.Text = "Find";
             this.buttonFind.UseVisualStyleBackColor = true;
+            this.buttonFind.Click += new System.EventHandler(this.buttonFind_Click);
             // 
             // buttonLoad
             // 
@@ -77,6 +81,7 @@
             this.buttonLoad.TabIndex = 3;
             this.buttonLoad.Text = "Load";
             this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
             // 
             // Open
             // 
