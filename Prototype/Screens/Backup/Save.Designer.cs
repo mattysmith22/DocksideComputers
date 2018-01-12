@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Save));
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonFind = new System.Windows.Forms.Button();
             this.labelLocation = new System.Windows.Forms.Label();
@@ -78,6 +79,7 @@
             this.Controls.Add(this.buttonFind);
             this.Controls.Add(this.labelLocation);
             this.Controls.Add(this.textBoxLocation);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Save";
             this.Text = "Save";
             this.ResumeLayout(false);

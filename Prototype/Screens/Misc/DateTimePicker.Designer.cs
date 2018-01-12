@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DateTimePicker));
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.buttonEnter = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -56,6 +57,7 @@
             this.ClientSize = new System.Drawing.Size(259, 229);
             this.Controls.Add(this.buttonEnter);
             this.Controls.Add(this.monthCalendar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DateTimePicker";
             this.Text = "DateTimePicker";
             this.ResumeLayout(false);

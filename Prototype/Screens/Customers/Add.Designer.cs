@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add));
             this.buttonAdd = new System.Windows.Forms.Button();
             this.textBoxMobile = new System.Windows.Forms.TextBox();
             this.textBoxLandline = new System.Windows.Forms.TextBox();
@@ -187,6 +188,7 @@
             this.Controls.Add(this.labelAddress);
             this.Controls.Add(this.labelSurname);
             this.Controls.Add(this.labelFirstname);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Add";
             this.Text = "Add Customer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Add_FormClosing);

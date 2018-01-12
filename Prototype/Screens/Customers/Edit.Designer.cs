@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit));
             this.labelFirstname = new System.Windows.Forms.Label();
             this.labelSurname = new System.Windows.Forms.Label();
             this.labelAddress = new System.Windows.Forms.Label();
@@ -199,6 +200,7 @@
             this.Controls.Add(this.labelAddress);
             this.Controls.Add(this.labelSurname);
             this.Controls.Add(this.labelFirstname);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Edit";
             this.Text = "Edit Customer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Edit_FormClosing);

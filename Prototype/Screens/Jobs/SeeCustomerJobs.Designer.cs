@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SeeCustomerJobs));
             this.dataGridViewJobs = new System.Windows.Forms.DataGridView();
             this.buttonView = new System.Windows.Forms.Button();
             this.labelProblem = new System.Windows.Forms.Label();
@@ -105,6 +106,7 @@
             this.Controls.Add(this.labelProblem);
             this.Controls.Add(this.buttonView);
             this.Controls.Add(this.dataGridViewJobs);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SeeCustomerJobs";
             this.Text = "View Jobs";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJobs)).EndInit();

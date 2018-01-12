@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewUnfinished));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labelProblem = new System.Windows.Forms.Label();
             this.textBoxProblem = new System.Windows.Forms.TextBox();
@@ -100,6 +101,7 @@
             this.Controls.Add(this.textBoxProblem);
             this.Controls.Add(this.labelProblem);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewUnfinished";
             this.Text = "View Unfinished";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

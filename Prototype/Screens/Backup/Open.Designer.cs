@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Open));
             this.textBoxLocation = new System.Windows.Forms.TextBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.labelLocation = new System.Windows.Forms.Label();
@@ -82,6 +83,7 @@
             this.Controls.Add(this.buttonFind);
             this.Controls.Add(this.labelLocation);
             this.Controls.Add(this.textBoxLocation);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Open";
             this.Text = "Open";
             this.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GetReceiptString));
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxReceiptCode = new System.Windows.Forms.TextBox();
             this.buttonReceiptCode = new System.Windows.Forms.Button();
@@ -67,6 +68,7 @@
             this.Controls.Add(this.buttonReceiptCode);
             this.Controls.Add(this.textBoxReceiptCode);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GetReceiptString";
             this.Text = "Receipt";
             this.ResumeLayout(false);

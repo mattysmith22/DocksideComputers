@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View));
             this.buttonEdit = new System.Windows.Forms.Button();
             this.labelPaymentMethod = new System.Windows.Forms.Label();
             this.textBoxPaymentMethod = new System.Windows.Forms.TextBox();
@@ -360,6 +361,7 @@
             this.Controls.Add(this.labelDetails);
             this.Controls.Add(this.textBoxProblem);
             this.Controls.Add(this.labelProblem);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "View";
             this.Text = "View";
             this.ResumeLayout(false);

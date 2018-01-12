@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add));
             this.labelProblem = new System.Windows.Forms.Label();
             this.labelDetails = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
@@ -214,6 +215,7 @@
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.labelDetails);
             this.Controls.Add(this.labelProblem);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Add";
             this.Text = "Add Job";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Add_FormClosing);

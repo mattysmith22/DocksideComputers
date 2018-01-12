@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add));
             this.buttonAdd = new System.Windows.Forms.Button();
             this.checkBoxIsAdmin = new System.Windows.Forms.CheckBox();
             this.labelIsAdmin = new System.Windows.Forms.Label();
@@ -109,6 +110,7 @@
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsername);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Add";
             this.Text = "Add";
             this.ResumeLayout(false);

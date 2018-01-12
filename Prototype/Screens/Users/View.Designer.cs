@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
@@ -79,6 +80,7 @@
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "View";
             this.Text = "View";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
