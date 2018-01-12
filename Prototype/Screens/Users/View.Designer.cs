@@ -39,48 +39,54 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 13);
+            this.dataGridView1.Location = new System.Drawing.Point(20, 20);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(285, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(428, 231);
             this.dataGridView1.TabIndex = 0;
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(13, 170);
+            this.buttonEdit.Location = new System.Drawing.Point(20, 262);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(91, 23);
+            this.buttonEdit.Size = new System.Drawing.Size(136, 35);
             this.buttonEdit.TabIndex = 1;
             this.buttonEdit.Text = "Edit";
             this.buttonEdit.UseVisualStyleBackColor = true;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(110, 170);
+            this.buttonAdd.Location = new System.Drawing.Point(165, 262);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(91, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(136, 35);
             this.buttonAdd.TabIndex = 2;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(207, 170);
+            this.buttonRemove.Location = new System.Drawing.Point(310, 262);
+            this.buttonRemove.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(91, 23);
+            this.buttonRemove.Size = new System.Drawing.Size(136, 35);
             this.buttonRemove.TabIndex = 3;
             this.buttonRemove.Text = "Remove";
             this.buttonRemove.UseVisualStyleBackColor = true;
             // 
             // View
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(307, 201);
+            this.ClientSize = new System.Drawing.Size(460, 309);
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "View";
             this.Text = "View";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

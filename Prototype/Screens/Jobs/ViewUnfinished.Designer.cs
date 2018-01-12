@@ -41,67 +41,75 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 13);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 14);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(289, 158);
+            this.dataGridView1.Size = new System.Drawing.Size(361, 207);
             this.dataGridView1.TabIndex = 0;
             // 
             // labelProblem
             // 
             this.labelProblem.AutoSize = true;
-            this.labelProblem.Location = new System.Drawing.Point(13, 178);
+            this.labelProblem.Location = new System.Drawing.Point(13, 234);
+            this.labelProblem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProblem.Name = "labelProblem";
-            this.labelProblem.Size = new System.Drawing.Size(48, 13);
+            this.labelProblem.Size = new System.Drawing.Size(71, 20);
             this.labelProblem.TabIndex = 1;
             this.labelProblem.Text = "Problem:";
             // 
             // textBoxProblem
             // 
             this.textBoxProblem.Enabled = false;
-            this.textBoxProblem.Location = new System.Drawing.Point(68, 178);
+            this.textBoxProblem.Location = new System.Drawing.Point(92, 231);
+            this.textBoxProblem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxProblem.Name = "textBoxProblem";
-            this.textBoxProblem.Size = new System.Drawing.Size(234, 20);
+            this.textBoxProblem.Size = new System.Drawing.Size(282, 26);
             this.textBoxProblem.TabIndex = 2;
             // 
             // labelDetails
             // 
             this.labelDetails.AutoSize = true;
-            this.labelDetails.Location = new System.Drawing.Point(13, 203);
+            this.labelDetails.Location = new System.Drawing.Point(13, 270);
+            this.labelDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDetails.Name = "labelDetails";
-            this.labelDetails.Size = new System.Drawing.Size(42, 13);
+            this.labelDetails.Size = new System.Drawing.Size(62, 20);
             this.labelDetails.TabIndex = 3;
             this.labelDetails.Text = "Details:";
             // 
             // textBoxDetails
             // 
             this.textBoxDetails.Enabled = false;
-            this.textBoxDetails.Location = new System.Drawing.Point(68, 204);
+            this.textBoxDetails.Location = new System.Drawing.Point(90, 267);
+            this.textBoxDetails.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxDetails.Multiline = true;
             this.textBoxDetails.Name = "textBoxDetails";
-            this.textBoxDetails.Size = new System.Drawing.Size(234, 75);
+            this.textBoxDetails.Size = new System.Drawing.Size(284, 113);
             this.textBoxDetails.TabIndex = 4;
             // 
             // buttonViewMore
             // 
-            this.buttonViewMore.Location = new System.Drawing.Point(68, 285);
+            this.buttonViewMore.Location = new System.Drawing.Point(90, 390);
+            this.buttonViewMore.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonViewMore.Name = "buttonViewMore";
-            this.buttonViewMore.Size = new System.Drawing.Size(135, 23);
+            this.buttonViewMore.Size = new System.Drawing.Size(284, 35);
             this.buttonViewMore.TabIndex = 5;
             this.buttonViewMore.Text = "View More";
             this.buttonViewMore.UseVisualStyleBackColor = true;
             // 
             // ViewUnfinished
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 320);
+            this.ClientSize = new System.Drawing.Size(387, 436);
             this.Controls.Add(this.buttonViewMore);
             this.Controls.Add(this.textBoxDetails);
             this.Controls.Add(this.labelDetails);
             this.Controls.Add(this.textBoxProblem);
             this.Controls.Add(this.labelProblem);
             this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ViewUnfinished";
             this.Text = "View Unfinished";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

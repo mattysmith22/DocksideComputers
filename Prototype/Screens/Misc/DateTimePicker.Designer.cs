@@ -35,16 +35,18 @@
             // 
             // monthCalendar
             // 
-            this.monthCalendar.Location = new System.Drawing.Point(18, 18);
+            this.monthCalendar.Location = new System.Drawing.Point(23, 23);
+            this.monthCalendar.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
             this.monthCalendar.MaxSelectionCount = 1;
             this.monthCalendar.Name = "monthCalendar";
             this.monthCalendar.TabIndex = 1;
             // 
             // buttonEnter
             // 
-            this.buttonEnter.Location = new System.Drawing.Point(18, 193);
+            this.buttonEnter.Location = new System.Drawing.Point(23, 193);
+            this.buttonEnter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonEnter.Name = "buttonEnter";
-            this.buttonEnter.Size = new System.Drawing.Size(229, 23);
+            this.buttonEnter.Size = new System.Drawing.Size(227, 35);
             this.buttonEnter.TabIndex = 2;
             this.buttonEnter.Text = "Enter";
             this.buttonEnter.UseVisualStyleBackColor = true;
@@ -52,12 +54,14 @@
             // 
             // DateTimePicker
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(259, 229);
+            this.ClientSize = new System.Drawing.Size(264, 238);
             this.Controls.Add(this.buttonEnter);
             this.Controls.Add(this.monthCalendar);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "DateTimePicker";
             this.Text = "DateTimePicker";
             this.ResumeLayout(false);

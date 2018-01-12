@@ -39,58 +39,65 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 13);
+            this.label1.Size = new System.Drawing.Size(174, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "This computer is locked";
             // 
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(15, 26);
+            this.labelUsername.Location = new System.Drawing.Point(13, 29);
+            this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(32, 13);
+            this.labelUsername.Size = new System.Drawing.Size(47, 20);
             this.labelUsername.TabIndex = 1;
             this.labelUsername.Text = "User:";
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(77, 43);
+            this.textBoxPassword.Location = new System.Drawing.Point(103, 49);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(139, 20);
+            this.textBoxPassword.Size = new System.Drawing.Size(206, 26);
             this.textBoxPassword.TabIndex = 2;
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 43);
+            this.label3.Location = new System.Drawing.Point(13, 49);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
+            this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Password:";
             // 
             // buttonUnlock
             // 
-            this.buttonUnlock.Location = new System.Drawing.Point(77, 70);
+            this.buttonUnlock.Location = new System.Drawing.Point(103, 85);
+            this.buttonUnlock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonUnlock.Name = "buttonUnlock";
-            this.buttonUnlock.Size = new System.Drawing.Size(139, 23);
+            this.buttonUnlock.Size = new System.Drawing.Size(206, 28);
             this.buttonUnlock.TabIndex = 4;
             this.buttonUnlock.Text = "Unlock";
             this.buttonUnlock.UseVisualStyleBackColor = true;
             // 
             // Lock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(228, 103);
+            this.ClientSize = new System.Drawing.Size(320, 123);
             this.Controls.Add(this.buttonUnlock);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Lock";
             this.Text = "Locked";
             this.ResumeLayout(false);

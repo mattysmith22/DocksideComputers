@@ -40,9 +40,10 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(75, 89);
+            this.buttonAdd.Location = new System.Drawing.Point(108, 110);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(139, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(208, 35);
             this.buttonAdd.TabIndex = 13;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -50,7 +51,8 @@
             // checkBoxIsAdmin
             // 
             this.checkBoxIsAdmin.AutoSize = true;
-            this.checkBoxIsAdmin.Location = new System.Drawing.Point(75, 69);
+            this.checkBoxIsAdmin.Location = new System.Drawing.Point(108, 86);
+            this.checkBoxIsAdmin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxIsAdmin.Name = "checkBoxIsAdmin";
             this.checkBoxIsAdmin.Size = new System.Drawing.Size(15, 14);
             this.checkBoxIsAdmin.TabIndex = 12;
@@ -59,50 +61,55 @@
             // labelIsAdmin
             // 
             this.labelIsAdmin.AutoSize = true;
-            this.labelIsAdmin.Location = new System.Drawing.Point(10, 69);
+            this.labelIsAdmin.Location = new System.Drawing.Point(13, 82);
+            this.labelIsAdmin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelIsAdmin.Name = "labelIsAdmin";
-            this.labelIsAdmin.Size = new System.Drawing.Size(50, 13);
+            this.labelIsAdmin.Size = new System.Drawing.Size(75, 20);
             this.labelIsAdmin.TabIndex = 11;
             this.labelIsAdmin.Text = "Is Admin:";
             // 
             // textBoxUsername
             // 
-            this.textBoxUsername.Location = new System.Drawing.Point(76, 12);
+            this.textBoxUsername.Location = new System.Drawing.Point(108, 14);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(138, 20);
+            this.textBoxUsername.Size = new System.Drawing.Size(205, 26);
             this.textBoxUsername.TabIndex = 9;
             // 
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(10, 39);
+            this.labelPassword.Location = new System.Drawing.Point(13, 53);
+            this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(56, 13);
+            this.labelPassword.Size = new System.Drawing.Size(82, 20);
             this.labelPassword.TabIndex = 8;
             this.labelPassword.Text = "Password:";
             // 
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(11, 12);
+            this.labelUsername.Location = new System.Drawing.Point(13, 17);
+            this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(58, 13);
+            this.labelUsername.Size = new System.Drawing.Size(87, 20);
             this.labelUsername.TabIndex = 7;
             this.labelUsername.Text = "Username:";
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(76, 38);
+            this.textBoxPassword.Location = new System.Drawing.Point(108, 50);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(138, 20);
+            this.textBoxPassword.Size = new System.Drawing.Size(205, 26);
             this.textBoxPassword.TabIndex = 14;
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // Add
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(222, 124);
+            this.ClientSize = new System.Drawing.Size(325, 153);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.checkBoxIsAdmin);
@@ -110,7 +117,9 @@
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsername);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Add";
             this.Text = "Add";
             this.ResumeLayout(false);

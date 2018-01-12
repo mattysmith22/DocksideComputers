@@ -62,9 +62,10 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(318, 224);
+            this.buttonEdit.Location = new System.Drawing.Point(476, 230);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(156, 23);
+            this.buttonEdit.Size = new System.Drawing.Size(234, 35);
             this.buttonEdit.TabIndex = 55;
             this.buttonEdit.Text = "Edit";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -73,42 +74,47 @@
             // labelPaymentMethod
             // 
             this.labelPaymentMethod.AutoSize = true;
-            this.labelPaymentMethod.Location = new System.Drawing.Point(225, 109);
+            this.labelPaymentMethod.Location = new System.Drawing.Point(334, 157);
+            this.labelPaymentMethod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPaymentMethod.Name = "labelPaymentMethod";
-            this.labelPaymentMethod.Size = new System.Drawing.Size(90, 13);
+            this.labelPaymentMethod.Size = new System.Drawing.Size(133, 20);
             this.labelPaymentMethod.TabIndex = 54;
             this.labelPaymentMethod.Text = "Payment Method:";
             // 
             // textBoxPaymentMethod
             // 
             this.textBoxPaymentMethod.Enabled = false;
-            this.textBoxPaymentMethod.Location = new System.Drawing.Point(318, 109);
+            this.textBoxPaymentMethod.Location = new System.Drawing.Point(478, 154);
+            this.textBoxPaymentMethod.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPaymentMethod.Name = "textBoxPaymentMethod";
-            this.textBoxPaymentMethod.Size = new System.Drawing.Size(156, 20);
+            this.textBoxPaymentMethod.Size = new System.Drawing.Size(232, 26);
             this.textBoxPaymentMethod.TabIndex = 53;
             // 
             // labelAmountPaid
             // 
             this.labelAmountPaid.AutoSize = true;
-            this.labelAmountPaid.Location = new System.Drawing.Point(224, 84);
+            this.labelAmountPaid.Location = new System.Drawing.Point(334, 121);
+            this.labelAmountPaid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAmountPaid.Name = "labelAmountPaid";
-            this.labelAmountPaid.Size = new System.Drawing.Size(70, 13);
+            this.labelAmountPaid.Size = new System.Drawing.Size(104, 20);
             this.labelAmountPaid.TabIndex = 52;
             this.labelAmountPaid.Text = "Amount Paid:";
             // 
             // textBoxAmountPaid
             // 
             this.textBoxAmountPaid.Enabled = false;
-            this.textBoxAmountPaid.Location = new System.Drawing.Point(318, 84);
+            this.textBoxAmountPaid.Location = new System.Drawing.Point(478, 118);
+            this.textBoxAmountPaid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxAmountPaid.Name = "textBoxAmountPaid";
-            this.textBoxAmountPaid.Size = new System.Drawing.Size(156, 20);
+            this.textBoxAmountPaid.Size = new System.Drawing.Size(232, 26);
             this.textBoxAmountPaid.TabIndex = 51;
             // 
             // checkBoxLeftMessage
             // 
             this.checkBoxLeftMessage.AutoSize = true;
             this.checkBoxLeftMessage.Enabled = false;
-            this.checkBoxLeftMessage.Location = new System.Drawing.Point(318, 64);
+            this.checkBoxLeftMessage.Location = new System.Drawing.Point(478, 94);
+            this.checkBoxLeftMessage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxLeftMessage.Name = "checkBoxLeftMessage";
             this.checkBoxLeftMessage.Size = new System.Drawing.Size(15, 14);
             this.checkBoxLeftMessage.TabIndex = 50;
@@ -117,27 +123,30 @@
             // labelLeftMessage
             // 
             this.labelLeftMessage.AutoSize = true;
-            this.labelLeftMessage.Location = new System.Drawing.Point(223, 64);
+            this.labelLeftMessage.Location = new System.Drawing.Point(334, 90);
+            this.labelLeftMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLeftMessage.Name = "labelLeftMessage";
-            this.labelLeftMessage.Size = new System.Drawing.Size(74, 13);
+            this.labelLeftMessage.Size = new System.Drawing.Size(110, 20);
             this.labelLeftMessage.TabIndex = 49;
             this.labelLeftMessage.Text = "Left Message:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(223, 37);
+            this.label1.Location = new System.Drawing.Point(334, 53);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.Size = new System.Drawing.Size(98, 20);
             this.label1.TabIndex = 47;
             this.label1.Text = "Receipt Key:";
             // 
             // labelCompletionDate
             // 
             this.labelCompletionDate.AutoSize = true;
-            this.labelCompletionDate.Location = new System.Drawing.Point(224, 11);
+            this.labelCompletionDate.Location = new System.Drawing.Point(334, 17);
+            this.labelCompletionDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCompletionDate.Name = "labelCompletionDate";
-            this.labelCompletionDate.Size = new System.Drawing.Size(88, 13);
+            this.labelCompletionDate.Size = new System.Drawing.Size(132, 20);
             this.labelCompletionDate.TabIndex = 44;
             this.labelCompletionDate.Text = "Completion Date:";
             // 
@@ -145,27 +154,30 @@
             // 
             this.labelSpeakTo.AllowDrop = true;
             this.labelSpeakTo.AutoSize = true;
-            this.labelSpeakTo.Location = new System.Drawing.Point(13, 226);
+            this.labelSpeakTo.Location = new System.Drawing.Point(13, 273);
+            this.labelSpeakTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSpeakTo.Name = "labelSpeakTo";
-            this.labelSpeakTo.Size = new System.Drawing.Size(57, 13);
+            this.labelSpeakTo.Size = new System.Drawing.Size(81, 20);
             this.labelSpeakTo.TabIndex = 43;
             this.labelSpeakTo.Text = "Speak To:";
             // 
             // textBoxSpeakTo
             // 
             this.textBoxSpeakTo.Enabled = false;
-            this.textBoxSpeakTo.Location = new System.Drawing.Point(76, 225);
+            this.textBoxSpeakTo.Location = new System.Drawing.Point(116, 270);
+            this.textBoxSpeakTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxSpeakTo.Name = "textBoxSpeakTo";
-            this.textBoxSpeakTo.Size = new System.Drawing.Size(141, 20);
+            this.textBoxSpeakTo.Size = new System.Drawing.Size(210, 26);
             this.textBoxSpeakTo.TabIndex = 42;
             // 
             // labelNeedCall
             // 
             this.labelNeedCall.AllowDrop = true;
             this.labelNeedCall.AutoSize = true;
-            this.labelNeedCall.Location = new System.Drawing.Point(13, 206);
+            this.labelNeedCall.Location = new System.Drawing.Point(226, 245);
+            this.labelNeedCall.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNeedCall.Name = "labelNeedCall";
-            this.labelNeedCall.Size = new System.Drawing.Size(56, 13);
+            this.labelNeedCall.Size = new System.Drawing.Size(81, 20);
             this.labelNeedCall.TabIndex = 41;
             this.labelNeedCall.Text = "Need Call:";
             // 
@@ -173,7 +185,8 @@
             // 
             this.checkBoxNeedCall.AutoSize = true;
             this.checkBoxNeedCall.Enabled = false;
-            this.checkBoxNeedCall.Location = new System.Drawing.Point(78, 205);
+            this.checkBoxNeedCall.Location = new System.Drawing.Point(311, 249);
+            this.checkBoxNeedCall.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxNeedCall.Name = "checkBoxNeedCall";
             this.checkBoxNeedCall.Size = new System.Drawing.Size(15, 14);
             this.checkBoxNeedCall.TabIndex = 40;
@@ -183,7 +196,8 @@
             // 
             this.checkBoxFormat.AutoSize = true;
             this.checkBoxFormat.Enabled = false;
-            this.checkBoxFormat.Location = new System.Drawing.Point(77, 186);
+            this.checkBoxFormat.Location = new System.Drawing.Point(203, 249);
+            this.checkBoxFormat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxFormat.Name = "checkBoxFormat";
             this.checkBoxFormat.Size = new System.Drawing.Size(15, 14);
             this.checkBoxFormat.TabIndex = 39;
@@ -193,9 +207,10 @@
             // 
             this.labelFormat.AllowDrop = true;
             this.labelFormat.AutoSize = true;
-            this.labelFormat.Location = new System.Drawing.Point(13, 186);
+            this.labelFormat.Location = new System.Drawing.Point(131, 245);
+            this.labelFormat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFormat.Name = "labelFormat";
-            this.labelFormat.Size = new System.Drawing.Size(42, 13);
+            this.labelFormat.Size = new System.Drawing.Size(64, 20);
             this.labelFormat.TabIndex = 38;
             this.labelFormat.Text = "Format:";
             // 
@@ -203,7 +218,8 @@
             // 
             this.checkBoxBackup.AutoSize = true;
             this.checkBoxBackup.Enabled = false;
-            this.checkBoxBackup.Location = new System.Drawing.Point(78, 166);
+            this.checkBoxBackup.Location = new System.Drawing.Point(108, 249);
+            this.checkBoxBackup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxBackup.Name = "checkBoxBackup";
             this.checkBoxBackup.Size = new System.Drawing.Size(15, 14);
             this.checkBoxBackup.TabIndex = 37;
@@ -213,27 +229,30 @@
             // 
             this.labelBackup.AllowDrop = true;
             this.labelBackup.AutoSize = true;
-            this.labelBackup.Location = new System.Drawing.Point(13, 166);
+            this.labelBackup.Location = new System.Drawing.Point(33, 245);
+            this.labelBackup.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelBackup.Name = "labelBackup";
-            this.labelBackup.Size = new System.Drawing.Size(47, 13);
+            this.labelBackup.Size = new System.Drawing.Size(67, 20);
             this.labelBackup.TabIndex = 36;
             this.labelBackup.Text = "Backup:";
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.Enabled = false;
-            this.textBoxPassword.Location = new System.Drawing.Point(78, 140);
+            this.textBoxPassword.Location = new System.Drawing.Point(116, 206);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(141, 20);
+            this.textBoxPassword.Size = new System.Drawing.Size(210, 26);
             this.textBoxPassword.TabIndex = 35;
             // 
             // labelPassword
             // 
             this.labelPassword.AllowDrop = true;
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(13, 142);
+            this.labelPassword.Location = new System.Drawing.Point(13, 209);
+            this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(56, 13);
+            this.labelPassword.Size = new System.Drawing.Size(82, 20);
             this.labelPassword.TabIndex = 34;
             this.labelPassword.Text = "Password:";
             // 
@@ -241,61 +260,68 @@
             // 
             this.labelUsername.AllowDrop = true;
             this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(14, 116);
+            this.labelUsername.Location = new System.Drawing.Point(13, 173);
+            this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(58, 13);
+            this.labelUsername.Size = new System.Drawing.Size(87, 20);
             this.labelUsername.TabIndex = 33;
             this.labelUsername.Text = "Username:";
             // 
             // textBoxUsername
             // 
             this.textBoxUsername.Enabled = false;
-            this.textBoxUsername.Location = new System.Drawing.Point(78, 116);
+            this.textBoxUsername.Location = new System.Drawing.Point(116, 170);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(141, 20);
+            this.textBoxUsername.Size = new System.Drawing.Size(210, 26);
             this.textBoxUsername.TabIndex = 32;
             // 
             // textBoxDetails
             // 
             this.textBoxDetails.Enabled = false;
-            this.textBoxDetails.Location = new System.Drawing.Point(76, 37);
+            this.textBoxDetails.Location = new System.Drawing.Point(116, 50);
+            this.textBoxDetails.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxDetails.Multiline = true;
             this.textBoxDetails.Name = "textBoxDetails";
-            this.textBoxDetails.Size = new System.Drawing.Size(141, 73);
+            this.textBoxDetails.Size = new System.Drawing.Size(210, 110);
             this.textBoxDetails.TabIndex = 31;
             // 
             // labelDetails
             // 
             this.labelDetails.AllowDrop = true;
             this.labelDetails.AutoSize = true;
-            this.labelDetails.Location = new System.Drawing.Point(14, 37);
+            this.labelDetails.Location = new System.Drawing.Point(13, 53);
+            this.labelDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDetails.Name = "labelDetails";
-            this.labelDetails.Size = new System.Drawing.Size(42, 13);
+            this.labelDetails.Size = new System.Drawing.Size(62, 20);
             this.labelDetails.TabIndex = 30;
             this.labelDetails.Text = "Details:";
             // 
             // textBoxProblem
             // 
             this.textBoxProblem.Enabled = false;
-            this.textBoxProblem.Location = new System.Drawing.Point(77, 11);
+            this.textBoxProblem.Location = new System.Drawing.Point(116, 14);
+            this.textBoxProblem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxProblem.Name = "textBoxProblem";
-            this.textBoxProblem.Size = new System.Drawing.Size(141, 20);
+            this.textBoxProblem.Size = new System.Drawing.Size(210, 26);
             this.textBoxProblem.TabIndex = 29;
             // 
             // labelProblem
             // 
             this.labelProblem.AutoSize = true;
-            this.labelProblem.Location = new System.Drawing.Point(13, 11);
+            this.labelProblem.Location = new System.Drawing.Point(13, 17);
+            this.labelProblem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProblem.Name = "labelProblem";
-            this.labelProblem.Size = new System.Drawing.Size(48, 13);
+            this.labelProblem.Size = new System.Drawing.Size(71, 20);
             this.labelProblem.TabIndex = 28;
             this.labelProblem.Text = "Problem:";
             // 
             // buttonVerify
             // 
-            this.buttonVerify.Location = new System.Drawing.Point(318, 37);
+            this.buttonVerify.Location = new System.Drawing.Point(478, 53);
+            this.buttonVerify.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonVerify.Name = "buttonVerify";
-            this.buttonVerify.Size = new System.Drawing.Size(93, 20);
+            this.buttonVerify.Size = new System.Drawing.Size(140, 31);
             this.buttonVerify.TabIndex = 48;
             this.buttonVerify.Text = "Verify";
             this.buttonVerify.UseVisualStyleBackColor = true;
@@ -304,34 +330,37 @@
             // labelCompletionDateData
             // 
             this.labelCompletionDateData.AutoSize = true;
-            this.labelCompletionDateData.Location = new System.Drawing.Point(319, 11);
+            this.labelCompletionDateData.Location = new System.Drawing.Point(474, 17);
+            this.labelCompletionDateData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCompletionDateData.Name = "labelCompletionDateData";
-            this.labelCompletionDateData.Size = new System.Drawing.Size(40, 13);
+            this.labelCompletionDateData.Size = new System.Drawing.Size(59, 20);
             this.labelCompletionDateData.TabIndex = 56;
             this.labelCompletionDateData.Text = "<date>";
             // 
             // labelStaffMember
             // 
             this.labelStaffMember.AutoSize = true;
-            this.labelStaffMember.Location = new System.Drawing.Point(225, 133);
+            this.labelStaffMember.Location = new System.Drawing.Point(334, 193);
+            this.labelStaffMember.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStaffMember.Name = "labelStaffMember";
-            this.labelStaffMember.Size = new System.Drawing.Size(72, 13);
+            this.labelStaffMember.Size = new System.Drawing.Size(110, 20);
             this.labelStaffMember.TabIndex = 57;
             this.labelStaffMember.Text = "Staff member:";
             // 
             // textBoxStaffMember
             // 
             this.textBoxStaffMember.Enabled = false;
-            this.textBoxStaffMember.Location = new System.Drawing.Point(318, 133);
+            this.textBoxStaffMember.Location = new System.Drawing.Point(478, 190);
+            this.textBoxStaffMember.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxStaffMember.Name = "textBoxStaffMember";
-            this.textBoxStaffMember.Size = new System.Drawing.Size(156, 20);
+            this.textBoxStaffMember.Size = new System.Drawing.Size(232, 26);
             this.textBoxStaffMember.TabIndex = 58;
             // 
             // View
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 259);
+            this.ClientSize = new System.Drawing.Size(723, 306);
             this.Controls.Add(this.textBoxStaffMember);
             this.Controls.Add(this.labelStaffMember);
             this.Controls.Add(this.labelCompletionDateData);
@@ -361,7 +390,9 @@
             this.Controls.Add(this.labelDetails);
             this.Controls.Add(this.textBoxProblem);
             this.Controls.Add(this.labelProblem);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "View";
             this.Text = "View";
             this.ResumeLayout(false);

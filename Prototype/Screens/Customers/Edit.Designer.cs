@@ -50,120 +50,142 @@
             // labelFirstname
             // 
             this.labelFirstname.AutoSize = true;
-            this.labelFirstname.Location = new System.Drawing.Point(12, 9);
+            this.labelFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFirstname.Location = new System.Drawing.Point(13, 12);
+            this.labelFirstname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFirstname.Name = "labelFirstname";
-            this.labelFirstname.Size = new System.Drawing.Size(55, 13);
+            this.labelFirstname.Size = new System.Drawing.Size(84, 20);
             this.labelFirstname.TabIndex = 0;
             this.labelFirstname.Text = "Firstname:";
             // 
             // labelSurname
             // 
             this.labelSurname.AutoSize = true;
-            this.labelSurname.Location = new System.Drawing.Point(12, 35);
+            this.labelSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSurname.Location = new System.Drawing.Point(13, 48);
+            this.labelSurname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSurname.Name = "labelSurname";
-            this.labelSurname.Size = new System.Drawing.Size(52, 13);
+            this.labelSurname.Size = new System.Drawing.Size(78, 20);
             this.labelSurname.TabIndex = 1;
             this.labelSurname.Text = "Surname:";
             // 
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(12, 61);
+            this.labelAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAddress.Location = new System.Drawing.Point(13, 84);
+            this.labelAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(48, 13);
+            this.labelAddress.Size = new System.Drawing.Size(72, 20);
             this.labelAddress.TabIndex = 2;
             this.labelAddress.Text = "Address:";
             // 
             // labelTown
             // 
             this.labelTown.AutoSize = true;
-            this.labelTown.Location = new System.Drawing.Point(12, 87);
+            this.labelTown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTown.Location = new System.Drawing.Point(13, 120);
+            this.labelTown.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTown.Name = "labelTown";
-            this.labelTown.Size = new System.Drawing.Size(37, 13);
+            this.labelTown.Size = new System.Drawing.Size(51, 20);
             this.labelTown.TabIndex = 3;
             this.labelTown.Text = "Town:";
             // 
             // labelCounty
             // 
             this.labelCounty.AutoSize = true;
-            this.labelCounty.Location = new System.Drawing.Point(12, 113);
+            this.labelCounty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCounty.Location = new System.Drawing.Point(13, 156);
+            this.labelCounty.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCounty.Name = "labelCounty";
-            this.labelCounty.Size = new System.Drawing.Size(43, 13);
+            this.labelCounty.Size = new System.Drawing.Size(63, 20);
             this.labelCounty.TabIndex = 4;
             this.labelCounty.Text = "County:";
             // 
             // labelLandline
             // 
             this.labelLandline.AutoSize = true;
-            this.labelLandline.Location = new System.Drawing.Point(12, 139);
+            this.labelLandline.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLandline.Location = new System.Drawing.Point(13, 192);
+            this.labelLandline.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLandline.Name = "labelLandline";
-            this.labelLandline.Size = new System.Drawing.Size(50, 13);
+            this.labelLandline.Size = new System.Drawing.Size(73, 20);
             this.labelLandline.TabIndex = 5;
             this.labelLandline.Text = "Landline:";
             // 
             // labelMobile
             // 
             this.labelMobile.AutoSize = true;
-            this.labelMobile.Location = new System.Drawing.Point(12, 165);
+            this.labelMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMobile.Location = new System.Drawing.Point(13, 228);
+            this.labelMobile.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMobile.Name = "labelMobile";
-            this.labelMobile.Size = new System.Drawing.Size(41, 13);
+            this.labelMobile.Size = new System.Drawing.Size(59, 20);
             this.labelMobile.TabIndex = 6;
             this.labelMobile.Text = "Mobile:";
             // 
             // textBoxFirstname
             // 
-            this.textBoxFirstname.Location = new System.Drawing.Point(73, 9);
+            this.textBoxFirstname.Location = new System.Drawing.Point(105, 9);
+            this.textBoxFirstname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxFirstname.Name = "textBoxFirstname";
-            this.textBoxFirstname.Size = new System.Drawing.Size(160, 20);
+            this.textBoxFirstname.Size = new System.Drawing.Size(238, 26);
             this.textBoxFirstname.TabIndex = 7;
             // 
             // textBoxSurname
             // 
-            this.textBoxSurname.Location = new System.Drawing.Point(73, 35);
+            this.textBoxSurname.Location = new System.Drawing.Point(104, 45);
+            this.textBoxSurname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxSurname.Name = "textBoxSurname";
-            this.textBoxSurname.Size = new System.Drawing.Size(160, 20);
+            this.textBoxSurname.Size = new System.Drawing.Size(238, 26);
             this.textBoxSurname.TabIndex = 8;
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(73, 61);
+            this.textBoxAddress.Location = new System.Drawing.Point(104, 81);
+            this.textBoxAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(160, 20);
+            this.textBoxAddress.Size = new System.Drawing.Size(238, 26);
             this.textBoxAddress.TabIndex = 9;
             // 
             // textBoxTown
             // 
-            this.textBoxTown.Location = new System.Drawing.Point(73, 87);
+            this.textBoxTown.Location = new System.Drawing.Point(104, 117);
+            this.textBoxTown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxTown.Name = "textBoxTown";
-            this.textBoxTown.Size = new System.Drawing.Size(160, 20);
+            this.textBoxTown.Size = new System.Drawing.Size(238, 26);
             this.textBoxTown.TabIndex = 10;
             // 
             // textBoxCounty
             // 
-            this.textBoxCounty.Location = new System.Drawing.Point(73, 113);
+            this.textBoxCounty.Location = new System.Drawing.Point(104, 153);
+            this.textBoxCounty.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxCounty.Name = "textBoxCounty";
-            this.textBoxCounty.Size = new System.Drawing.Size(160, 20);
+            this.textBoxCounty.Size = new System.Drawing.Size(238, 26);
             this.textBoxCounty.TabIndex = 11;
             // 
             // textBoxLandline
             // 
-            this.textBoxLandline.Location = new System.Drawing.Point(73, 139);
+            this.textBoxLandline.Location = new System.Drawing.Point(104, 189);
+            this.textBoxLandline.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxLandline.Name = "textBoxLandline";
-            this.textBoxLandline.Size = new System.Drawing.Size(160, 20);
+            this.textBoxLandline.Size = new System.Drawing.Size(238, 26);
             this.textBoxLandline.TabIndex = 12;
             // 
             // textBoxMobile
             // 
-            this.textBoxMobile.Location = new System.Drawing.Point(73, 165);
+            this.textBoxMobile.Location = new System.Drawing.Point(104, 225);
+            this.textBoxMobile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxMobile.Name = "textBoxMobile";
-            this.textBoxMobile.Size = new System.Drawing.Size(160, 20);
+            this.textBoxMobile.Size = new System.Drawing.Size(238, 26);
             this.textBoxMobile.TabIndex = 13;
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(132, 192);
+            this.buttonEdit.Location = new System.Drawing.Point(193, 261);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(100, 23);
+            this.buttonEdit.Size = new System.Drawing.Size(150, 35);
             this.buttonEdit.TabIndex = 14;
             this.buttonEdit.Text = "Edit";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -171,9 +193,10 @@
             // 
             // buttonRevert
             // 
-            this.buttonRevert.Location = new System.Drawing.Point(26, 192);
+            this.buttonRevert.Location = new System.Drawing.Point(35, 261);
+            this.buttonRevert.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonRevert.Name = "buttonRevert";
-            this.buttonRevert.Size = new System.Drawing.Size(100, 23);
+            this.buttonRevert.Size = new System.Drawing.Size(150, 35);
             this.buttonRevert.TabIndex = 15;
             this.buttonRevert.Text = "Revert";
             this.buttonRevert.UseVisualStyleBackColor = true;
@@ -181,9 +204,9 @@
             // 
             // Edit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(246, 228);
+            this.ClientSize = new System.Drawing.Size(354, 305);
             this.Controls.Add(this.buttonRevert);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.textBoxMobile);
@@ -200,7 +223,9 @@
             this.Controls.Add(this.labelAddress);
             this.Controls.Add(this.labelSurname);
             this.Controls.Add(this.labelFirstname);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Edit";
             this.Text = "Edit Customer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Edit_FormClosing);

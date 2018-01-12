@@ -43,72 +43,81 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(13, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(84, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Firstname:";
             // 
             // textBoxFirstname
             // 
-            this.textBoxFirstname.Location = new System.Drawing.Point(74, 13);
+            this.textBoxFirstname.Location = new System.Drawing.Point(105, 14);
+            this.textBoxFirstname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxFirstname.Name = "textBoxFirstname";
-            this.textBoxFirstname.Size = new System.Drawing.Size(136, 20);
+            this.textBoxFirstname.Size = new System.Drawing.Size(202, 26);
             this.textBoxFirstname.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 39);
+            this.label2.Location = new System.Drawing.Point(13, 53);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Surname:";
             // 
             // textBoxSurname
             // 
-            this.textBoxSurname.Location = new System.Drawing.Point(74, 39);
+            this.textBoxSurname.Location = new System.Drawing.Point(104, 50);
+            this.textBoxSurname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxSurname.Name = "textBoxSurname";
-            this.textBoxSurname.Size = new System.Drawing.Size(136, 20);
+            this.textBoxSurname.Size = new System.Drawing.Size(202, 26);
             this.textBoxSurname.TabIndex = 3;
             // 
             // textBoxLandline
             // 
-            this.textBoxLandline.Location = new System.Drawing.Point(74, 65);
+            this.textBoxLandline.Location = new System.Drawing.Point(104, 86);
+            this.textBoxLandline.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxLandline.Name = "textBoxLandline";
-            this.textBoxLandline.Size = new System.Drawing.Size(136, 20);
+            this.textBoxLandline.Size = new System.Drawing.Size(202, 26);
             this.textBoxLandline.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 65);
+            this.label3.Location = new System.Drawing.Point(13, 89);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.Size = new System.Drawing.Size(73, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Landline:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 91);
+            this.label4.Location = new System.Drawing.Point(13, 125);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 13);
+            this.label4.Size = new System.Drawing.Size(59, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Mobile:";
             // 
             // textBoxMobile
             // 
-            this.textBoxMobile.Location = new System.Drawing.Point(74, 91);
+            this.textBoxMobile.Location = new System.Drawing.Point(104, 122);
+            this.textBoxMobile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxMobile.Name = "textBoxMobile";
-            this.textBoxMobile.Size = new System.Drawing.Size(136, 20);
+            this.textBoxMobile.Size = new System.Drawing.Size(202, 26);
             this.textBoxMobile.TabIndex = 7;
             // 
             // buttonFilter
             // 
-            this.buttonFilter.Location = new System.Drawing.Point(74, 118);
+            this.buttonFilter.Location = new System.Drawing.Point(102, 158);
+            this.buttonFilter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonFilter.Name = "buttonFilter";
-            this.buttonFilter.Size = new System.Drawing.Size(136, 23);
+            this.buttonFilter.Size = new System.Drawing.Size(204, 35);
             this.buttonFilter.TabIndex = 8;
             this.buttonFilter.Text = "Filter";
             this.buttonFilter.UseVisualStyleBackColor = true;
@@ -116,9 +125,9 @@
             // 
             // Filter
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(222, 149);
+            this.ClientSize = new System.Drawing.Size(317, 205);
             this.Controls.Add(this.buttonFilter);
             this.Controls.Add(this.textBoxMobile);
             this.Controls.Add(this.label4);
@@ -128,7 +137,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxFirstname);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Filter";
             this.Text = "Filter";
             this.ResumeLayout(false);
