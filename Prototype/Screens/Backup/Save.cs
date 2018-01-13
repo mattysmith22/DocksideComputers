@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace Prototype.Screens.Backup
 {
@@ -27,30 +28,37 @@ namespace Prototype.Screens.Backup
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection connection = Database.GetConnection())
+            try
             {
-                using (MySqlCommand cmd = new MySqlCommand())
+                using (MySqlConnection connection = Database.GetConnection())
                 {
-                    using (MySqlBackup backup = new MySqlBackup(cmd))
+                    using (MySqlCommand cmd = new MySqlCommand())
                     {
-                        cmd.Connection = connection;
-                        connection.Open();
-                        backup.ExportInfo.ExportEvents = false;
-                        backup.ExportInfo.ExportFunctions = false;
-                        backup.ExportInfo.ExportProcedures = false;
-                        backup.ExportInfo.ExportRoutinesWithoutDefiner = false;
-                        backup.ExportInfo.ExportRows = true;
-                        backup.ExportInfo.ExportTableStructure = true;
-                        backup.ExportInfo.ExportTriggers = false;
-                        backup.ExportInfo.ExportViews = false;
-                        backup.ExportInfo.RowsExportMode = RowsDataExportMode.OnDuplicateKeyUpdate;
-                        backup.ExportInfo.TablesToBeExportedList = new List<string>() {"tbl_customers", "tbl_jobs", "tbl_staff", "tbl_transactions"};
+                        using (MySqlBackup backup = new MySqlBackup(cmd))
+                        {
+                            cmd.Connection = connection;
+                            connection.Open();
+                            backup.ExportInfo.ExportEvents = false;
+                            backup.ExportInfo.ExportFunctions = false;
+                            backup.ExportInfo.ExportProcedures = false;
+                            backup.ExportInfo.ExportRoutinesWithoutDefiner = false;
+                            backup.ExportInfo.ExportRows = true;
+                            backup.ExportInfo.ExportTableStructure = true;
+                            backup.ExportInfo.ExportTriggers = false;
+                            backup.ExportInfo.ExportViews = false;
+                            backup.ExportInfo.RowsExportMode = RowsDataExportMode.OnDuplicateKeyUpdate;
+                            backup.ExportInfo.TablesToBeExportedList = new List<string>() { "tbl_customers", "tbl_jobs", "tbl_staff", "tbl_transactions" };
 
-                        backup.ExportToFile(textBoxLocation.Text);
-                        MessageBox.Show("Backup completed");
-                        connection.Close();
+                            backup.ExportToFile(textBoxLocation.Text);
+                            MessageBox.Show("Backup completed");
+                            connection.Close();
+                        }
                     }
                 }
+            }
+            catch
+            {
+                MessageBox.Show("There was an error in the backup process, maybe check the file path?", "Error");
             }
         }
     }

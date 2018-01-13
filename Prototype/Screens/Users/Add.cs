@@ -103,5 +103,17 @@ namespace Prototype.Screens.Users
         {
             shouldPopUp = true;
         }
+
+        private void Add_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (shouldPopUp)
+            {
+                DialogResult reply = MessageBox.Show("Do you want to close the form?", "Are you sure?", MessageBoxButtons.YesNo);
+                if (reply == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
     }
 }

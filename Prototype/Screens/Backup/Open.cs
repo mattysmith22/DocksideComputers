@@ -27,20 +27,27 @@ namespace Prototype.Screens.Backup
 
         private void buttonLoad_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection connection = Database.GetConnection())
+            try
             {
-                using (MySqlCommand cmd = new MySqlCommand())
+                using (MySqlConnection connection = Database.GetConnection())
                 {
-                    using (MySqlBackup backup = new MySqlBackup(cmd))
+                    using (MySqlCommand cmd = new MySqlCommand())
                     {
-                        cmd.Connection = connection;
-                        connection.Open();
-                        backup.ImportInfo.TargetDatabase = "dockside";
-                        backup.ImportFromFile(textBoxLocation.Text);
-                        MessageBox.Show("Backup loaded");
-                        connection.Close();
+                        using (MySqlBackup backup = new MySqlBackup(cmd))
+                        {
+                            cmd.Connection = connection;
+                            connection.Open();
+                            backup.ImportInfo.TargetDatabase = "dockside";
+                            backup.ImportFromFile(textBoxLocation.Text);
+                            MessageBox.Show("Backup loaded");
+                            connection.Close();
+                        }
                     }
                 }
+            }
+            catch
+            {
+                MessageBox.Show("There was an error in the restore process, maybe check the file path?", "Error");
             }
         }
     }

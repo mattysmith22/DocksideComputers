@@ -127,6 +127,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Edit";
             this.Text = "Edit";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Edit_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
