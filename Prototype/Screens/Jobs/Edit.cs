@@ -52,7 +52,7 @@ namespace Prototype.Screens.Jobs
             try
             {
                 completionDate = data.GetDateTime(data.GetOrdinal("completionDate"));
-                labelCompletionDateData.Text = completionDate.ToString();
+                labelCompletionDateData.Text = completionDate.ToString("dd/MM/yyyy");
                 dateIsNull = false;
             }
             catch
