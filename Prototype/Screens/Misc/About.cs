@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.IO;
 
 namespace Prototype.Screens.Misc
 {
@@ -14,6 +16,15 @@ namespace Prototype.Screens.Misc
         public About()
         {
             InitializeComponent();
+            using (Stream stream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream("Prototype.Resources.about.rtf"))
+            {
+                richTextBoxAbout.LoadFile(stream, RichTextBoxStreamType.RichText);
+            }
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

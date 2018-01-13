@@ -281,6 +281,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Resources\about.rtf" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DocksideIcon.ico" />
