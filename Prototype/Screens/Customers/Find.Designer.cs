@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Find));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +50,6 @@
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.checkBoxSearchEnabled = new System.Windows.Forms.CheckBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonViewJobs = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
@@ -223,14 +222,14 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(16, 84);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -238,17 +237,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(729, 461);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // checkBoxSearchEnabled
-            // 
-            this.checkBoxSearchEnabled.AutoSize = true;
-            this.checkBoxSearchEnabled.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxSearchEnabled.Location = new System.Drawing.Point(16, 59);
-            this.checkBoxSearchEnabled.Name = "checkBoxSearchEnabled";
-            this.checkBoxSearchEnabled.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxSearchEnabled.TabIndex = 3;
-            this.checkBoxSearchEnabled.UseVisualStyleBackColor = true;
-            this.checkBoxSearchEnabled.CheckedChanged += new System.EventHandler(this.buttonSearch_Click);
             // 
             // buttonAdd
             // 
@@ -347,9 +335,9 @@
             // textBoxQuery
             // 
             this.textBoxQuery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxQuery.Location = new System.Drawing.Point(37, 52);
+            this.textBoxQuery.Location = new System.Drawing.Point(16, 52);
             this.textBoxQuery.Name = "textBoxQuery";
-            this.textBoxQuery.Size = new System.Drawing.Size(414, 26);
+            this.textBoxQuery.Size = new System.Drawing.Size(435, 26);
             this.textBoxQuery.TabIndex = 22;
             this.textBoxQuery.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxQuery_KeyUp);
             // 
@@ -397,7 +385,6 @@
             this.Controls.Add(this.buttonViewJobs);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonSearch);
-            this.Controls.Add(this.checkBoxSearchEnabled);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -436,7 +423,6 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.CheckBox checkBoxSearchEnabled;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonViewJobs;

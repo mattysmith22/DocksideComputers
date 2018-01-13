@@ -23,7 +23,6 @@ namespace Prototype.Screens.Customers
 
             updateDataTable();
 
-            toolTip.SetToolTip(checkBoxSearchEnabled, "Sets whether the search options are active");
             toolTip.SetToolTip(textBoxQuery, "Search options for customers");
             toolTip.SetToolTip(buttonSearch, "Run the typed-in search");
             toolTip.SetToolTip(buttonAdd, "Add a new customer");
@@ -40,7 +39,7 @@ namespace Prototype.Screens.Customers
             string sql;
 
             //Get relevant data
-            if (checkBoxSearchEnabled.Checked)
+            if (textBoxQuery.Text.Trim().Length != 0) //if there is something in query box
             {
                 sql = "SELECT * FROM tbl_customers WHERE MATCH (firstname, surname, address, town, county, mobile, landline) AGAINST (@query IN NATURAL LANGUAGE MODE)"; //Create query
             }
