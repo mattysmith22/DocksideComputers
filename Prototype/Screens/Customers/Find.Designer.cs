@@ -141,7 +141,7 @@
             this.findToolStripMenuItem,
             this.addToolStripMenuItem});
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
-            this.userToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(130, 26);
             this.userToolStripMenuItem.Text = "User";
             // 
             // findToolStripMenuItem
@@ -164,7 +164,7 @@
             this.saveToolStripMenuItem,
             this.restoreToolStripMenuItem});
             this.backupToolStripMenuItem.Name = "backupToolStripMenuItem";
-            this.backupToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.backupToolStripMenuItem.Size = new System.Drawing.Size(130, 26);
             this.backupToolStripMenuItem.Text = "Backup";
             // 
             // saveToolStripMenuItem
@@ -231,6 +231,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(16, 55);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(478, 456);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
