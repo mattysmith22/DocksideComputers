@@ -285,8 +285,6 @@
   <ItemGroup>
     <Content Include="DocksideIcon.ico" />
     <Content Include="icon.ico" />
-    <Content Include="Resources\DocksideLogo.png" />
-    <Content Include="Resources\DocksideLogoTitle.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\DocksideIcon.ico" />
