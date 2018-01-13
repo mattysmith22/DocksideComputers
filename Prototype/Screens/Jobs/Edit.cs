@@ -179,6 +179,8 @@ namespace Prototype.Screens.Jobs
 
         private void buttonRegenerate_Click(object sender, EventArgs e)
         {
+            receiptKey = Receipts.GenerateReceiptKey();
+            MessageBox.Show("Receipt key changed");
             shouldPopUp = true;
         }
     }
