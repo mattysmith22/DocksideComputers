@@ -30,9 +30,19 @@ namespace Prototype.Screens.Customers
 
         private void updateDataTable() //Does what it says on the tin
         {
+            string sql;
+
             //Get relevant data
-            string sql = "SELECT customerID, firstname, surname FROM tbl_customers";
+            if (checkBoxSearchEnabled.Checked)
+            {
+                sql = "SELECT * FROM tbl_customers WHERE MATCH (firstname, surname, address, town, county, mobile, landline) AGAINST (@query IN NATURAL LANGUAGE MODE)"; //Create query
+            }
+            else
+            {
+                sql = "SELECT * FROM tbl_customers"; //Create query
+            }
             MySqlDataAdapter data = Database.GetDataAdapter(sql);
+            data.SelectCommand.Parameters.AddWithValue("@query", textBoxQuery.Text);
 
             using (DataTable dt = new DataTable()) //Increases efficiency
             {
@@ -48,6 +58,8 @@ namespace Prototype.Screens.Customers
 
         private void updateDataList() //Updates the in-depth list of details on the right-hand side of the selected customer
         {
+            MySqlCommand command;
+
             Debug.WriteLine("Selected cells:" + dataGridView1.SelectedCells.Count.ToString());
             if (dataGridView1.SelectedRows.Count == 1)
             {
@@ -57,7 +69,7 @@ namespace Prototype.Screens.Customers
                 connection.Open();
 
                 string sql = "SELECT * FROM tbl_customers WHERE customerID = @id"; //Create query
-                MySqlCommand command = new MySqlCommand(sql, connection);
+                command = new MySqlCommand(sql, connection);
                 command.Parameters.AddWithValue("@id", customerID);
 
                 MySqlDataReader data = command.ExecuteReader(); //Get Data
@@ -176,19 +188,6 @@ namespace Prototype.Screens.Customers
             }
         }
 
-        private void buttonFilter_Click(object sender, EventArgs e)
-        {
-            Filter filterScreen = new Filter(filterOptions);
-            filterScreen.ShowDialog();
-
-            filterOptions = filterScreen.filterOptions;
-        }
-
-        private void checkBoxFilter_CheckedChanged(object sender, EventArgs e)
-        {
-            MessageBox.Show("As this is a prototype, filtering has not been implemented");
-        }
-
         private void exit(object sender, EventArgs e)
         {
             this.Close();
@@ -275,6 +274,19 @@ namespace Prototype.Screens.Customers
             else
             {
                 MessageBox.Show("Invalid receipt code, please try again");
+            }
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            updateDataTable();
+        }
+
+        private void textBoxQuery_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyData == Keys.Enter)
+            {
+                updateDataTable();
             }
         }
     }

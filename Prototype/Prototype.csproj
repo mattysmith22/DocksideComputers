@@ -204,6 +204,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Screens\Backup\Open.resx">
       <DependentUpon>Open.cs</DependentUpon>
@@ -286,6 +287,7 @@
   <ItemGroup>
     <Content Include="DocksideIcon.ico" />
     <Content Include="icon.ico" />
+    <EmbeddedResource Include="Resources\search.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\DocksideIcon.ico" />

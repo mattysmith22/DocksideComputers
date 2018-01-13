@@ -49,8 +49,7 @@
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.checkBoxFilter = new System.Windows.Forms.CheckBox();
-            this.buttonFilter = new System.Windows.Forms.Button();
+            this.checkBoxSearchEnabled = new System.Windows.Forms.CheckBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonViewJobs = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
@@ -60,7 +59,9 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.textBoxCustomerData = new System.Windows.Forms.TextBox();
+            this.textBoxQuery = new System.Windows.Forms.TextBox();
             this.pictureBoxBranding = new System.Windows.Forms.PictureBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBranding)).BeginInit();
@@ -76,7 +77,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(821, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(1070, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -141,20 +142,20 @@
             this.findToolStripMenuItem,
             this.addToolStripMenuItem});
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
-            this.userToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(130, 26);
             this.userToolStripMenuItem.Text = "User";
             // 
             // findToolStripMenuItem
             // 
             this.findToolStripMenuItem.Name = "findToolStripMenuItem";
-            this.findToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.findToolStripMenuItem.Size = new System.Drawing.Size(110, 26);
             this.findToolStripMenuItem.Text = "Find";
             this.findToolStripMenuItem.Click += new System.EventHandler(this.findToolStripMenuItem_Click);
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(110, 26);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
@@ -164,7 +165,7 @@
             this.saveToolStripMenuItem,
             this.restoreToolStripMenuItem});
             this.backupToolStripMenuItem.Name = "backupToolStripMenuItem";
-            this.backupToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.backupToolStripMenuItem.Size = new System.Drawing.Size(130, 26);
             this.backupToolStripMenuItem.Text = "Backup";
             // 
             // saveToolStripMenuItem
@@ -193,14 +194,14 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem1
             // 
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(122, 26);
             this.helpToolStripMenuItem1.Text = "Help";
             // 
             // label1
@@ -228,42 +229,31 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 55);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 84);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(478, 456);
+            this.dataGridView1.Size = new System.Drawing.Size(729, 461);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
-            // checkBoxFilter
+            // checkBoxSearchEnabled
             // 
-            this.checkBoxFilter.AutoSize = true;
-            this.checkBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxFilter.Location = new System.Drawing.Point(12, 517);
-            this.checkBoxFilter.Name = "checkBoxFilter";
-            this.checkBoxFilter.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxFilter.TabIndex = 3;
-            this.checkBoxFilter.UseVisualStyleBackColor = true;
-            this.checkBoxFilter.CheckedChanged += new System.EventHandler(this.checkBoxFilter_CheckedChanged);
-            // 
-            // buttonFilter
-            // 
-            this.buttonFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFilter.Location = new System.Drawing.Point(33, 517);
-            this.buttonFilter.Name = "buttonFilter";
-            this.buttonFilter.Size = new System.Drawing.Size(95, 28);
-            this.buttonFilter.TabIndex = 4;
-            this.buttonFilter.Text = "Search";
-            this.buttonFilter.UseVisualStyleBackColor = true;
-            this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
+            this.checkBoxSearchEnabled.AutoSize = true;
+            this.checkBoxSearchEnabled.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxSearchEnabled.Location = new System.Drawing.Point(16, 59);
+            this.checkBoxSearchEnabled.Name = "checkBoxSearchEnabled";
+            this.checkBoxSearchEnabled.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxSearchEnabled.TabIndex = 3;
+            this.checkBoxSearchEnabled.UseVisualStyleBackColor = true;
+            this.checkBoxSearchEnabled.CheckedChanged += new System.EventHandler(this.buttonSearch_Click);
             // 
             // buttonAdd
             // 
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.Location = new System.Drawing.Point(134, 517);
+            this.buttonAdd.Location = new System.Drawing.Point(500, 52);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(95, 28);
+            this.buttonAdd.Size = new System.Drawing.Size(245, 28);
             this.buttonAdd.TabIndex = 5;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -272,7 +262,7 @@
             // buttonViewJobs
             // 
             this.buttonViewJobs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonViewJobs.Location = new System.Drawing.Point(500, 449);
+            this.buttonViewJobs.Location = new System.Drawing.Point(862, 483);
             this.buttonViewJobs.Name = "buttonViewJobs";
             this.buttonViewJobs.Size = new System.Drawing.Size(95, 28);
             this.buttonViewJobs.TabIndex = 13;
@@ -283,7 +273,7 @@
             // buttonEdit
             // 
             this.buttonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEdit.Location = new System.Drawing.Point(601, 449);
+            this.buttonEdit.Location = new System.Drawing.Point(963, 483);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(95, 28);
             this.buttonEdit.TabIndex = 14;
@@ -294,7 +284,7 @@
             // buttonPrint
             // 
             this.buttonPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrint.Location = new System.Drawing.Point(500, 483);
+            this.buttonPrint.Location = new System.Drawing.Point(862, 517);
             this.buttonPrint.Name = "buttonPrint";
             this.buttonPrint.Size = new System.Drawing.Size(95, 28);
             this.buttonPrint.TabIndex = 15;
@@ -305,7 +295,7 @@
             // buttonAddJob
             // 
             this.buttonAddJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddJob.Location = new System.Drawing.Point(500, 415);
+            this.buttonAddJob.Location = new System.Drawing.Point(862, 449);
             this.buttonAddJob.Name = "buttonAddJob";
             this.buttonAddJob.Size = new System.Drawing.Size(95, 28);
             this.buttonAddJob.TabIndex = 16;
@@ -316,7 +306,7 @@
             // buttonDelete
             // 
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(601, 415);
+            this.buttonDelete.Location = new System.Drawing.Point(963, 449);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(95, 28);
             this.buttonDelete.TabIndex = 17;
@@ -328,7 +318,7 @@
             // 
             this.buttonExit.BackColor = System.Drawing.Color.Red;
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.Location = new System.Drawing.Point(601, 483);
+            this.buttonExit.Location = new System.Drawing.Point(963, 517);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(95, 28);
             this.buttonExit.TabIndex = 19;
@@ -344,7 +334,7 @@
             // 
             this.textBoxCustomerData.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxCustomerData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerData.Location = new System.Drawing.Point(502, 120);
+            this.textBoxCustomerData.Location = new System.Drawing.Point(751, 154);
             this.textBoxCustomerData.Multiline = true;
             this.textBoxCustomerData.Name = "textBoxCustomerData";
             this.textBoxCustomerData.ReadOnly = true;
@@ -352,21 +342,45 @@
             this.textBoxCustomerData.Size = new System.Drawing.Size(307, 289);
             this.textBoxCustomerData.TabIndex = 20;
             // 
+            // textBoxQuery
+            // 
+            this.textBoxQuery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxQuery.Location = new System.Drawing.Point(37, 52);
+            this.textBoxQuery.Name = "textBoxQuery";
+            this.textBoxQuery.Size = new System.Drawing.Size(414, 26);
+            this.textBoxQuery.TabIndex = 22;
+            this.textBoxQuery.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxQuery_KeyUp);
+            // 
             // pictureBoxBranding
             // 
             this.pictureBoxBranding.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBranding.Image")));
-            this.pictureBoxBranding.Location = new System.Drawing.Point(576, 32);
+            this.pictureBoxBranding.Location = new System.Drawing.Point(825, 32);
             this.pictureBoxBranding.Name = "pictureBoxBranding";
             this.pictureBoxBranding.Size = new System.Drawing.Size(233, 82);
             this.pictureBoxBranding.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxBranding.TabIndex = 21;
             this.pictureBoxBranding.TabStop = false;
             // 
+            // buttonSearch
+            // 
+            this.buttonSearch.BackgroundImage = global::Prototype.Properties.Resources.search;
+            this.buttonSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSearch.Image = global::Prototype.Properties.Resources.search;
+            this.buttonSearch.Location = new System.Drawing.Point(457, 52);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(37, 26);
+            this.buttonSearch.TabIndex = 4;
+            this.buttonSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
             // Find
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 550);
+            this.ClientSize = new System.Drawing.Size(1070, 550);
+            this.Controls.Add(this.textBoxQuery);
             this.Controls.Add(this.pictureBoxBranding);
             this.Controls.Add(this.textBoxCustomerData);
             this.Controls.Add(this.buttonExit);
@@ -376,8 +390,8 @@
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonViewJobs);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.buttonFilter);
-            this.Controls.Add(this.checkBoxFilter);
+            this.Controls.Add(this.buttonSearch);
+            this.Controls.Add(this.checkBoxSearchEnabled);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -416,8 +430,8 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.CheckBox checkBoxFilter;
-        private System.Windows.Forms.Button buttonFilter;
+        private System.Windows.Forms.CheckBox checkBoxSearchEnabled;
+        private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonViewJobs;
         private System.Windows.Forms.Button buttonEdit;
@@ -428,5 +442,6 @@
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.TextBox textBoxCustomerData;
         private System.Windows.Forms.PictureBox pictureBoxBranding;
+        private System.Windows.Forms.TextBox textBoxQuery;
     }
 }
