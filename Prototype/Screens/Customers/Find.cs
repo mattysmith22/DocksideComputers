@@ -43,14 +43,13 @@ namespace Prototype.Screens.Customers
 
         private int getSelectedCustomerID()//Gets the ID of the selected customer in the dataGridView
         {
-            int rowIndex = dataGridView1.SelectedCells[0].RowIndex;
-            return (int)dataGridView1.Rows[rowIndex].Cells["customerID"].Value;
+            return (int)dataGridView1.SelectedRows[0].Cells["customerID"].Value;
         }
 
         private void updateDataList() //Updates the in-depth list of details on the right-hand side of the selected customer
         {
             Debug.WriteLine("Selected cells:" + dataGridView1.SelectedCells.Count.ToString());
-            if (dataGridView1.SelectedCells.Count == 1)
+            if (dataGridView1.SelectedRows.Count == 1)
             {
                 int customerID = getSelectedCustomerID(); //Get the ID of the selected customer
 
