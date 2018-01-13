@@ -65,6 +65,7 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(205, 26);
             this.textBoxUsername.TabIndex = 2;
+            this.textBoxUsername.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // buttonReset
             // 
@@ -75,6 +76,7 @@
             this.buttonReset.TabIndex = 3;
             this.buttonReset.Text = "Reset";
             this.buttonReset.UseVisualStyleBackColor = true;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
             // labelIsAdmin
             // 
@@ -95,6 +97,7 @@
             this.checkBoxIsAdmin.Size = new System.Drawing.Size(15, 14);
             this.checkBoxIsAdmin.TabIndex = 5;
             this.checkBoxIsAdmin.UseVisualStyleBackColor = true;
+            this.checkBoxIsAdmin.CheckedChanged += new System.EventHandler(this.ChangeMade);
             // 
             // buttonModify
             // 
@@ -105,6 +108,7 @@
             this.buttonModify.TabIndex = 6;
             this.buttonModify.Text = "Modify";
             this.buttonModify.UseVisualStyleBackColor = true;
+            this.buttonModify.Click += new System.EventHandler(this.buttonModify_Click);
             // 
             // Edit
             // 

@@ -47,6 +47,7 @@
             this.buttonAdd.TabIndex = 13;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // checkBoxIsAdmin
             // 
@@ -57,6 +58,7 @@
             this.checkBoxIsAdmin.Size = new System.Drawing.Size(15, 14);
             this.checkBoxIsAdmin.TabIndex = 12;
             this.checkBoxIsAdmin.UseVisualStyleBackColor = true;
+            this.checkBoxIsAdmin.CheckedChanged += new System.EventHandler(this.ChangeMade);
             // 
             // labelIsAdmin
             // 
@@ -75,6 +77,7 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(205, 26);
             this.textBoxUsername.TabIndex = 9;
+            this.textBoxUsername.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // labelPassword
             // 
@@ -104,6 +107,7 @@
             this.textBoxPassword.Size = new System.Drawing.Size(205, 26);
             this.textBoxPassword.TabIndex = 14;
             this.textBoxPassword.UseSystemPasswordChar = true;
+            this.textBoxPassword.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // Add
             // 
