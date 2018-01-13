@@ -247,5 +247,36 @@ namespace Prototype.Screens.Customers
             about.ShowDialog();
         }
         #endregion
+
+        private void verifyReceiptToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Misc.GetReceiptString receiptString = new Misc.GetReceiptString();
+            receiptString.ShowDialog();
+
+            string receiptCode = receiptString.receiptCode;
+            MySqlConnection connection = Database.GetConnection();
+            connection.Open();
+
+            string sql = "SELECT * FROM tbl_jobs WHERE receiptKey = @receiptCode";
+            MySqlCommand command = new MySqlCommand(sql, connection);
+
+            command.Parameters.AddWithValue("@receiptcode", receiptCode);
+
+            MySqlDataReader reader = command.ExecuteReader();
+
+            if(reader.Read())
+            {
+                DialogResult result = MessageBox.Show("Job Found, would you like to open?", "Success", MessageBoxButtons.YesNo);
+                if(result == DialogResult.Yes)
+                {
+                    Jobs.View viewJob = new Jobs.View(reader.GetInt32("jobID"));
+                    viewJob.ShowDialog();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid receipt code, please try again");
+            }
+        }
     }
 }
