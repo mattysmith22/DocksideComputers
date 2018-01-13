@@ -13,19 +13,26 @@ namespace Prototype.Screens.Customers
 {
     public partial class Find : Form
     {
-        FilterOptions filterOptions;
 
         public Find()
         {
             InitializeComponent();
-            adminToolStripMenuItem.Visible = Globals.isAdmin; //Only show admin menus if the user is an administrator
+
+            buttonDelete.Visible = Globals.isAdmin; //Only show admin menus if the user is an administrator
+            adminToolStripMenuItem.Visible = Globals.isAdmin;
+
             updateDataTable();
 
-            filterOptions = new FilterOptions();
-            filterOptions.firstname = "";
-            filterOptions.surname = "";
-            filterOptions.mobile = "";
-            filterOptions.landline = "";
+            toolTip.SetToolTip(checkBoxSearchEnabled, "Sets whether the search options are active");
+            toolTip.SetToolTip(textBoxQuery, "Search options for customers");
+            toolTip.SetToolTip(buttonSearch, "Run the typed-in search");
+            toolTip.SetToolTip(buttonAdd, "Add a new customer");
+            toolTip.SetToolTip(buttonAddJob, "Add a job to the selected customer");
+            toolTip.SetToolTip(buttonDelete, "Delete the selected customer");
+            toolTip.SetToolTip(buttonViewJobs, "View all jobs stored by a customer");
+            toolTip.SetToolTip(buttonEdit, "Edit a customer's details");
+            toolTip.SetToolTip(buttonPrint, "Print out the details of a customer");
+            toolTip.SetToolTip(buttonExit, "Log out of the current account");
         }
 
         private void updateDataTable() //Does what it says on the tin
