@@ -51,5 +51,23 @@ namespace Prototype
                 throw new FormatException("Value must be more than 0");
             }
         }
+
+        public static bool IsDatabaseConnected(out string errorMessage)
+        {
+            errorMessage = "";
+
+            MySqlConnection connection = GetConnection();
+
+            try
+            {
+                connection.Open();
+                return true;
+            }
+            catch(MySqlException e)
+            {
+                errorMessage = e.Message;
+                return false;
+            }
+        }
     }
 }

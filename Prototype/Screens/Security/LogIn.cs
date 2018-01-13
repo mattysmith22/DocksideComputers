@@ -20,6 +20,19 @@ namespace Prototype.Screens.Security
         public LogIn()
         {
             InitializeComponent();
+            string errormessage;
+            if(Database.IsDatabaseConnected(out errormessage))
+            {
+                labelConnectionStatus.ForeColor = Color.Green;
+                labelConnectionStatus.Text = "Connected";
+                toolTip.SetToolTip(labelConnectionStatus, "Connection success");
+            }
+            else
+            {
+                labelConnectionStatus.ForeColor = Color.Red;
+                labelConnectionStatus.Text = "Disconnected";
+                toolTip.SetToolTip(labelConnectionStatus, errormessage);
+            }
         }
 
         //Verifies the logon credentials

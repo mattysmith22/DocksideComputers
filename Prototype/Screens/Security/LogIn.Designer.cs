@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn));
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,6 +37,8 @@
             this.buttonLogIn = new System.Windows.Forms.Button();
             this.labelStatus = new System.Windows.Forms.Label();
             this.pictureBoxBranding = new System.Windows.Forms.PictureBox();
+            this.labelConnectionStatus = new System.Windows.Forms.Label();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBranding)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,11 +116,22 @@
             this.pictureBoxBranding.TabIndex = 6;
             this.pictureBoxBranding.TabStop = false;
             // 
+            // labelConnectionStatus
+            // 
+            this.labelConnectionStatus.AutoSize = true;
+            this.labelConnectionStatus.Location = new System.Drawing.Point(66, 229);
+            this.labelConnectionStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelConnectionStatus.Name = "labelConnectionStatus";
+            this.labelConnectionStatus.Size = new System.Drawing.Size(56, 20);
+            this.labelConnectionStatus.TabIndex = 7;
+            this.labelConnectionStatus.Text = "Status";
+            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(336, 254);
+            this.Controls.Add(this.labelConnectionStatus);
             this.Controls.Add(this.pictureBoxBranding);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.buttonLogIn);
@@ -148,5 +162,7 @@
         private System.Windows.Forms.Button buttonLogIn;
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.PictureBox pictureBoxBranding;
+        private System.Windows.Forms.Label labelConnectionStatus;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
