@@ -43,7 +43,7 @@ namespace Prototype.Screens.Backup
                         backup.ExportInfo.ExportTableStructure = true;
                         backup.ExportInfo.ExportTriggers = false;
                         backup.ExportInfo.ExportViews = false;
-                        backup.ExportInfo.RowsExportMode = RowsDataExportMode.Insert;
+                        backup.ExportInfo.RowsExportMode = RowsDataExportMode.OnDuplicateKeyUpdate;
                         backup.ExportInfo.TablesToBeExportedList = new List<string>() {"tbl_customers", "tbl_jobs", "tbl_staff", "tbl_transactions"};
 
                         backup.ExportToFile(textBoxLocation.Text);

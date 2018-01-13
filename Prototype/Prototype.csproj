@@ -285,7 +285,11 @@
   <ItemGroup>
     <Content Include="DocksideIcon.ico" />
     <Content Include="icon.ico" />
-    <Content Include="Resources\DocksideIcon.ico" />
+    <Content Include="Resources\DocksideLogo.png" />
+    <Content Include="Resources\DocksideLogoTitle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\DocksideIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
