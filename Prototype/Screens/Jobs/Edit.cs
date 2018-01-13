@@ -12,7 +12,7 @@ namespace Prototype.Screens.Jobs
 {
     public partial class Edit : Form
     {
-        private bool forceClose = false;
+        private bool shouldPopUp = false;
         private int jobID;
         private DateTime completionDate;
         private bool dateIsNull = true;
@@ -66,11 +66,13 @@ namespace Prototype.Screens.Jobs
             receiptKey = data.GetString(data.GetOrdinal("receiptKey"));
             data.Close();
             connection.Close();
+
+            shouldPopUp = false;
         }
 
         private void Edit_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!forceClose)
+            if (shouldPopUp)
             {
                 DialogResult reply = MessageBox.Show("Do you want to close the form?", "Are you sure?", MessageBoxButtons.YesNo);
                 if (reply == DialogResult.No)
@@ -115,7 +117,7 @@ namespace Prototype.Screens.Jobs
 
             connection.Close();
 
-            forceClose = true;
+            shouldPopUp = false;
             this.Close();
         }
 
@@ -129,12 +131,16 @@ namespace Prototype.Screens.Jobs
             dateIsNull = false;
             completionDate = DateTime.Now;
             labelCompletionDateData.Text = completionDate.ToString();
+
+            shouldPopUp = true;
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)
         {
             dateIsNull = true;
             labelCompletionDateData.Text = "Incomplete";
+
+            shouldPopUp = true;
         }
 
         private void buttonBackdate_Click(object sender, EventArgs e)
@@ -162,6 +168,18 @@ namespace Prototype.Screens.Jobs
             {
                 labelCompletionDateData.Text = "Incomplete";
             }
+
+            shouldPopUp = true;
+        }
+
+        private void ChangeMade(object sender, EventArgs e)
+        {
+            shouldPopUp = true;
+        }
+
+        private void buttonRegenerate_Click(object sender, EventArgs e)
+        {
+            shouldPopUp = true;
         }
     }
 }

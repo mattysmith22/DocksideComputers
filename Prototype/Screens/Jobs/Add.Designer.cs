@@ -135,6 +135,7 @@
             this.textBoxProblem.Name = "textBoxProblem";
             this.textBoxProblem.Size = new System.Drawing.Size(276, 26);
             this.textBoxProblem.TabIndex = 8;
+            this.textBoxProblem.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // textBoxDetails
             // 
@@ -144,6 +145,7 @@
             this.textBoxDetails.Name = "textBoxDetails";
             this.textBoxDetails.Size = new System.Drawing.Size(276, 104);
             this.textBoxDetails.TabIndex = 9;
+            this.textBoxDetails.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // textBoxUsername
             // 
@@ -152,6 +154,7 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(276, 26);
             this.textBoxUsername.TabIndex = 10;
+            this.textBoxUsername.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // textBoxPassword
             // 
@@ -160,6 +163,7 @@
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(276, 26);
             this.textBoxPassword.TabIndex = 11;
+            this.textBoxPassword.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // textBoxSpeakTo
             // 
@@ -168,6 +172,7 @@
             this.textBoxSpeakTo.Name = "textBoxSpeakTo";
             this.textBoxSpeakTo.Size = new System.Drawing.Size(276, 26);
             this.textBoxSpeakTo.TabIndex = 15;
+            this.textBoxSpeakTo.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // checkBoxBackup
             // 
@@ -178,6 +183,7 @@
             this.checkBoxBackup.Size = new System.Drawing.Size(15, 14);
             this.checkBoxBackup.TabIndex = 16;
             this.checkBoxBackup.UseVisualStyleBackColor = true;
+            this.checkBoxBackup.CheckedChanged += new System.EventHandler(this.ChangeMade);
             // 
             // checkBoxFormat
             // 
@@ -188,6 +194,7 @@
             this.checkBoxFormat.Size = new System.Drawing.Size(15, 14);
             this.checkBoxFormat.TabIndex = 17;
             this.checkBoxFormat.UseVisualStyleBackColor = true;
+            this.checkBoxFormat.CheckedChanged += new System.EventHandler(this.ChangeMade);
             // 
             // checkBoxNeedCall
             // 
@@ -198,6 +205,7 @@
             this.checkBoxNeedCall.Size = new System.Drawing.Size(15, 14);
             this.checkBoxNeedCall.TabIndex = 18;
             this.checkBoxNeedCall.UseVisualStyleBackColor = true;
+            this.checkBoxNeedCall.CheckedChanged += new System.EventHandler(this.ChangeMade);
             // 
             // buttonAdd
             // 

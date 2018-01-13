@@ -13,7 +13,7 @@ namespace Prototype.Screens.Customers
     public partial class Add : Form
     {
 
-        private bool forceClose = false;
+        private bool shouldPopUp = false;
 
         public Add()
         {
@@ -41,14 +41,14 @@ namespace Prototype.Screens.Customers
 
             connection.Close();
 
-            forceClose = true;
+            shouldPopUp = false;
 
             this.Close();
         }
 
         private void Add_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!forceClose)
+            if (shouldPopUp)
             {
                 DialogResult reply = MessageBox.Show("Do you want to close the form?", "Are you sure?", MessageBoxButtons.YesNo);
                 if (reply == DialogResult.No)
@@ -56,6 +56,11 @@ namespace Prototype.Screens.Customers
                     e.Cancel = true;
                 }
             }
+        }
+
+        private void ChangeMade(object sender, EventArgs e)
+        {
+            shouldPopUp = true;
         }
     }
 }

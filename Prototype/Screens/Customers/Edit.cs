@@ -13,7 +13,7 @@ namespace Prototype.Screens.Customers
     public partial class Edit : Form
     {
         private int customerID;
-        private bool forceClose = false;
+        private bool shouldPopUp = false;
 
         public Edit(int customerID)
         {
@@ -46,6 +46,8 @@ namespace Prototype.Screens.Customers
             }
 
             connection.Close();
+
+            shouldPopUp = false;
         }
 
         private void buttonRevert_Click(object sender, EventArgs e)
@@ -75,14 +77,14 @@ namespace Prototype.Screens.Customers
 
             connection.Close();
 
-            forceClose = true;
+            shouldPopUp = false;
 
             this.Close();
         }
 
         private void Edit_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!forceClose)
+            if (shouldPopUp)
             {
                 DialogResult reply = MessageBox.Show("Do you want to close the form?", "Are you sure?", MessageBoxButtons.YesNo);
                 if (reply == DialogResult.No)
@@ -90,6 +92,11 @@ namespace Prototype.Screens.Customers
                     e.Cancel = true;
                 }
             }
+        }
+
+        private void ChangeMade(object sender, EventArgs e)
+        {
+            shouldPopUp = true;
         }
     }
 }

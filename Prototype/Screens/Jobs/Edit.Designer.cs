@@ -80,6 +80,7 @@
             this.textBoxProblem.Name = "textBoxProblem";
             this.textBoxProblem.Size = new System.Drawing.Size(210, 26);
             this.textBoxProblem.TabIndex = 1;
+            this.textBoxProblem.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // labelDetails
             // 
@@ -100,6 +101,7 @@
             this.textBoxDetails.Name = "textBoxDetails";
             this.textBoxDetails.Size = new System.Drawing.Size(210, 110);
             this.textBoxDetails.TabIndex = 3;
+            this.textBoxDetails.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // textBoxUsername
             // 
@@ -108,6 +110,7 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(210, 26);
             this.textBoxUsername.TabIndex = 4;
+            this.textBoxUsername.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // labelUsername
             // 
@@ -138,6 +141,7 @@
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(210, 26);
             this.textBoxPassword.TabIndex = 7;
+            this.textBoxPassword.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // labelBackup
             // 
@@ -159,6 +163,7 @@
             this.checkBoxBackup.Size = new System.Drawing.Size(15, 14);
             this.checkBoxBackup.TabIndex = 9;
             this.checkBoxBackup.UseVisualStyleBackColor = true;
+            this.checkBoxBackup.CheckedChanged += new System.EventHandler(this.ChangeMade);
             // 
             // labelFormat
             // 
@@ -180,6 +185,7 @@
             this.checkBoxFormat.Size = new System.Drawing.Size(15, 14);
             this.checkBoxFormat.TabIndex = 11;
             this.checkBoxFormat.UseVisualStyleBackColor = true;
+            this.checkBoxFormat.CheckedChanged += new System.EventHandler(this.ChangeMade);
             // 
             // checkBoxNeedCall
             // 
@@ -190,6 +196,7 @@
             this.checkBoxNeedCall.Size = new System.Drawing.Size(15, 14);
             this.checkBoxNeedCall.TabIndex = 12;
             this.checkBoxNeedCall.UseVisualStyleBackColor = true;
+            this.checkBoxNeedCall.CheckedChanged += new System.EventHandler(this.ChangeMade);
             // 
             // labelNeedCall
             // 
@@ -209,6 +216,7 @@
             this.textBoxSpeakTo.Name = "textBoxSpeakTo";
             this.textBoxSpeakTo.Size = new System.Drawing.Size(210, 26);
             this.textBoxSpeakTo.TabIndex = 14;
+            this.textBoxSpeakTo.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // labelSpeakTo
             // 
@@ -272,6 +280,7 @@
             this.buttonRegenerate.TabIndex = 20;
             this.buttonRegenerate.Text = "Re-generate";
             this.buttonRegenerate.UseVisualStyleBackColor = true;
+            this.buttonRegenerate.Click += new System.EventHandler(this.buttonRegenerate_Click);
             // 
             // labelLeftMessage
             // 
@@ -292,6 +301,7 @@
             this.checkBoxLeftMessage.Size = new System.Drawing.Size(15, 14);
             this.checkBoxLeftMessage.TabIndex = 22;
             this.checkBoxLeftMessage.UseVisualStyleBackColor = true;
+            this.checkBoxLeftMessage.CheckedChanged += new System.EventHandler(this.ChangeMade);
             // 
             // labelAmountPaid
             // 
@@ -352,6 +362,7 @@
             this.numericUpDownAmountPaid.Name = "numericUpDownAmountPaid";
             this.numericUpDownAmountPaid.Size = new System.Drawing.Size(234, 26);
             this.numericUpDownAmountPaid.TabIndex = 29;
+            this.numericUpDownAmountPaid.ValueChanged += new System.EventHandler(this.ChangeMade);
             // 
             // textBoxPaymentMethod
             // 
@@ -360,6 +371,7 @@
             this.textBoxPaymentMethod.Name = "textBoxPaymentMethod";
             this.textBoxPaymentMethod.Size = new System.Drawing.Size(232, 26);
             this.textBoxPaymentMethod.TabIndex = 25;
+            this.textBoxPaymentMethod.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // buttonReload
             // 

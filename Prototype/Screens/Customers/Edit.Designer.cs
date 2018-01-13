@@ -131,6 +131,7 @@
             this.textBoxFirstname.Name = "textBoxFirstname";
             this.textBoxFirstname.Size = new System.Drawing.Size(238, 26);
             this.textBoxFirstname.TabIndex = 7;
+            this.textBoxFirstname.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // textBoxSurname
             // 
@@ -139,6 +140,7 @@
             this.textBoxSurname.Name = "textBoxSurname";
             this.textBoxSurname.Size = new System.Drawing.Size(238, 26);
             this.textBoxSurname.TabIndex = 8;
+            this.textBoxSurname.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // textBoxAddress
             // 
@@ -147,6 +149,7 @@
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(238, 26);
             this.textBoxAddress.TabIndex = 9;
+            this.textBoxAddress.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // textBoxTown
             // 
@@ -155,6 +158,7 @@
             this.textBoxTown.Name = "textBoxTown";
             this.textBoxTown.Size = new System.Drawing.Size(238, 26);
             this.textBoxTown.TabIndex = 10;
+            this.textBoxTown.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // textBoxCounty
             // 
@@ -163,6 +167,7 @@
             this.textBoxCounty.Name = "textBoxCounty";
             this.textBoxCounty.Size = new System.Drawing.Size(238, 26);
             this.textBoxCounty.TabIndex = 11;
+            this.textBoxCounty.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // textBoxLandline
             // 
@@ -171,6 +176,7 @@
             this.textBoxLandline.Name = "textBoxLandline";
             this.textBoxLandline.Size = new System.Drawing.Size(238, 26);
             this.textBoxLandline.TabIndex = 12;
+            this.textBoxLandline.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // textBoxMobile
             // 
@@ -179,6 +185,7 @@
             this.textBoxMobile.Name = "textBoxMobile";
             this.textBoxMobile.Size = new System.Drawing.Size(238, 26);
             this.textBoxMobile.TabIndex = 13;
+            this.textBoxMobile.TextChanged += new System.EventHandler(this.ChangeMade);
             // 
             // buttonEdit
             // 
