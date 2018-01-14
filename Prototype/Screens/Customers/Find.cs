@@ -39,7 +39,7 @@ namespace Prototype.Screens.Customers
             string sql;
 
             //Get relevant data
-            if (textBoxQuery.Text.Trim().Length != 0) //if there is something in query box
+            if (textBoxQuery.Text.Trim().Length != 0 && checkBoxEnableQuery.Checked) //if there is something in query box
             {
                 sql = "SELECT * FROM tbl_customers WHERE MATCH (firstname, surname, address, town, county, mobile, landline) AGAINST (@query IN NATURAL LANGUAGE MODE)"; //Create query
             }
@@ -54,6 +54,11 @@ namespace Prototype.Screens.Customers
             {
                 data.Fill(dt);
                 dataGridView1.DataSource = dt;
+
+                if (dataGridView1.Rows.Count == 0 && checkBoxEnableQuery.Checked)
+                {
+                    MessageBox.Show("The query released no customers.", "No results");
+                }
             }
         }
 
@@ -294,6 +299,11 @@ namespace Prototype.Screens.Customers
             {
                 updateDataTable();
             }
+        }
+
+        private void checkBoxEnableQuery_CheckedChanged(object sender, EventArgs e)
+        {
+            updateDataTable();
         }
     }
 }
