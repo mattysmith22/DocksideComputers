@@ -60,6 +60,7 @@
             this.textBoxPaymentMethod = new System.Windows.Forms.TextBox();
             this.buttonReload = new System.Windows.Forms.Button();
             this.buttonBackdate = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmountPaid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -380,26 +381,36 @@
             this.buttonReload.Name = "buttonReload";
             this.buttonReload.Size = new System.Drawing.Size(234, 35);
             this.buttonReload.TabIndex = 30;
-            this.buttonReload.Text = "Reload";
+            this.buttonReload.Text = "Undo Changes";
             this.buttonReload.UseVisualStyleBackColor = true;
             this.buttonReload.Click += new System.EventHandler(this.buttonReload_Click);
             // 
             // buttonBackdate
             // 
-            this.buttonBackdate.Location = new System.Drawing.Point(476, 83);
+            this.buttonBackdate.Location = new System.Drawing.Point(622, 83);
             this.buttonBackdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonBackdate.Name = "buttonBackdate";
-            this.buttonBackdate.Size = new System.Drawing.Size(140, 31);
+            this.buttonBackdate.Size = new System.Drawing.Size(86, 31);
             this.buttonBackdate.TabIndex = 31;
             this.buttonBackdate.Text = "Backdate";
             this.buttonBackdate.UseVisualStyleBackColor = true;
             this.buttonBackdate.Click += new System.EventHandler(this.buttonBackdate_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(431, 83);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(183, 26);
+            this.dateTimePicker1.TabIndex = 32;
+            this.dateTimePicker1.Visible = false;
+            this.dateTimePicker1.CloseUp += new System.EventHandler(this.buttonBackdate_Click);
             // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(722, 370);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.buttonBackdate);
             this.Controls.Add(this.buttonReload);
             this.Controls.Add(this.numericUpDownAmountPaid);
@@ -476,5 +487,6 @@
         private System.Windows.Forms.TextBox textBoxPaymentMethod;
         private System.Windows.Forms.Button buttonReload;
         private System.Windows.Forms.Button buttonBackdate;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

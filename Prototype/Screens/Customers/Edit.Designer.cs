@@ -205,7 +205,7 @@
             this.buttonRevert.Name = "buttonRevert";
             this.buttonRevert.Size = new System.Drawing.Size(150, 35);
             this.buttonRevert.TabIndex = 15;
-            this.buttonRevert.Text = "Revert";
+            this.buttonRevert.Text = "Undo Changes";
             this.buttonRevert.UseVisualStyleBackColor = true;
             this.buttonRevert.Click += new System.EventHandler(this.buttonRevert_Click);
             // 

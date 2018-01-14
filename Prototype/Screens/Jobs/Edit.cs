@@ -24,6 +24,7 @@ namespace Prototype.Screens.Jobs
 
             this.jobID = jobID;
             UpdateData();
+            dateTimePicker1.MaxDate = DateTime.Now;
 
             buttonBackdate.Visible = Globals.isAdmin;
             buttonBackdate.Enabled = Globals.isAdmin;
@@ -130,7 +131,7 @@ namespace Prototype.Screens.Jobs
         {
             dateIsNull = false;
             completionDate = DateTime.Now;
-            labelCompletionDateData.Text = completionDate.ToString();
+            labelCompletionDateData.Text = completionDate.ToString("dd/MM/yyyy");
 
             shouldPopUp = true;
         }
@@ -145,31 +146,20 @@ namespace Prototype.Screens.Jobs
 
         private void buttonBackdate_Click(object sender, EventArgs e)
         {
-            Screens.Misc.DateTimePicker picker;
-
-            if (dateIsNull)
+            if(dateTimePicker1.Visible == false)
             {
-                picker = new Misc.DateTimePicker();
+                dateTimePicker1.Visible = true;
+                buttonBackdate.Text = "Enter";
             }
             else
             {
-                picker = new Misc.DateTimePicker(completionDate);
-            }
+                completionDate = dateTimePicker1.Value;
+                dateIsNull = false;
+                labelCompletionDateData.Text = completionDate.ToString("dd/MM/yyyy");
 
-            picker.ShowDialog();
-
-            dateIsNull = picker.isNull;
-            if(!picker.isNull)
-            {
-                labelCompletionDateData.Text = completionDate.ToString();
-                completionDate = picker.value;
+                dateTimePicker1.Visible = false;
+                buttonBackdate.Text = "Backdate";
             }
-            else
-            {
-                labelCompletionDateData.Text = "Incomplete";
-            }
-
-            shouldPopUp = true;
         }
 
         private void ChangeMade(object sender, EventArgs e)

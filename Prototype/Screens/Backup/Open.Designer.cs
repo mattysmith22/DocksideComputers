@@ -48,7 +48,7 @@
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog1";
-            this.openFileDialog.Filter = "SQL Files|*.cs|All files|*.*";
+            this.openFileDialog.Filter = "SQL Files|*.sql|All files|*.*";
             this.openFileDialog.Title = "SQL File to load";
             // 
             // labelLocation

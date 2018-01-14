@@ -79,7 +79,7 @@
             // 
             // saveFileDialog
             // 
-            this.saveFileDialog.Filter = "SQL Files|*.cs|All files|*.*";
+            this.saveFileDialog.Filter = "SQL Files|*.sql|All files|*.*";
             this.saveFileDialog.Title = "Where to save SQL File";
             // 
             // Save

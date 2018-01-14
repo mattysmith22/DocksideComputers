@@ -53,6 +53,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(361, 207);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.buttonViewMore_Click);
             // 
             // labelProblem
             // 

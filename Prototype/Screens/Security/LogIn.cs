@@ -73,5 +73,21 @@ namespace Prototype.Screens.Security
                 MessageBox.Show("Error: Incorrect username");
             }
         }
+
+        private void textBoxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyData == Keys.Enter)
+            {
+                buttonLogIn.PerformClick();
+            }
+        }
+
+        private void textBoxUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                textBoxPassword.Focus();
+            }
+        }
     }
 }

@@ -50,6 +50,7 @@
             this.dataGridViewJobs.Size = new System.Drawing.Size(441, 204);
             this.dataGridViewJobs.TabIndex = 0;
             this.dataGridViewJobs.SelectionChanged += new System.EventHandler(this.dataGridViewJobs_SelectionChanged);
+            this.dataGridViewJobs.DoubleClick += new System.EventHandler(this.buttonView_Click);
             // 
             // buttonView
             // 
