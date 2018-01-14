@@ -12,6 +12,7 @@ namespace Prototype.Screens.Misc
     public partial class GetReceiptString : Form
     {
         public string receiptCode;
+        public bool confirmed = false;
 
         public GetReceiptString()
         {
@@ -22,7 +23,18 @@ namespace Prototype.Screens.Misc
         private void buttonReceiptCode_Click(object sender, EventArgs e)
         {
             receiptCode = textBoxReceiptCode.Text;
+            confirmed = true;
             this.Close();
+        }
+
+        private void textBoxReceiptCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyData == Keys.Enter)
+            {
+                receiptCode = textBoxReceiptCode.Text;
+                confirmed = true;
+                this.Close();
+            }
         }
     }
 }

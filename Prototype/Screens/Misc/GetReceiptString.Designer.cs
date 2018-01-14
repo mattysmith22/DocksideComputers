@@ -51,6 +51,7 @@
             this.textBoxReceiptCode.Name = "textBoxReceiptCode";
             this.textBoxReceiptCode.Size = new System.Drawing.Size(154, 26);
             this.textBoxReceiptCode.TabIndex = 1;
+            this.textBoxReceiptCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxReceiptCode_KeyDown);
             // 
             // buttonReceiptCode
             // 

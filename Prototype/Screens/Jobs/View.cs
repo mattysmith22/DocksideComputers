@@ -79,28 +79,31 @@ namespace Prototype.Screens.Jobs
             Misc.GetReceiptString getReceiptString = new Misc.GetReceiptString();
             getReceiptString.ShowDialog();
 
-            MySqlConnection connection = Database.GetConnection();
-            connection.Open();
-
-            string sql = "SELECT jobID FROM tbl_jobs WHERE receiptKey = @receiptKey";
-            MySqlCommand command = new MySqlCommand(sql, connection);
-            command.Parameters.AddWithValue("@receiptKey", getReceiptString.receiptCode);
-
-            MySqlDataReader data = command.ExecuteReader();
-            if (data.Read())
+            if (getReceiptString.confirmed)
             {
-                if (data.GetInt32(data.GetOrdinal("jobID")) == jobID)
+                MySqlConnection connection = Database.GetConnection();
+                connection.Open();
+
+                string sql = "SELECT jobID FROM tbl_jobs WHERE receiptKey = @receiptKey";
+                MySqlCommand command = new MySqlCommand(sql, connection);
+                command.Parameters.AddWithValue("@receiptKey", getReceiptString.receiptCode);
+
+                MySqlDataReader data = command.ExecuteReader();
+                if (data.Read())
                 {
-                    MessageBox.Show("Receipt is valid");
+                    if (data.GetInt32(data.GetOrdinal("jobID")) == jobID)
+                    {
+                        MessageBox.Show("Receipt is valid");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Receipt is invalid");
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Receipt is invalid");
                 }
-            }
-            else
-            {
-                MessageBox.Show("Receipt is invalid");
             }
         }
 
