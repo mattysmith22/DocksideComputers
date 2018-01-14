@@ -14,6 +14,8 @@ namespace Prototype.Screens.Jobs
     {
         private int jobID;
         private string receiptKey;
+        private int customerID;
+        private string firstname, surname;
 
         public View(int jobID)
         {
@@ -27,7 +29,10 @@ namespace Prototype.Screens.Jobs
             MySqlConnection connection = Database.GetConnection();
             connection.Open();
 
-            string sql = "SELECT * FROM tbl_jobs, tbl_transactions WHERE tbl_jobs.jobID = @jobID AND tbl_transactions.jobID = @jobID";
+            string sql = "SELECT * FROM " +
+                "tbl_jobs INNER JOIN tbl_customers ON tbl_jobs.customerID = tbl_customers.customerID " +
+                "INNER JOIN tbl_transactions ON tbl_jobs.jobID = tbl_transactions.jobID " +
+                "WHERE tbl_jobs.jobID = 1;";
             MySqlCommand command = new MySqlCommand(sql, connection);
             command.Parameters.AddWithValue("@jobID", jobID);
 
@@ -36,6 +41,9 @@ namespace Prototype.Screens.Jobs
             if (data.Read())
             {
                 textBoxProblem.Text = data.GetString(data.GetOrdinal("problem"));
+                customerID = data.GetInt32(data.GetOrdinal("customerID"));
+                firstname = data.GetString(data.GetOrdinal("firstname"));
+                surname = data.GetString(data.GetOrdinal("surname"));
                 textBoxDetails.Text = data.GetString(data.GetOrdinal("details"));
                 textBoxUsername.Text = data.GetString(data.GetOrdinal("computerUsername"));
                 textBoxPassword.Text = data.GetString(data.GetOrdinal("computerPassword"));
@@ -101,6 +109,37 @@ namespace Prototype.Screens.Jobs
             Screens.Jobs.Edit editScreen = new Edit(jobID);
             editScreen.ShowDialog();
             loadData();
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            PrintPopup printPopup = new PrintPopup();
+            printPopup.ShowDialog();
+
+            if(printPopup.confirmPrint)
+            {
+                if (printDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    if (printPopup.printJob)
+                    {
+                        Printing.PrintJob printJob = new Printing.PrintJob(customerID, firstname, surname,
+                            textBoxProblem.Text, textBoxDetails.Text, textBoxUsername.Text, textBoxPassword.Text,
+                            checkBoxBackup.Checked, checkBoxFormat.Checked, checkBoxNeedCall.Checked,
+                            textBoxSpeakTo.Text, receiptKey);
+
+                        printJob.PrinterSettings = printDialog1.PrinterSettings;
+                        printJob.Print();
+                    }
+                    
+                    if (printPopup.printReceipt)
+                    {
+                        Printing.PrintJobReceipt printReceipt = new Printing.PrintJobReceipt(receiptKey, textBoxProblem.Text, textBoxDetails.Text);
+
+                        printReceipt.PrinterSettings = printDialog1.PrinterSettings;
+                        printReceipt.Print();
+                    }
+                }
+            }
         }
     }
 }

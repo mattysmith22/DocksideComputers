@@ -101,7 +101,7 @@ namespace Prototype.Screens.Customers
 
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedCells.Count == 1)
+            if (dataGridView1.SelectedRows.Count == 1)
             {
                 int customerID = getSelectedCustomerID(); //Get the ID of the selected customer
 
@@ -116,7 +116,7 @@ namespace Prototype.Screens.Customers
 
                 if (data.Read()) //If any is selected at all
                 {
-                    Printing.PrintReceipt document = new Printing.PrintReceipt(getSelectedCustomerID(),
+                    Printing.PrintCustomer document = new Printing.PrintCustomer(getSelectedCustomerID(),
                         data.GetString("firstname"),
                         data.GetString("surname"),
                         data.GetString("address"),

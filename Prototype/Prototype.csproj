@@ -63,7 +63,13 @@
     <Compile Include="Database.cs" />
     <Compile Include="DrawingTools.cs" />
     <Compile Include="Globals.cs" />
-    <Compile Include="Printing\PrintReceipt.cs">
+    <Compile Include="Printing\PrintJobReceipt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\PrintJob.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\PrintCustomer.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
@@ -116,6 +122,12 @@
     </Compile>
     <Compile Include="Screens\Jobs\Edit.Designer.cs">
       <DependentUpon>Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Jobs\PrintPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Jobs\PrintPopup.Designer.cs">
+      <DependentUpon>PrintPopup.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Jobs\SeeCustomerJobs.cs">
       <SubType>Form</SubType>
@@ -224,6 +236,9 @@
     <EmbeddedResource Include="Screens\Jobs\Edit.resx">
       <DependentUpon>Edit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Jobs\PrintPopup.resx">
+      <DependentUpon>PrintPopup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Jobs\SeeCustomerJobs.resx">
       <DependentUpon>SeeCustomerJobs.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,6 +293,8 @@
   <ItemGroup>
     <Content Include="DocksideIcon.ico" />
     <Content Include="icon.ico" />
+    <EmbeddedResource Include="Resources\docksideBranding.png" />
+    <None Include="Resources\printBranding.bmp" />
     <EmbeddedResource Include="Resources\search.png" />
   </ItemGroup>
   <ItemGroup>

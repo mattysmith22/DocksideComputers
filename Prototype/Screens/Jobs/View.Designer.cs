@@ -58,14 +58,16 @@
             this.labelCompletionDateData = new System.Windows.Forms.Label();
             this.labelStaffMember = new System.Windows.Forms.Label();
             this.textBoxStaffMember = new System.Windows.Forms.TextBox();
+            this.buttonPrint = new System.Windows.Forms.Button();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.SuspendLayout();
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(476, 230);
+            this.buttonEdit.Location = new System.Drawing.Point(572, 230);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(234, 35);
+            this.buttonEdit.Size = new System.Drawing.Size(138, 35);
             this.buttonEdit.TabIndex = 55;
             this.buttonEdit.Text = "Edit";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -356,11 +358,27 @@
             this.textBoxStaffMember.Size = new System.Drawing.Size(232, 26);
             this.textBoxStaffMember.TabIndex = 58;
             // 
+            // buttonPrint
+            // 
+            this.buttonPrint.Location = new System.Drawing.Point(426, 230);
+            this.buttonPrint.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(138, 35);
+            this.buttonPrint.TabIndex = 59;
+            this.buttonPrint.Text = "Print";
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 306);
+            this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.textBoxStaffMember);
             this.Controls.Add(this.labelStaffMember);
             this.Controls.Add(this.labelCompletionDateData);
@@ -431,5 +449,7 @@
         private System.Windows.Forms.Label labelCompletionDateData;
         private System.Windows.Forms.Label labelStaffMember;
         private System.Windows.Forms.TextBox textBoxStaffMember;
+        private System.Windows.Forms.Button buttonPrint;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }
