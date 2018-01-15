@@ -32,7 +32,7 @@ namespace Prototype.Screens.Jobs
             string sql = "SELECT * FROM " +
                 "tbl_jobs INNER JOIN tbl_customers ON tbl_jobs.customerID = tbl_customers.customerID " +
                 "INNER JOIN tbl_transactions ON tbl_jobs.jobID = tbl_transactions.jobID " +
-                "WHERE tbl_jobs.jobID = 1;";
+                "WHERE tbl_jobs.jobID = @jobID;";
             MySqlCommand command = new MySqlCommand(sql, connection);
             command.Parameters.AddWithValue("@jobID", jobID);
 

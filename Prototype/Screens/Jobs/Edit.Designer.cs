@@ -61,13 +61,15 @@
             this.buttonReload = new System.Windows.Forms.Button();
             this.buttonBackdate = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.labelJobHeading = new System.Windows.Forms.Label();
+            this.labelTransactionHeading = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmountPaid)).BeginInit();
             this.SuspendLayout();
             // 
             // labelProblem
             // 
             this.labelProblem.AutoSize = true;
-            this.labelProblem.Location = new System.Drawing.Point(13, 17);
+            this.labelProblem.Location = new System.Drawing.Point(13, 48);
             this.labelProblem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProblem.Name = "labelProblem";
             this.labelProblem.Size = new System.Drawing.Size(71, 20);
@@ -76,7 +78,7 @@
             // 
             // textBoxProblem
             // 
-            this.textBoxProblem.Location = new System.Drawing.Point(112, 14);
+            this.textBoxProblem.Location = new System.Drawing.Point(112, 45);
             this.textBoxProblem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxProblem.Name = "textBoxProblem";
             this.textBoxProblem.Size = new System.Drawing.Size(210, 26);
@@ -87,7 +89,7 @@
             // 
             this.labelDetails.AllowDrop = true;
             this.labelDetails.AutoSize = true;
-            this.labelDetails.Location = new System.Drawing.Point(13, 48);
+            this.labelDetails.Location = new System.Drawing.Point(13, 79);
             this.labelDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDetails.Name = "labelDetails";
             this.labelDetails.Size = new System.Drawing.Size(62, 20);
@@ -96,7 +98,7 @@
             // 
             // textBoxDetails
             // 
-            this.textBoxDetails.Location = new System.Drawing.Point(112, 50);
+            this.textBoxDetails.Location = new System.Drawing.Point(112, 81);
             this.textBoxDetails.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxDetails.Multiline = true;
             this.textBoxDetails.Name = "textBoxDetails";
@@ -106,7 +108,7 @@
             // 
             // textBoxUsername
             // 
-            this.textBoxUsername.Location = new System.Drawing.Point(112, 170);
+            this.textBoxUsername.Location = new System.Drawing.Point(112, 201);
             this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(210, 26);
@@ -117,7 +119,7 @@
             // 
             this.labelUsername.AllowDrop = true;
             this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(13, 177);
+            this.labelUsername.Location = new System.Drawing.Point(13, 208);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(87, 20);
@@ -128,7 +130,7 @@
             // 
             this.labelPassword.AllowDrop = true;
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(13, 210);
+            this.labelPassword.Location = new System.Drawing.Point(13, 241);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(82, 20);
@@ -137,7 +139,7 @@
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(112, 206);
+            this.textBoxPassword.Location = new System.Drawing.Point(112, 237);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(210, 26);
@@ -148,7 +150,7 @@
             // 
             this.labelBackup.AllowDrop = true;
             this.labelBackup.AutoSize = true;
-            this.labelBackup.Location = new System.Drawing.Point(25, 246);
+            this.labelBackup.Location = new System.Drawing.Point(25, 277);
             this.labelBackup.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelBackup.Name = "labelBackup";
             this.labelBackup.Size = new System.Drawing.Size(67, 20);
@@ -158,7 +160,7 @@
             // checkBoxBackup
             // 
             this.checkBoxBackup.AutoSize = true;
-            this.checkBoxBackup.Location = new System.Drawing.Point(100, 250);
+            this.checkBoxBackup.Location = new System.Drawing.Point(100, 281);
             this.checkBoxBackup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxBackup.Name = "checkBoxBackup";
             this.checkBoxBackup.Size = new System.Drawing.Size(15, 14);
@@ -170,7 +172,7 @@
             // 
             this.labelFormat.AllowDrop = true;
             this.labelFormat.AutoSize = true;
-            this.labelFormat.Location = new System.Drawing.Point(123, 246);
+            this.labelFormat.Location = new System.Drawing.Point(123, 277);
             this.labelFormat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFormat.Name = "labelFormat";
             this.labelFormat.Size = new System.Drawing.Size(64, 20);
@@ -180,7 +182,7 @@
             // checkBoxFormat
             // 
             this.checkBoxFormat.AutoSize = true;
-            this.checkBoxFormat.Location = new System.Drawing.Point(195, 250);
+            this.checkBoxFormat.Location = new System.Drawing.Point(195, 281);
             this.checkBoxFormat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxFormat.Name = "checkBoxFormat";
             this.checkBoxFormat.Size = new System.Drawing.Size(15, 14);
@@ -191,7 +193,7 @@
             // checkBoxNeedCall
             // 
             this.checkBoxNeedCall.AutoSize = true;
-            this.checkBoxNeedCall.Location = new System.Drawing.Point(307, 250);
+            this.checkBoxNeedCall.Location = new System.Drawing.Point(307, 281);
             this.checkBoxNeedCall.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxNeedCall.Name = "checkBoxNeedCall";
             this.checkBoxNeedCall.Size = new System.Drawing.Size(15, 14);
@@ -203,7 +205,7 @@
             // 
             this.labelNeedCall.AllowDrop = true;
             this.labelNeedCall.AutoSize = true;
-            this.labelNeedCall.Location = new System.Drawing.Point(218, 246);
+            this.labelNeedCall.Location = new System.Drawing.Point(218, 277);
             this.labelNeedCall.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNeedCall.Name = "labelNeedCall";
             this.labelNeedCall.Size = new System.Drawing.Size(81, 20);
@@ -212,7 +214,7 @@
             // 
             // textBoxSpeakTo
             // 
-            this.textBoxSpeakTo.Location = new System.Drawing.Point(112, 274);
+            this.textBoxSpeakTo.Location = new System.Drawing.Point(112, 305);
             this.textBoxSpeakTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxSpeakTo.Name = "textBoxSpeakTo";
             this.textBoxSpeakTo.Size = new System.Drawing.Size(210, 26);
@@ -223,7 +225,7 @@
             // 
             this.labelSpeakTo.AllowDrop = true;
             this.labelSpeakTo.AutoSize = true;
-            this.labelSpeakTo.Location = new System.Drawing.Point(13, 277);
+            this.labelSpeakTo.Location = new System.Drawing.Point(13, 308);
             this.labelSpeakTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSpeakTo.Name = "labelSpeakTo";
             this.labelSpeakTo.Size = new System.Drawing.Size(81, 20);
@@ -233,7 +235,7 @@
             // labelCompletionDate
             // 
             this.labelCompletionDate.AutoSize = true;
-            this.labelCompletionDate.Location = new System.Drawing.Point(330, 17);
+            this.labelCompletionDate.Location = new System.Drawing.Point(330, 48);
             this.labelCompletionDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCompletionDate.Name = "labelCompletionDate";
             this.labelCompletionDate.Size = new System.Drawing.Size(132, 20);
@@ -242,7 +244,7 @@
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(622, 42);
+            this.buttonRemove.Location = new System.Drawing.Point(622, 73);
             this.buttonRemove.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(86, 31);
@@ -254,7 +256,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(330, 124);
+            this.label1.Location = new System.Drawing.Point(330, 155);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 20);
@@ -263,7 +265,7 @@
             // 
             // buttonMarkComplete
             // 
-            this.buttonMarkComplete.Location = new System.Drawing.Point(474, 42);
+            this.buttonMarkComplete.Location = new System.Drawing.Point(474, 73);
             this.buttonMarkComplete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonMarkComplete.Name = "buttonMarkComplete";
             this.buttonMarkComplete.Size = new System.Drawing.Size(140, 31);
@@ -274,7 +276,7 @@
             // 
             // buttonRegenerate
             // 
-            this.buttonRegenerate.Location = new System.Drawing.Point(476, 124);
+            this.buttonRegenerate.Location = new System.Drawing.Point(476, 155);
             this.buttonRegenerate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonRegenerate.Name = "buttonRegenerate";
             this.buttonRegenerate.Size = new System.Drawing.Size(140, 31);
@@ -286,7 +288,7 @@
             // labelLeftMessage
             // 
             this.labelLeftMessage.AutoSize = true;
-            this.labelLeftMessage.Location = new System.Drawing.Point(328, 170);
+            this.labelLeftMessage.Location = new System.Drawing.Point(328, 201);
             this.labelLeftMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLeftMessage.Name = "labelLeftMessage";
             this.labelLeftMessage.Size = new System.Drawing.Size(110, 20);
@@ -296,7 +298,7 @@
             // checkBoxLeftMessage
             // 
             this.checkBoxLeftMessage.AutoSize = true;
-            this.checkBoxLeftMessage.Location = new System.Drawing.Point(476, 174);
+            this.checkBoxLeftMessage.Location = new System.Drawing.Point(476, 205);
             this.checkBoxLeftMessage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxLeftMessage.Name = "checkBoxLeftMessage";
             this.checkBoxLeftMessage.Size = new System.Drawing.Size(15, 14);
@@ -307,7 +309,7 @@
             // labelAmountPaid
             // 
             this.labelAmountPaid.AutoSize = true;
-            this.labelAmountPaid.Location = new System.Drawing.Point(330, 208);
+            this.labelAmountPaid.Location = new System.Drawing.Point(330, 239);
             this.labelAmountPaid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAmountPaid.Name = "labelAmountPaid";
             this.labelAmountPaid.Size = new System.Drawing.Size(104, 20);
@@ -317,7 +319,7 @@
             // labelPaymentMethod
             // 
             this.labelPaymentMethod.AutoSize = true;
-            this.labelPaymentMethod.Location = new System.Drawing.Point(335, 246);
+            this.labelPaymentMethod.Location = new System.Drawing.Point(335, 277);
             this.labelPaymentMethod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPaymentMethod.Name = "labelPaymentMethod";
             this.labelPaymentMethod.Size = new System.Drawing.Size(133, 20);
@@ -326,7 +328,7 @@
             // 
             // buttonFinish
             // 
-            this.buttonFinish.Location = new System.Drawing.Point(476, 279);
+            this.buttonFinish.Location = new System.Drawing.Point(476, 310);
             this.buttonFinish.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonFinish.Name = "buttonFinish";
             this.buttonFinish.Size = new System.Drawing.Size(234, 35);
@@ -338,7 +340,7 @@
             // labelCompletionDateData
             // 
             this.labelCompletionDateData.AutoSize = true;
-            this.labelCompletionDateData.Location = new System.Drawing.Point(470, 17);
+            this.labelCompletionDateData.Location = new System.Drawing.Point(470, 48);
             this.labelCompletionDateData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCompletionDateData.Name = "labelCompletionDateData";
             this.labelCompletionDateData.Size = new System.Drawing.Size(59, 20);
@@ -353,7 +355,7 @@
             0,
             0,
             131072});
-            this.numericUpDownAmountPaid.Location = new System.Drawing.Point(476, 207);
+            this.numericUpDownAmountPaid.Location = new System.Drawing.Point(476, 238);
             this.numericUpDownAmountPaid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numericUpDownAmountPaid.Maximum = new decimal(new int[] {
             4000,
@@ -367,7 +369,7 @@
             // 
             // textBoxPaymentMethod
             // 
-            this.textBoxPaymentMethod.Location = new System.Drawing.Point(476, 243);
+            this.textBoxPaymentMethod.Location = new System.Drawing.Point(476, 274);
             this.textBoxPaymentMethod.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPaymentMethod.Name = "textBoxPaymentMethod";
             this.textBoxPaymentMethod.Size = new System.Drawing.Size(232, 26);
@@ -376,7 +378,7 @@
             // 
             // buttonReload
             // 
-            this.buttonReload.Location = new System.Drawing.Point(476, 324);
+            this.buttonReload.Location = new System.Drawing.Point(476, 355);
             this.buttonReload.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonReload.Name = "buttonReload";
             this.buttonReload.Size = new System.Drawing.Size(234, 35);
@@ -387,7 +389,7 @@
             // 
             // buttonBackdate
             // 
-            this.buttonBackdate.Location = new System.Drawing.Point(622, 83);
+            this.buttonBackdate.Location = new System.Drawing.Point(622, 114);
             this.buttonBackdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonBackdate.Name = "buttonBackdate";
             this.buttonBackdate.Size = new System.Drawing.Size(86, 31);
@@ -398,18 +400,40 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(431, 83);
+            this.dateTimePicker1.Location = new System.Drawing.Point(431, 114);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(183, 26);
             this.dateTimePicker1.TabIndex = 32;
             this.dateTimePicker1.Visible = false;
             this.dateTimePicker1.CloseUp += new System.EventHandler(this.buttonBackdate_Click);
             // 
+            // labelJobHeading
+            // 
+            this.labelJobHeading.AutoSize = true;
+            this.labelJobHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJobHeading.Location = new System.Drawing.Point(107, 9);
+            this.labelJobHeading.Name = "labelJobHeading";
+            this.labelJobHeading.Size = new System.Drawing.Size(56, 29);
+            this.labelJobHeading.TabIndex = 61;
+            this.labelJobHeading.Text = "Job";
+            // 
+            // labelTransactionHeading
+            // 
+            this.labelTransactionHeading.AutoSize = true;
+            this.labelTransactionHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTransactionHeading.Location = new System.Drawing.Point(473, 9);
+            this.labelTransactionHeading.Name = "labelTransactionHeading";
+            this.labelTransactionHeading.Size = new System.Drawing.Size(150, 29);
+            this.labelTransactionHeading.TabIndex = 62;
+            this.labelTransactionHeading.Text = "Transaction";
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 370);
+            this.ClientSize = new System.Drawing.Size(722, 413);
+            this.Controls.Add(this.labelTransactionHeading);
+            this.Controls.Add(this.labelJobHeading);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.buttonBackdate);
             this.Controls.Add(this.buttonReload);
@@ -488,5 +512,7 @@
         private System.Windows.Forms.Button buttonReload;
         private System.Windows.Forms.Button buttonBackdate;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label labelJobHeading;
+        private System.Windows.Forms.Label labelTransactionHeading;
     }
 }

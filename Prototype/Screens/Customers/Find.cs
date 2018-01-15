@@ -190,7 +190,7 @@ namespace Prototype.Screens.Customers
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedCells.Count == 1)
+            if (dataGridView1.SelectedRows.Count == 1)
             {
                 Customers.Edit editScreen = new Edit(getSelectedCustomerID());
                 editScreen.ShowDialog();

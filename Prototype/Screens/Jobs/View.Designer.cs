@@ -60,11 +60,13 @@
             this.textBoxStaffMember = new System.Windows.Forms.TextBox();
             this.buttonPrint = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.labelJobHeading = new System.Windows.Forms.Label();
+            this.labelTransactionHeading = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(572, 230);
+            this.buttonEdit.Location = new System.Drawing.Point(573, 259);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(138, 35);
@@ -76,7 +78,7 @@
             // labelPaymentMethod
             // 
             this.labelPaymentMethod.AutoSize = true;
-            this.labelPaymentMethod.Location = new System.Drawing.Point(334, 157);
+            this.labelPaymentMethod.Location = new System.Drawing.Point(335, 186);
             this.labelPaymentMethod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPaymentMethod.Name = "labelPaymentMethod";
             this.labelPaymentMethod.Size = new System.Drawing.Size(133, 20);
@@ -86,7 +88,7 @@
             // textBoxPaymentMethod
             // 
             this.textBoxPaymentMethod.Enabled = false;
-            this.textBoxPaymentMethod.Location = new System.Drawing.Point(478, 154);
+            this.textBoxPaymentMethod.Location = new System.Drawing.Point(479, 183);
             this.textBoxPaymentMethod.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPaymentMethod.Name = "textBoxPaymentMethod";
             this.textBoxPaymentMethod.Size = new System.Drawing.Size(232, 26);
@@ -95,7 +97,7 @@
             // labelAmountPaid
             // 
             this.labelAmountPaid.AutoSize = true;
-            this.labelAmountPaid.Location = new System.Drawing.Point(334, 121);
+            this.labelAmountPaid.Location = new System.Drawing.Point(335, 150);
             this.labelAmountPaid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAmountPaid.Name = "labelAmountPaid";
             this.labelAmountPaid.Size = new System.Drawing.Size(104, 20);
@@ -105,7 +107,7 @@
             // textBoxAmountPaid
             // 
             this.textBoxAmountPaid.Enabled = false;
-            this.textBoxAmountPaid.Location = new System.Drawing.Point(478, 118);
+            this.textBoxAmountPaid.Location = new System.Drawing.Point(479, 147);
             this.textBoxAmountPaid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxAmountPaid.Name = "textBoxAmountPaid";
             this.textBoxAmountPaid.Size = new System.Drawing.Size(232, 26);
@@ -115,7 +117,7 @@
             // 
             this.checkBoxLeftMessage.AutoSize = true;
             this.checkBoxLeftMessage.Enabled = false;
-            this.checkBoxLeftMessage.Location = new System.Drawing.Point(478, 94);
+            this.checkBoxLeftMessage.Location = new System.Drawing.Point(479, 123);
             this.checkBoxLeftMessage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxLeftMessage.Name = "checkBoxLeftMessage";
             this.checkBoxLeftMessage.Size = new System.Drawing.Size(15, 14);
@@ -125,7 +127,7 @@
             // labelLeftMessage
             // 
             this.labelLeftMessage.AutoSize = true;
-            this.labelLeftMessage.Location = new System.Drawing.Point(334, 90);
+            this.labelLeftMessage.Location = new System.Drawing.Point(335, 119);
             this.labelLeftMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLeftMessage.Name = "labelLeftMessage";
             this.labelLeftMessage.Size = new System.Drawing.Size(110, 20);
@@ -135,7 +137,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(334, 53);
+            this.label1.Location = new System.Drawing.Point(335, 82);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 20);
@@ -145,7 +147,7 @@
             // labelCompletionDate
             // 
             this.labelCompletionDate.AutoSize = true;
-            this.labelCompletionDate.Location = new System.Drawing.Point(334, 17);
+            this.labelCompletionDate.Location = new System.Drawing.Point(335, 46);
             this.labelCompletionDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCompletionDate.Name = "labelCompletionDate";
             this.labelCompletionDate.Size = new System.Drawing.Size(132, 20);
@@ -156,7 +158,7 @@
             // 
             this.labelSpeakTo.AllowDrop = true;
             this.labelSpeakTo.AutoSize = true;
-            this.labelSpeakTo.Location = new System.Drawing.Point(13, 273);
+            this.labelSpeakTo.Location = new System.Drawing.Point(14, 302);
             this.labelSpeakTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSpeakTo.Name = "labelSpeakTo";
             this.labelSpeakTo.Size = new System.Drawing.Size(81, 20);
@@ -166,7 +168,7 @@
             // textBoxSpeakTo
             // 
             this.textBoxSpeakTo.Enabled = false;
-            this.textBoxSpeakTo.Location = new System.Drawing.Point(116, 270);
+            this.textBoxSpeakTo.Location = new System.Drawing.Point(117, 299);
             this.textBoxSpeakTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxSpeakTo.Name = "textBoxSpeakTo";
             this.textBoxSpeakTo.Size = new System.Drawing.Size(210, 26);
@@ -176,7 +178,7 @@
             // 
             this.labelNeedCall.AllowDrop = true;
             this.labelNeedCall.AutoSize = true;
-            this.labelNeedCall.Location = new System.Drawing.Point(226, 245);
+            this.labelNeedCall.Location = new System.Drawing.Point(227, 274);
             this.labelNeedCall.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNeedCall.Name = "labelNeedCall";
             this.labelNeedCall.Size = new System.Drawing.Size(81, 20);
@@ -187,7 +189,7 @@
             // 
             this.checkBoxNeedCall.AutoSize = true;
             this.checkBoxNeedCall.Enabled = false;
-            this.checkBoxNeedCall.Location = new System.Drawing.Point(311, 249);
+            this.checkBoxNeedCall.Location = new System.Drawing.Point(312, 278);
             this.checkBoxNeedCall.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxNeedCall.Name = "checkBoxNeedCall";
             this.checkBoxNeedCall.Size = new System.Drawing.Size(15, 14);
@@ -198,7 +200,7 @@
             // 
             this.checkBoxFormat.AutoSize = true;
             this.checkBoxFormat.Enabled = false;
-            this.checkBoxFormat.Location = new System.Drawing.Point(203, 249);
+            this.checkBoxFormat.Location = new System.Drawing.Point(204, 278);
             this.checkBoxFormat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxFormat.Name = "checkBoxFormat";
             this.checkBoxFormat.Size = new System.Drawing.Size(15, 14);
@@ -209,7 +211,7 @@
             // 
             this.labelFormat.AllowDrop = true;
             this.labelFormat.AutoSize = true;
-            this.labelFormat.Location = new System.Drawing.Point(131, 245);
+            this.labelFormat.Location = new System.Drawing.Point(132, 274);
             this.labelFormat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFormat.Name = "labelFormat";
             this.labelFormat.Size = new System.Drawing.Size(64, 20);
@@ -220,7 +222,7 @@
             // 
             this.checkBoxBackup.AutoSize = true;
             this.checkBoxBackup.Enabled = false;
-            this.checkBoxBackup.Location = new System.Drawing.Point(108, 249);
+            this.checkBoxBackup.Location = new System.Drawing.Point(109, 278);
             this.checkBoxBackup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBoxBackup.Name = "checkBoxBackup";
             this.checkBoxBackup.Size = new System.Drawing.Size(15, 14);
@@ -231,7 +233,7 @@
             // 
             this.labelBackup.AllowDrop = true;
             this.labelBackup.AutoSize = true;
-            this.labelBackup.Location = new System.Drawing.Point(33, 245);
+            this.labelBackup.Location = new System.Drawing.Point(34, 274);
             this.labelBackup.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelBackup.Name = "labelBackup";
             this.labelBackup.Size = new System.Drawing.Size(67, 20);
@@ -241,7 +243,7 @@
             // textBoxPassword
             // 
             this.textBoxPassword.Enabled = false;
-            this.textBoxPassword.Location = new System.Drawing.Point(116, 206);
+            this.textBoxPassword.Location = new System.Drawing.Point(117, 235);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(210, 26);
@@ -251,7 +253,7 @@
             // 
             this.labelPassword.AllowDrop = true;
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(13, 209);
+            this.labelPassword.Location = new System.Drawing.Point(14, 238);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(82, 20);
@@ -262,7 +264,7 @@
             // 
             this.labelUsername.AllowDrop = true;
             this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(13, 173);
+            this.labelUsername.Location = new System.Drawing.Point(14, 202);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(87, 20);
@@ -272,7 +274,7 @@
             // textBoxUsername
             // 
             this.textBoxUsername.Enabled = false;
-            this.textBoxUsername.Location = new System.Drawing.Point(116, 170);
+            this.textBoxUsername.Location = new System.Drawing.Point(117, 199);
             this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(210, 26);
@@ -281,7 +283,7 @@
             // textBoxDetails
             // 
             this.textBoxDetails.Enabled = false;
-            this.textBoxDetails.Location = new System.Drawing.Point(116, 50);
+            this.textBoxDetails.Location = new System.Drawing.Point(117, 79);
             this.textBoxDetails.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxDetails.Multiline = true;
             this.textBoxDetails.Name = "textBoxDetails";
@@ -292,7 +294,7 @@
             // 
             this.labelDetails.AllowDrop = true;
             this.labelDetails.AutoSize = true;
-            this.labelDetails.Location = new System.Drawing.Point(13, 53);
+            this.labelDetails.Location = new System.Drawing.Point(14, 82);
             this.labelDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDetails.Name = "labelDetails";
             this.labelDetails.Size = new System.Drawing.Size(62, 20);
@@ -302,7 +304,7 @@
             // textBoxProblem
             // 
             this.textBoxProblem.Enabled = false;
-            this.textBoxProblem.Location = new System.Drawing.Point(116, 14);
+            this.textBoxProblem.Location = new System.Drawing.Point(117, 43);
             this.textBoxProblem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxProblem.Name = "textBoxProblem";
             this.textBoxProblem.Size = new System.Drawing.Size(210, 26);
@@ -311,7 +313,7 @@
             // labelProblem
             // 
             this.labelProblem.AutoSize = true;
-            this.labelProblem.Location = new System.Drawing.Point(13, 17);
+            this.labelProblem.Location = new System.Drawing.Point(14, 46);
             this.labelProblem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProblem.Name = "labelProblem";
             this.labelProblem.Size = new System.Drawing.Size(71, 20);
@@ -320,7 +322,7 @@
             // 
             // buttonVerify
             // 
-            this.buttonVerify.Location = new System.Drawing.Point(478, 53);
+            this.buttonVerify.Location = new System.Drawing.Point(479, 82);
             this.buttonVerify.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonVerify.Name = "buttonVerify";
             this.buttonVerify.Size = new System.Drawing.Size(140, 31);
@@ -332,7 +334,7 @@
             // labelCompletionDateData
             // 
             this.labelCompletionDateData.AutoSize = true;
-            this.labelCompletionDateData.Location = new System.Drawing.Point(474, 17);
+            this.labelCompletionDateData.Location = new System.Drawing.Point(475, 46);
             this.labelCompletionDateData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCompletionDateData.Name = "labelCompletionDateData";
             this.labelCompletionDateData.Size = new System.Drawing.Size(59, 20);
@@ -342,7 +344,7 @@
             // labelStaffMember
             // 
             this.labelStaffMember.AutoSize = true;
-            this.labelStaffMember.Location = new System.Drawing.Point(334, 193);
+            this.labelStaffMember.Location = new System.Drawing.Point(335, 222);
             this.labelStaffMember.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStaffMember.Name = "labelStaffMember";
             this.labelStaffMember.Size = new System.Drawing.Size(110, 20);
@@ -352,7 +354,7 @@
             // textBoxStaffMember
             // 
             this.textBoxStaffMember.Enabled = false;
-            this.textBoxStaffMember.Location = new System.Drawing.Point(478, 190);
+            this.textBoxStaffMember.Location = new System.Drawing.Point(479, 219);
             this.textBoxStaffMember.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxStaffMember.Name = "textBoxStaffMember";
             this.textBoxStaffMember.Size = new System.Drawing.Size(232, 26);
@@ -360,7 +362,7 @@
             // 
             // buttonPrint
             // 
-            this.buttonPrint.Location = new System.Drawing.Point(426, 230);
+            this.buttonPrint.Location = new System.Drawing.Point(427, 259);
             this.buttonPrint.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonPrint.Name = "buttonPrint";
             this.buttonPrint.Size = new System.Drawing.Size(138, 35);
@@ -373,11 +375,33 @@
             // 
             this.printDialog1.UseEXDialog = true;
             // 
+            // labelJobHeading
+            // 
+            this.labelJobHeading.AutoSize = true;
+            this.labelJobHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJobHeading.Location = new System.Drawing.Point(112, 9);
+            this.labelJobHeading.Name = "labelJobHeading";
+            this.labelJobHeading.Size = new System.Drawing.Size(56, 29);
+            this.labelJobHeading.TabIndex = 60;
+            this.labelJobHeading.Text = "Job";
+            // 
+            // labelTransactionHeading
+            // 
+            this.labelTransactionHeading.AutoSize = true;
+            this.labelTransactionHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTransactionHeading.Location = new System.Drawing.Point(474, 9);
+            this.labelTransactionHeading.Name = "labelTransactionHeading";
+            this.labelTransactionHeading.Size = new System.Drawing.Size(150, 29);
+            this.labelTransactionHeading.TabIndex = 61;
+            this.labelTransactionHeading.Text = "Transaction";
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 306);
+            this.ClientSize = new System.Drawing.Size(723, 338);
+            this.Controls.Add(this.labelTransactionHeading);
+            this.Controls.Add(this.labelJobHeading);
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.textBoxStaffMember);
             this.Controls.Add(this.labelStaffMember);
@@ -451,5 +475,7 @@
         private System.Windows.Forms.TextBox textBoxStaffMember;
         private System.Windows.Forms.Button buttonPrint;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.Label labelJobHeading;
+        private System.Windows.Forms.Label labelTransactionHeading;
     }
 }
