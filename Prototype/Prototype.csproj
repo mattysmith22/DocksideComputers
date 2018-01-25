@@ -38,7 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BarcodeLib">
-      <HintPath>..\..\..\..\Downloads\BarcodeLib.dll</HintPath>
+      <HintPath>..\..\..\..\BarcodeLib.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySqlBackup.NET.2.0.10.1\lib\net40\MySql.Data.dll</HintPath>

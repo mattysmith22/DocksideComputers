@@ -70,8 +70,8 @@ namespace Prototype.Printing
 
             #region print the barcode
 
-            cursor.X = leftMargin + (printWidth - 300) / 2;
-            Image barcodeImg = Barcode.DoEncode(TYPE.CODE128, receiptKey, false, Color.Black, Color.Empty, 300, 100);
+            cursor.X = leftMargin + (printWidth - 600) / 2;
+            Image barcodeImg = Barcode.DoEncode(TYPE.CODE128, receiptKey, false, Color.Black, Color.Empty, 600, 100);
             e.Graphics.DrawImage(barcodeImg, cursor);
             cursor.Y += 110; 
 
