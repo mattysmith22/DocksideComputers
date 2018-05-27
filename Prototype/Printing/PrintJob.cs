@@ -114,7 +114,7 @@ namespace Prototype.Printing
 
             measuredSize = e.Graphics.MeasureString(problem, fontText, DefaultPageSettings.PaperSize.Width - DefaultPageSettings.Margins.Right - (int)cursor.X);
             e.Graphics.DrawString(problem, fontText, Brushes.Black, new RectangleF(cursor, measuredSize));
-            cursor.Y += measuredSize.Height;
+            cursor.Y += Math.Max(fontText.Height, measuredSize.Height);
             #endregion
 
             #region print details;
@@ -126,7 +126,7 @@ namespace Prototype.Printing
 
             measuredSize = e.Graphics.MeasureString(details, fontText, DefaultPageSettings.PaperSize.Width - DefaultPageSettings.Margins.Right - (int)cursor.X);
             e.Graphics.DrawString(details, fontText, Brushes.Black, new RectangleF(cursor, measuredSize));
-            cursor.Y += measuredSize.Height + (2*padding);
+            cursor.Y += Math.Max(fontText.Height, measuredSize.Height) + (2*padding);
 
             #endregion
             
@@ -146,7 +146,7 @@ namespace Prototype.Printing
 
             measuredSize = e.Graphics.MeasureString(computerUsername, fontText, DefaultPageSettings.PaperSize.Width - DefaultPageSettings.Margins.Right - (int)cursor.X);
             e.Graphics.DrawString(computerUsername, fontText, Brushes.Black, new RectangleF(cursor, measuredSize));
-            cursor.Y += measuredSize.Height;
+            cursor.Y += Math.Max(fontText.Height, measuredSize.Height);
 
             #endregion
 
@@ -159,7 +159,7 @@ namespace Prototype.Printing
 
             measuredSize = e.Graphics.MeasureString(computerPassword, fontText, DefaultPageSettings.PaperSize.Width - DefaultPageSettings.Margins.Right - (int)cursor.X);
             e.Graphics.DrawString(computerPassword, fontText, Brushes.Black, new RectangleF(cursor, measuredSize));
-            cursor.Y += measuredSize.Height + padding;
+            cursor.Y += Math.Max(fontText.Height, measuredSize.Height) + padding;
 
             #endregion
 

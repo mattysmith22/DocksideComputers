@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Diagnostics;
+using System.Configuration;
 
 namespace Prototype.Screens.Customers
 {
@@ -167,7 +168,7 @@ namespace Prototype.Screens.Customers
 
             if (verifyAdminScreen.success)
             {
-                if (dataGridView1.SelectedCells.Count == 1)
+                if (dataGridView1.SelectedRows.Count == 1)
                 {
                     MySqlConnection connection = Database.GetConnection();
                     connection.Open();
@@ -306,6 +307,11 @@ namespace Prototype.Screens.Customers
         private void checkBoxEnableQuery_CheckedChanged(object sender, EventArgs e)
         {
             updateDataTable();
+        }
+
+        private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(ConfigurationManager.AppSettings["HelpURL"]);
         }
     }
 }

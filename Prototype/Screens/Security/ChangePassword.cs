@@ -21,8 +21,7 @@ namespace Prototype.Screens.Security
             this.username = username;
             this.isAdmin = isAdmin;
 
-            textBoxNew.Enabled = !isAdmin;
-            textBoxNewConfirm.Enabled = !isAdmin;
+            textBoxOld.Enabled = !isAdmin;
         }
 
         private void buttonChange_Click(object sender, EventArgs e)
